@@ -3540,6 +3540,7 @@ public class GOTRegistry {
 		registerItem(jogosChestplate, "jogosChestplate");
 		registerItem(jogosLeggings, "jogosLeggings");
 		registerItem(jogosBoots, "jogosBoots");
+		registerItem(dothrakiHorseArmor, "dothrakiHorseArmor");
 		registerItem(nomadSword, "nomadSword");
 		registerItem(nomadBattleaxe, "nomadBattleaxe");
 		registerItem(nomadSpear, "nomadSpear");
@@ -3941,7 +3942,6 @@ public class GOTRegistry {
 		registerItem(cracker, "cracker");
 		registerItem(cucumberSeeds, "cucumberSeeds");
 		registerItem(diamondHorseArmor, "horseArmorDiamond");
-		registerItem(dothrakiHorseArmor, "dothrakiHorseArmor");
 		registerItem(dye, "dye");
 		registerItem(featherDyed, "featherDyed");
 		registerItem(flax, "flax");
