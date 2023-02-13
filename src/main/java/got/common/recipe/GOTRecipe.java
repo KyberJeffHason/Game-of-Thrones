@@ -610,8 +610,7 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.flintDagger), "X", "Y", Character.valueOf('X'), Items.flint, Character.valueOf('Y'), "stickWood"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.club), "X", "X", "X", Character.valueOf('X'), "plankWood"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.trident), " XX", " YX", "Y  ", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood"));
-
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.wildFireJar), "XYX", "YZY", "XYX", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), Items.gunpowder, Character.valueOf('Z'), GOTRegistry.fuseItem));
+		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.firePot, 4), "Z", "Y", "X", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), Items.gunpowder, Character.valueOf('Z'), GOTRegistry.fuseItem));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.skullStaff), "X", "Y", "Y", Character.valueOf('X'), Items.skull, Character.valueOf('Y'), "stickWood"));
 
@@ -950,7 +949,6 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.birdCage, 1, 2), "YYY", "Y Y", "XXX", Character.valueOf('X'), "ingotSilver", Character.valueOf('Y'), GOTRegistry.silverBars));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.birdCage, 1, 3), "YYY", "Y Y", "XXX", Character.valueOf('X'), "ingotGold", Character.valueOf('Y'), GOTRegistry.goldBars));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.birdCageWood, 1, 0), "YYY", "Y Y", "XXX", Character.valueOf('X'), "plankWood", Character.valueOf('Y'), "stickWood"));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.bomb, 4), "XYX", "YXY", "XYX", Character.valueOf('X'), Items.gunpowder, Character.valueOf('Y'), "ingotIron"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.boneBlock, 1, 0), "XX", "XX", Character.valueOf('X'), "bone"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.boneBoots), "X X", "X X", Character.valueOf('X'), "bone"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.boneChestplate), "X X", "XXX", "XXX", Character.valueOf('X'), "bone"));
@@ -1235,8 +1233,6 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GOTRegistry.redBrick, 1, 0), new ItemStack(Blocks.brick_block, 1, 0), "vine"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GOTRegistry.saltedFlesh), Items.rotten_flesh, "salt"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.gunpowder, 2), GOTRegistry.termite));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GOTRegistry.bomb, 1, 1), new ItemStack(GOTRegistry.bomb, 1, 0), Items.gunpowder, "ingotIron"));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GOTRegistry.bomb, 1, 2), new ItemStack(GOTRegistry.bomb, 1, 1), Items.gunpowder, "ingotIron"));
 		GameRegistry.addShapelessRecipe(new ItemStack(GOTRegistry.alloySteelIngot, 9), new ItemStack(GOTRegistry.blockMetal2, 1, 4));
 		GameRegistry.addShapelessRecipe(new ItemStack(GOTRegistry.alloySteelNugget, 9), GOTRegistry.alloySteelIngot);
 		GameRegistry.addShapelessRecipe(new ItemStack(GOTRegistry.amber, 9), new ItemStack(GOTRegistry.blockGem, 1, 4));
@@ -1403,9 +1399,6 @@ public class GOTRecipe {
 		for (i = 0; i <= 1; ++i) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.woodBeam9, 3, i), "X", "X", "X", Character.valueOf('X'), new ItemStack(GOTRegistry.wood9, 1, i)));
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.woodBeamV2, 3, i), "X", "X", "X", Character.valueOf('X'), new ItemStack(Blocks.log2, 1, i)));
-		}
-		for (i = 0; i <= 2; ++i) {
-			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GOTRegistry.bomb, 1, i + 8), new ItemStack(GOTRegistry.bomb, 1, i), Items.lava_bucket));
 		}
 		for (i = 0; i <= 3; ++i) {
 			if (i != 1) {
