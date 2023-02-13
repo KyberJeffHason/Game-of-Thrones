@@ -37,7 +37,7 @@ public class GOTAttackTiming {
 			if (pressed) {
 				KeyBinding.onTick(attackKey.getKeyCode());
 			}
-			if (pressed && GOTAttackTiming.mc.objectMouseOver != null && GOTAttackTiming.mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.ENTITY && GOTAttackTiming.mc.objectMouseOver.entityHit instanceof EntityLivingBase) {
+			if (pressed) {
 				if (attackTime <= 0) {
 					ItemStack itemstack = GOTAttackTiming.mc.thePlayer.getHeldItem();
 					attackTime = fullAttackTime = GOTWeaponStats.getAttackTimePlayer(itemstack);
