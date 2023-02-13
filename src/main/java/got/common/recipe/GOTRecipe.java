@@ -610,7 +610,7 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.flintDagger), "X", "Y", Character.valueOf('X'), Items.flint, Character.valueOf('Y'), "stickWood"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.club), "X", "X", "X", Character.valueOf('X'), "plankWood"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.trident), " XX", " YX", "Y  ", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood"));
-		
+
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.firePot, 4), "Z", "Y", "X", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), Items.gunpowder, Character.valueOf('Z'), GOTRegistry.fuseItem));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.skullStaff), "X", "Y", "Y", Character.valueOf('X'), Items.skull, Character.valueOf('Y'), "stickWood"));
 
