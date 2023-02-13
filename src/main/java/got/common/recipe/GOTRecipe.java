@@ -715,7 +715,6 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.alloySteelIngot), "XXX", "XXX", "XXX", Character.valueOf('X'), GOTRegistry.alloySteelNugget);
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.bananaBread), "XYX", Character.valueOf('X'), Items.wheat, Character.valueOf('Y'), GOTRegistry.banana);
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.bananaCakeItem), "AAA", "BCB", "DDD", Character.valueOf('A'), Items.milk_bucket, Character.valueOf('B'), GOTRegistry.banana, Character.valueOf('C'), Items.egg, Character.valueOf('D'), Items.wheat);
-		GameRegistry.addRecipe(new ItemStack(GOTRegistry.bank), "XXX", "XYX", "XXX", Character.valueOf('X'), Blocks.cobblestone, Character.valueOf('Y'), GOTRegistry.coin);
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.blockGem, 1, 0), "XXX", "XXX", "XXX", Character.valueOf('X'), GOTRegistry.topaz);
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.blockGem, 1, 1), "XXX", "XXX", "XXX", Character.valueOf('X'), GOTRegistry.amethyst);
 		GameRegistry.addRecipe(new ItemStack(GOTRegistry.blockGem, 1, 2), "XXX", "XXX", "XXX", Character.valueOf('X'), GOTRegistry.sapphire);
