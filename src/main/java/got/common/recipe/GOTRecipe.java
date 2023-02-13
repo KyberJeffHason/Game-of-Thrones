@@ -1197,7 +1197,6 @@ public class GOTRecipe {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.wineGlass, 2), "X X", " X ", " X ", Character.valueOf('X'), Blocks.glass));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.woodPlate, 2), "XX", Character.valueOf('X'), "logWood"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.arrow, 4), "X", "Y", "Z", Character.valueOf('X'), "arrowTip", Character.valueOf('Y'), "stickWood", Character.valueOf('Z'), "feather"));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.arrowFire, 4), " X ", "XYX", " X ", Character.valueOf('X'), Items.arrow, Character.valueOf('Y'), GOTRegistry.sulfur));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.arrowPoisoned, 4), " X ", "XYX", " X ", Character.valueOf('X'), Items.arrow, Character.valueOf('Y'), "poison"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GOTRegistry.crossbowBoltPoisoned, 4), " X ", "XYX", " X ", Character.valueOf('X'), GOTRegistry.crossbowBolt, Character.valueOf('Y'), "poison"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.brewing_stand, 1), " X ", "YYY", Character.valueOf('X'), "stickWood", Character.valueOf('Y'), Blocks.cobblestone));
