@@ -72,7 +72,9 @@ public class GOTMaterial {
 	public static ArmorMaterial YITI_SAMURAI = EnumHelper.addArmorMaterial("GOT_YITI_SAMURAI", 60, new int[] { 2, 7, 6, 3 }, 9);
 
 	public static ToolMaterial BRONZE_TOOL = EnumHelper.addToolMaterial("GOT_BRONZE_TOOL", 2, 500, 5.0F, 1.5F, 10);
-	public static ToolMaterial IRON_TOOL = EnumHelper.addToolMaterial("GOT_IRON_TOOL", 2, 625, 6.0F, 2.0F, 14);
+	public static ToolMaterial IRON = EnumHelper.addToolMaterial("GOT_IRON", 2, 625, 6.0F, 2.0F, 14);
+	public static ToolMaterial WOOD = EnumHelper.addToolMaterial("GOT_WOOD", 0, 147, 2.0F, 0.0F, 15);
+	public static ToolMaterial STONE = EnumHelper.addToolMaterial("GOT_STONE", 1, 327, 4.0F, 1.0F, 5);
 	public static ToolMaterial COBALT_TOOL = EnumHelper.addToolMaterial("GOT_COBALT_TOOL", 3, 3902, 8.0F, 3.0F, 10);
 	public static ToolMaterial FLINT_TOOL = EnumHelper.addToolMaterial("GOT_FLINT_TOOL", 1, 327, 4.0F, 1.0F, 5);
 	public static ToolMaterial HORN_TOOL = EnumHelper.addToolMaterial("GOT_HORN_TOOL", 1, 327, 4.0F, 1.0F, 5);
@@ -164,6 +166,8 @@ public class GOTMaterial {
 		SILVER_TOOL.setRepairItem(new ItemStack(GOTRegistry.silverIngot));
 		VALYRIAN_TOOL.setRepairItem(new ItemStack(GOTRegistry.valyrianIngot));
 		ASSHAI_TOOL.setRepairItem(new ItemStack(Items.iron_ingot));
-		IRON_TOOL.setRepairItem(new ItemStack(Items.iron_ingot));
+		IRON.setRepairItem(new ItemStack(Items.iron_ingot));
+		WOOD.setRepairItem(new ItemStack(Item.getItemFromBlock(Blocks.planks)));
+		STONE.setRepairItem(new ItemStack(Item.getItemFromBlock(Blocks.cobblestone)));
 	}
 }

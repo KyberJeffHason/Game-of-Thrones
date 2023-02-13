@@ -5,6 +5,7 @@ import java.util.*;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import got.GOT;
 import got.common.GOTSquadrons;
+import got.common.database.GOTMaterial;
 import got.common.entity.ai.GOTEntityAINearestAttackableTargetBasic;
 import got.common.entity.other.GOTEntityNPC;
 import got.common.network.*;
@@ -17,7 +18,7 @@ import net.minecraft.world.World;
 
 public class GOTItemCommandSword extends GOTItemSword implements GOTSquadrons.SquadronItem {
 	public GOTItemCommandSword() {
-		super(ToolMaterial.IRON);
+		super(GOTMaterial.IRON);
 		setMaxDamage(0);
 		gotWeaponDamage = 1.0f;
 	}
