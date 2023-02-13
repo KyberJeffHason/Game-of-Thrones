@@ -140,6 +140,8 @@ public class GOTGuiMap extends GOTGuiMenuBase {
 	public int facScrollWidgetWidth = 17;
 	public int facScrollWidgetHeight = 12;
 
+	public boolean focusSet = false;
+
 	public GuiButton buttonConquestRegions;
 
 	public GOTGuiMap() {
@@ -251,8 +253,16 @@ public class GOTGuiMap extends GOTGuiMenuBase {
 			buttonConquestRegions.enabled = true;
 			buttonConquestRegions.visible = true;
 		}
-		posX = prevPosX;
-		posY = prevPosY;
+
+		if(!focusSet) {
+			posX = 634;
+			posY = 1168;
+			focusSet = true;
+		} else {
+			posX = prevPosX;
+			posY = prevPosY;
+		}
+
 		isMouseWithinMap = i >= mapXMin && i < mapXMax && j >= mapYMin && j < mapYMax;
 		if (!hasOverlay && !isFacScrolling && zoomTicks == 0 && Mouse.isButtonDown(0)) {
 			if ((isMouseButtonDown == 0 || isMouseButtonDown == 1) && isMouseWithinMap) {
