@@ -233,7 +233,6 @@ public enum GOTMiniQuestFactory {
 		cities.put(LORATH, GOTFaction.LORATH);
 		cities.put(NORVOS, GOTFaction.NORVOS);
 		cities.put(QOHOR, GOTFaction.QOHOR);
-		cities.put(PENTOS, GOTFaction.PENTOS);
 		cities.put(MYR, GOTFaction.MYR);
 		cities.put(LYS, GOTFaction.LYS);
 		cities.put(TYROSH, GOTFaction.TYROSH);

@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 
 public class GOTBlockTablePentos extends GOTBlockCraftingTable {
 	public GOTBlockTablePentos() {
-		super(Material.wood, GOTFaction.PENTOS, 74);
+		super(Material.wood, GOTFaction.HIGH_POWER, 74);
 		setStepSound(Block.soundTypeWood);
 	}
 }

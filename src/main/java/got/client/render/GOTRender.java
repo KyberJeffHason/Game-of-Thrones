@@ -27,7 +27,6 @@ import got.common.entity.essos.lys.*;
 import got.common.entity.essos.mossovy.*;
 import got.common.entity.essos.myr.*;
 import got.common.entity.essos.norvos.GOTEntityNorvosMan;
-import got.common.entity.essos.pentos.GOTEntityPentosMan;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -98,7 +97,6 @@ public class GOTRender {
 		renders.put(GOTEntityNorthMan.class, new GOTRenderFactionNPC("westeros/north"));
 		renders.put(GOTEntityNorthHillmanWarrior.class, new GOTRenderFactionNPC("westeros/wild"));
 		renders.put(GOTEntityNorvosMan.class, new GOTRenderFactionNPC("essos/free"));
-		renders.put(GOTEntityPentosMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityQarthMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityQohorMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityReachMan.class, new GOTRenderFactionNPC("westeros/westeros"));
@@ -269,7 +267,6 @@ public class GOTRender {
 		renders.put(GOTEntityHighSepton.class, new GOTRenderLegendaryNPCLayered("high_septon"));
 		renders.put(GOTEntityHotPie.class, new GOTRenderLegendaryNPCLayered("hot_pie", 0.9f));
 		renders.put(GOTEntityHowlandReed.class, new GOTRenderLegendaryNPCLayered("howland_reed"));
-		renders.put(GOTEntityIllyrioMopatis.class, new GOTRenderLegendaryNPCLayered("illyrio_mopatis"));
 		renders.put(GOTEntityJaimeLannister.class, new GOTRenderLegendaryNPCLayered("jaime_lannister"));
 		renders.put(GOTEntityJeorMormont.class, new GOTRenderLegendaryNPCLayered("jeor_mormont"));
 		renders.put(GOTEntityJoffreyBaratheon.class, new GOTRenderLegendaryNPCLayered("joffrey_baratheon", 0.9f));

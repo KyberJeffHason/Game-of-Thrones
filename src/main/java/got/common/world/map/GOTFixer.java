@@ -28,7 +28,6 @@ import got.common.world.structure.essos.lys.GOTStructureLysCity;
 import got.common.world.structure.essos.mossovy.GOTStructureMossovyVillage;
 import got.common.world.structure.essos.myr.GOTStructureMyrCity;
 import got.common.world.structure.essos.norvos.GOTStructureNorvosCity;
-import got.common.world.structure.essos.pentos.GOTStructurePentosCity;
 import got.common.world.structure.essos.qarth.GOTStructureQarthCity;
 import got.common.world.structure.essos.qohor.GOTStructureQohorCity;
 import got.common.world.structure.essos.tyrosh.GOTStructureTyroshCity;
@@ -53,7 +52,7 @@ import net.minecraft.world.World;
 
 public class GOTFixer {
 	public static Map<GOTWaypoint, GOTStructureBase> structures = new EnumMap<>(GOTWaypoint.class);
-	public static GOTVillageGen[] f = new GOTVillageGen[67];
+	public static GOTVillageGen[] f = new GOTVillageGen[66];
 
 	public static void addSpecialLocations(World world, Random random, int i, int k) {
 		GOTWaypoint[] forts = { GOTWaypoint.FiveForts1, GOTWaypoint.FiveForts2, GOTWaypoint.FiveForts3, GOTWaypoint.FiveForts4, GOTWaypoint.FiveForts5 };
@@ -187,9 +186,6 @@ public class GOTFixer {
 		f[slot] = new GOTStructureNorvosCity(biome, 0.0f).setIsTown();
 		f[slot].affix(GOTWaypoint.Norvos.info(0, -1, 2));
 		slot++;
-		f[slot] = new GOTStructurePentosCity(biome, 0.0f).setIsTown();
-		f[slot].affix(GOTWaypoint.Pentos.info(-1, 0, 1));
-		slot++;
 		f[slot] = new GOTStructureQarthCity(biome, 0.0f).setIsTown();
 		f[slot].affix(GOTWaypoint.PortYhos.info(0, 1, 0), GOTWaypoint.Qarkash.info(0, 1, 0), GOTWaypoint.Qarth.info(0, 1, 0));
 		slot++;
@@ -215,7 +211,7 @@ public class GOTFixer {
 		f[slot].affix(GOTWaypoint.FairMarket, GOTWaypoint.Harroway, GOTWaypoint.Pennytree, GOTWaypoint.Sevenstreams);
 		slot++;
 		f[slot] = new GOTStructureRuins(biome, 0.0f);
-		f[slot].affix(GOTWaypoint.WestWatch, GOTWaypoint.KrazaajHas, GOTWaypoint.Morne, GOTWaypoint.NySar, GOTWaypoint.OldGhis, GOTWaypoint.Shandystone, GOTWaypoint.Starpike, GOTWaypoint.Telyria, GOTWaypoint.TorturersDeep, GOTWaypoint.VaesOrvik, GOTWaypoint.VaesQosar, GOTWaypoint.VaesShirosi, GOTWaypoint.VaesTolorro, GOTWaypoint.Velos, GOTWaypoint.VojjorSamvi, GOTWaypoint.GreyGallows, GOTWaypoint.BloodStone, GOTWaypoint.KrazaajHas, GOTWaypoint.Kayakayanaya, GOTWaypoint.Aegon, GOTWaypoint.Raenys, GOTWaypoint.Visenya, GOTWaypoint.Ghozai, GOTWaypoint.GhoyanDrohe, GOTWaypoint.FourteenFlames, GOTWaypoint.Ibbish, GOTWaypoint.Samyriana, GOTWaypoint.Bhorash, GOTWaypoint.Bayasabhad, GOTWaypoint.ArNoy, GOTWaypoint.Adakhakileki, GOTWaypoint.CastleLychester, GOTWaypoint.MhysaFaer, GOTWaypoint.AquosDhaen, GOTWaypoint.Draconys, GOTWaypoint.Tyria, GOTWaypoint.Rhyos, GOTWaypoint.Oros, GOTWaypoint.VulturesRoost, GOTWaypoint.Spicetown, GOTWaypoint.Castamere, GOTWaypoint.Goldenhill, GOTWaypoint.GreyironCastle, GOTWaypoint.HoareCastle, GOTWaypoint.HoareKeep, GOTWaypoint.HoggHall, GOTWaypoint.HollardCastle, GOTWaypoint.OldStones, GOTWaypoint.Summerhall, GOTWaypoint.TarbeckHall, GOTWaypoint.TowerOfJoy, GOTWaypoint.Whispers, GOTWaypoint.WhiteWalls);
+		f[slot].affix(GOTWaypoint.WestWatch, GOTWaypoint.KrazaajHas, GOTWaypoint.Morne, GOTWaypoint.NySar, GOTWaypoint.OldGhis, GOTWaypoint.Shandystone, GOTWaypoint.Starpike, GOTWaypoint.Telyria, GOTWaypoint.TorturersDeep, GOTWaypoint.VaesOrvik, GOTWaypoint.VaesQosar, GOTWaypoint.VaesShirosi, GOTWaypoint.VaesTolorro, GOTWaypoint.Velos, GOTWaypoint.VojjorSamvi, GOTWaypoint.GreyGallows, GOTWaypoint.BloodStone, GOTWaypoint.KrazaajHas, GOTWaypoint.Kayakayanaya, GOTWaypoint.Aegon, GOTWaypoint.Raenys, GOTWaypoint.Visenya, GOTWaypoint.Ghozai, GOTWaypoint.FourteenFlames, GOTWaypoint.Ibbish, GOTWaypoint.Samyriana, GOTWaypoint.Bhorash, GOTWaypoint.Bayasabhad, GOTWaypoint.ArNoy, GOTWaypoint.Adakhakileki, GOTWaypoint.CastleLychester, GOTWaypoint.MhysaFaer, GOTWaypoint.AquosDhaen, GOTWaypoint.Draconys, GOTWaypoint.Tyria, GOTWaypoint.Rhyos, GOTWaypoint.Oros, GOTWaypoint.VulturesRoost, GOTWaypoint.Spicetown, GOTWaypoint.Castamere, GOTWaypoint.Goldenhill, GOTWaypoint.GreyironCastle, GOTWaypoint.HoareCastle, GOTWaypoint.HoareKeep, GOTWaypoint.HoggHall, GOTWaypoint.HollardCastle, GOTWaypoint.OldStones, GOTWaypoint.Summerhall, GOTWaypoint.TarbeckHall, GOTWaypoint.TowerOfJoy, GOTWaypoint.Whispers, GOTWaypoint.WhiteWalls);
 		slot++;
 		f[slot] = new GOTStructureRuinsBig(biome, 0.0f);
 		f[slot].affix(GOTWaypoint.EastBay, GOTWaypoint.EastCoast, GOTWaypoint.NorthForests, GOTWaypoint.WhiteMountains, GOTWaypoint.CentralForests, GOTWaypoint.Marshes, GOTWaypoint.RedForests, GOTWaypoint.SouthUlthos, GOTWaypoint.SouthTaiga, GOTWaypoint.Bonetown, GOTWaypoint.Harrenhal, GOTWaypoint.Stygai, GOTWaypoint.Ulos, GOTWaypoint.Yeen);
@@ -702,12 +698,6 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Pentos.shift(-1, 0), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityIllyrioMopatis(world), world, 3, 1, 0);
-			}
-		});
 
 		structures.put(GOTWaypoint.PinkmaidenCastle, new Spawner() {
 			@Override

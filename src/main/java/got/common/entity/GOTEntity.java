@@ -20,7 +20,6 @@ import got.common.entity.essos.lys.*;
 import got.common.entity.essos.mossovy.*;
 import got.common.entity.essos.myr.*;
 import got.common.entity.essos.norvos.*;
-import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -376,26 +375,6 @@ public class GOTEntity {
 		GOTEntityRegistry.register(GOTEntityDorneMiner.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneLumberman.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneMason.class, id++, GOTFaction.DORNE);
-
-		GOTEntityRegistry.register(GOTEntityPentosMan.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosLevyman.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosLevymanArcher.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosGuard.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosBannerBearer.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosGuardCaptain.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosBaker.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosBartender.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosBlacksmith.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosBrewer.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosButcher.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosFarmer.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosFarmhand.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosFishmonger.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosFlorist.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosGoldsmith.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosLumberman.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosMason.class, id++, GOTFaction.PENTOS);
-		GOTEntityRegistry.register(GOTEntityPentosMiner.class, id++, GOTFaction.PENTOS);
 
 		GOTEntityRegistry.register(GOTEntityNorvosMan.class, id++, GOTFaction.NORVOS);
 		GOTEntityRegistry.register(GOTEntityNorvosLevyman.class, id++, GOTFaction.NORVOS);
@@ -850,7 +829,6 @@ public class GOTEntity {
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityQuentynMartell.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityQuentynQorgyle.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityTrystaneMartell.class, id++, GOTFaction.DORNE);
-		GOTEntityRegistry.registerLegendaryNPC(GOTEntityIllyrioMopatis.class, id++, GOTFaction.PENTOS);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityMellario.class, id++, GOTFaction.NORVOS);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityJaqenHghar.class, id++, GOTFaction.LORATH);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntitySalladhorSaan.class, id++, GOTFaction.LYS);

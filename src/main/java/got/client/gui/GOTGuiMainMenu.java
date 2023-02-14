@@ -181,7 +181,6 @@ public class GOTGuiMainMenu extends GuiMainMenu {
 		waypointRoute.add(GOTWaypoint.StormsEnd);
 		waypointRoute.add(GOTWaypoint.Highgarden);
 		waypointRoute.add(GOTWaypoint.Sunspear);
-		waypointRoute.add(GOTWaypoint.Pentos);
 		waypointRoute.add(GOTWaypoint.OldGhis);
 		waypointRoute.add(GOTWaypoint.Tiqui);
 		waypointRoute.add(GOTWaypoint.Asshai);

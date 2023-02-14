@@ -16,7 +16,6 @@ import got.common.entity.essos.lys.*;
 import got.common.entity.essos.mossovy.*;
 import got.common.entity.essos.myr.*;
 import got.common.entity.essos.norvos.*;
-import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -106,8 +105,6 @@ public class GOTSpawnList {
 	public static List<GOTSpawnEntry> NORTH_MILITARY_L = new ArrayList<>();
 	public static List<GOTSpawnEntry> NORVOS_CIVILIAN_L = new ArrayList<>();
 	public static List<GOTSpawnEntry> NORVOS_MILITARY_L = new ArrayList<>();
-	public static List<GOTSpawnEntry> PENTOS_CIVILIAN_L = new ArrayList<>();
-	public static List<GOTSpawnEntry> PENTOS_MILITARY_L = new ArrayList<>();
 	public static List<GOTSpawnEntry> QARTH_CIVILIAN_L = new ArrayList<>();
 	public static List<GOTSpawnEntry> QARTH_MILITARY_L = new ArrayList<>();
 	public static List<GOTSpawnEntry> QOHOR_CIVILIAN_L = new ArrayList<>();
@@ -241,9 +238,6 @@ public class GOTSpawnList {
 		NORVOS_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityNorvosMan.class, 10, 1, 2));
 		NORVOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityNorvosLevyman.class, 10, 1, 2));
 		NORVOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityNorvosLevymanArcher.class, 5, 1, 2));
-		PENTOS_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityPentosMan.class, 10, 1, 2));
-		PENTOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityPentosLevyman.class, 10, 1, 2));
-		PENTOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityPentosLevymanArcher.class, 5, 1, 2));
 		QARTH_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityQarthMan.class, 10, 1, 2));
 		QARTH_MILITARY_L.add(new GOTSpawnEntry(GOTEntityQarthLevyman.class, 10, 1, 2));
 		QARTH_MILITARY_L.add(new GOTSpawnEntry(GOTEntityQarthLevymanArcher.class, 5, 1, 2));
@@ -370,8 +364,6 @@ public class GOTSpawnList {
 	public static GOTSpawnList NORTH_MILITARY = new GOTSpawnList(NORTH_MILITARY_L);
 	public static GOTSpawnList NORVOS_CIVILIAN = new GOTSpawnList(NORVOS_CIVILIAN_L);
 	public static GOTSpawnList NORVOS_MILITARY = new GOTSpawnList(NORVOS_MILITARY_L);
-	public static GOTSpawnList PENTOS_CIVILIAN = new GOTSpawnList(PENTOS_CIVILIAN_L);
-	public static GOTSpawnList PENTOS_MILITARY = new GOTSpawnList(PENTOS_MILITARY_L);
 	public static GOTSpawnList QARTH_CIVILIAN = new GOTSpawnList(QARTH_CIVILIAN_L);
 	public static GOTSpawnList QARTH_MILITARY = new GOTSpawnList(QARTH_MILITARY_L);
 	public static GOTSpawnList QOHOR_CIVILIAN = new GOTSpawnList(QOHOR_CIVILIAN_L);

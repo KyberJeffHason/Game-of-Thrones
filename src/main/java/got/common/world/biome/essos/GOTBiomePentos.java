@@ -11,7 +11,6 @@ import got.common.world.feature.GOTTreeType;
 import got.common.world.map.GOTBezierType;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.pentos.GOTStructurePentosCity;
 import got.common.world.structure.other.GOTStructureStoneRuin;
 
 public class GOTBiomePentos extends GOTBiomeEssos {
@@ -27,10 +26,6 @@ public class GOTBiomePentos extends GOTBiomeEssos {
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_APPLE_PEAR, 0.1f);
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_POMEGRANATE, 0.3f);
 		decorator.addTree(GOTTreeType.ARAMANT, 5);
-		decorator.addVillage(new GOTStructurePentosCity(this, 1.0f));
-		ArrayList<SpawnListContainer> c0 = new ArrayList<>();
-		c0.add(GOTBiomeSpawnList.entry(GOTSpawnList.PENTOS_MILITARY, 10).setSpawnChance(GOTBiome.SPAWN));
-		npcSpawnList.newFactionList(10).add(c0);
 		decorator.addRandomStructure(new GOTStructureStoneRuin.RuinSandstone(1, 4), 400);
 	}
 

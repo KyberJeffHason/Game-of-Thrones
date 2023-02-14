@@ -9,7 +9,6 @@ import got.common.entity.essos.lorath.*;
 import got.common.entity.essos.lys.*;
 import got.common.entity.essos.myr.*;
 import got.common.entity.essos.norvos.*;
-import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -128,7 +127,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysBartender(world));
 		map.put(isMyr, new GOTEntityMyrBartender(world));
 		map.put(isNorvos, new GOTEntityNorvosBartender(world));
-		map.put(isPentos, new GOTEntityPentosBartender(world));
 		map.put(isQarth, new GOTEntityQarthBartender(world));
 		map.put(isQohor, new GOTEntityQohorBartender(world));
 		map.put(isTyrosh, new GOTEntityTyroshBartender(world));
@@ -148,7 +146,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysBlacksmith(world));
 		map.put(isMyr, new GOTEntityMyrBlacksmith(world));
 		map.put(isNorvos, new GOTEntityNorvosBlacksmith(world));
-		map.put(isPentos, new GOTEntityPentosBlacksmith(world));
 		map.put(isQarth, new GOTEntityQarthBlacksmith(world));
 		map.put(isQohor, new GOTEntityQohorBlacksmith(world));
 		map.put(isTyrosh, new GOTEntityTyroshBlacksmith(world));
@@ -169,7 +166,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, GOTChestContents.LYS);
 		map.put(isMyr, GOTChestContents.MYR);
 		map.put(isNorvos, GOTChestContents.NORVOS);
-		map.put(isPentos, GOTChestContents.PENTOS);
 		map.put(isQarth, GOTChestContents.QARTH);
 		map.put(isQohor, GOTChestContents.QOHOR);
 		map.put(isTyrosh, GOTChestContents.TYROSH);
@@ -190,7 +186,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysSlaver(world));
 		map.put(isMyr, new GOTEntityMyrSlaver(world));
 		map.put(isNorvos, new GOTEntityNorvosFarmer(world));
-		map.put(isPentos, new GOTEntityPentosFarmer(world));
 		map.put(isQarth, new GOTEntityQarthFarmer(world));
 		map.put(isQohor, new GOTEntityQohorFarmer(world));
 		map.put(isTyrosh, new GOTEntityTyroshSlaver(world));
@@ -210,7 +205,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysSlave(world));
 		map.put(isMyr, new GOTEntityMyrSlave(world));
 		map.put(isNorvos, new GOTEntityNorvosFarmhand(world));
-		map.put(isPentos, new GOTEntityPentosFarmhand(world));
 		map.put(isQarth, new GOTEntityQarthFarmhand(world));
 		map.put(isQohor, new GOTEntityQohorFarmhand(world));
 		map.put(isTyrosh, new GOTEntityTyroshSlave(world));
@@ -230,7 +224,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysGeneral(world));
 		map.put(isMyr, new GOTEntityMyrGeneral(world));
 		map.put(isNorvos, new GOTEntityNorvosGuardCaptain(world));
-		map.put(isPentos, new GOTEntityPentosGuardCaptain(world));
 		map.put(isQarth, new GOTEntityQarthGuardCaptain(world));
 		map.put(isQohor, new GOTEntityQohorGuardCaptain(world));
 		map.put(isTyrosh, new GOTEntityTyroshGeneral(world));
@@ -250,7 +243,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysMan(world));
 		map.put(isMyr, new GOTEntityMyrMan(world));
 		map.put(isNorvos, new GOTEntityNorvosMan(world));
-		map.put(isPentos, new GOTEntityPentosMan(world));
 		map.put(isQarth, new GOTEntityQarthMan(world));
 		map.put(isQohor, new GOTEntityQohorMan(world));
 		map.put(isTyrosh, new GOTEntityTyroshMan(world));
@@ -280,7 +272,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysSoldier(world));
 		map.put(isMyr, new GOTEntityMyrSoldier(world));
 		map.put(isNorvos, new GOTEntityNorvosLevyman(world));
-		map.put(isPentos, new GOTEntityPentosLevyman(world));
 		map.put(isQarth, new GOTEntityQarthLevyman(world));
 		map.put(isQohor, new GOTEntityQohorLevyman(world));
 		map.put(isTyrosh, new GOTEntityTyroshSoldier(world));
@@ -300,7 +291,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, new GOTEntityLysSoldierArcher(world));
 		map.put(isMyr, new GOTEntityMyrSoldierArcher(world));
 		map.put(isNorvos, new GOTEntityNorvosLevymanArcher(world));
-		map.put(isPentos, new GOTEntityPentosLevymanArcher(world));
 		map.put(isQarth, new GOTEntityQarthLevymanArcher(world));
 		map.put(isQohor, new GOTEntityQohorLevymanArcher(world));
 		map.put(isTyrosh, new GOTEntityTyroshSoldierArcher(world));
@@ -321,7 +311,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isLys, GOTRegistry.tableLys);
 		map.put(isMyr, GOTRegistry.tableMyr);
 		map.put(isNorvos, GOTRegistry.tableNorvos);
-		map.put(isPentos, GOTRegistry.tablePentos);
 		map.put(isQarth, GOTRegistry.tableQarth);
 		map.put(isQohor, GOTRegistry.tableQohor);
 		map.put(isTyrosh, GOTRegistry.tableTyrosh);
