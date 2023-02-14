@@ -6,7 +6,6 @@ import got.common.world.biome.GOTBiome;
 import got.common.world.biome.variant.*;
 import got.common.world.map.*;
 import got.common.world.spawning.GOTSpawnerAnimals;
-import got.common.world.structure.essos.ghiscar.GOTStructureGhiscarPyramidMapgen;
 import net.minecraft.block.*;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
@@ -43,8 +42,6 @@ public class GOTChunkProvider implements IChunkProvider {
 	public double[] blockHeightNoiseArray;
 	public GOTMapGenCaves caveGenerator = new GOTMapGenCaves();
 	public MapGenBase ravineGenerator = new GOTMapGenRavine();
-	public MapGenStructure ghiscarPyramid = new GOTStructureGhiscarPyramidMapgen();
-	public MapGenStructure sothoryosPyramid = new GOTStructureGhiscarPyramidMapgen();
 
 	public GOTChunkProvider(World world, long seed) {
 		worldObj = world;
@@ -322,8 +319,6 @@ public class GOTChunkProvider implements IChunkProvider {
 		long l1 = rand.nextLong() / 2L * 2L + 1L;
 		long l2 = rand.nextLong() / 2L * 2L + 1L;
 		rand.setSeed(i * l1 + j * l2 ^ worldObj.getSeed());
-		ghiscarPyramid.generateStructuresInChunk(worldObj, rand, i, j);
-		sothoryosPyramid.generateStructuresInChunk(worldObj, rand, i, j);
 		if (rand.nextInt(4) == 0) {
 			i1 = k + rand.nextInt(16) + 8;
 			j1 = rand.nextInt(128);
@@ -382,8 +377,6 @@ public class GOTChunkProvider implements IChunkProvider {
 		caveGenerator.chunkFlags = chunkFlags;
 		caveGenerator.func_151539_a(this, worldObj, i, k, blocks);
 		ravineGenerator.func_151539_a(this, worldObj, i, k, blocks);
-		ghiscarPyramid.func_151539_a(this, worldObj, i, k, blocks);
-		sothoryosPyramid.func_151539_a(this, worldObj, i, k, blocks);
 		Chunk chunk = new Chunk(worldObj, i, k);
 		ExtendedBlockStorage[] blockStorage = chunk.getBlockStorageArray();
 		for (int i1 = 0; i1 < 16; ++i1) {
@@ -420,8 +413,6 @@ public class GOTChunkProvider implements IChunkProvider {
 
 	@Override
 	public void recreateStructures(int i, int k) {
-		ghiscarPyramid.func_151539_a(this, worldObj, i, k, null);
-		sothoryosPyramid.func_151539_a(this, worldObj, i, k, null);
 	}
 
 	public void replaceBlocksForBiome(int i, int k, Block[] blocks, byte[] metadata, BiomeGenBase[] biomeArray, GOTBiomeVariant[] variantArray, ChunkFlags chunkFlags) {

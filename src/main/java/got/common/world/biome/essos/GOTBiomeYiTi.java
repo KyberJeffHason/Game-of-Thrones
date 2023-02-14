@@ -12,7 +12,6 @@ import got.common.world.map.GOTBezierType;
 import got.common.world.map.GOTWaypoint.Region;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.yiti.GOTStructureYiTiCity;
 import got.common.world.structure.other.*;
 
 public class GOTBiomeYiTi extends GOTBiomeEssos {
@@ -40,7 +39,6 @@ public class GOTBiomeYiTi extends GOTBiomeEssos {
 		decorator.addRandomStructure(new GOTStructureBurntHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureRottenHouse(false), 4000);
 		decorator.addRandomStructure(new GOTStructureStoneRuin.RuinYiTi(1, 4), 400);
-		decorator.addVillage(new GOTStructureYiTiCity(this, 1.0f));
 		invasionSpawns.addInvasion(GOTInvasions.JOGOS, GOTEventSpawner.EventChance.UNCOMMON);
 		ArrayList<SpawnListContainer> c0 = new ArrayList<>();
 		c0.add(GOTBiomeSpawnList.entry(GOTSpawnList.YITI_CONQUEST, 4).setSpawnChance(GOTBiome.SPAWN));

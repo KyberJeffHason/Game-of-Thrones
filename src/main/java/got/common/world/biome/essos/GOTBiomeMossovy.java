@@ -10,13 +10,11 @@ import got.common.world.biome.variant.GOTBiomeVariant;
 import got.common.world.map.GOTWaypoint.Region;
 import got.common.world.spawning.GOTBiomeSpawnList;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.mossovy.GOTStructureMossovyVillage;
 
 public class GOTBiomeMossovy extends GOTBiomeEssosCold {
 	public GOTBiomeMossovy(int i, boolean major) {
 		super(i, major);
 		addBiomeVariant(GOTBiomeVariant.FOREST_PINE, 0.2f);
-		decorator.addVillage(new GOTStructureMossovyVillage(this, 1.0f));
 		ArrayList<SpawnListContainer> c0 = new ArrayList<>();
 		c0.add(GOTBiomeSpawnList.entry(GOTSpawnList.MOSSOVY_MILITARY, 10).setSpawnChance(GOTBiome.SPAWN));
 		npcSpawnList.newFactionList(10).add(c0);

@@ -1,8 +1,0 @@
-package got.common.world.structure.essos.lorath;
-
-public class GOTStructureLorathTownTree extends GOTStructureEssosTownTree {
-	public GOTStructureLorathTownTree(boolean flag) {
-		super(flag);
-		isLorath = true;
-	}
-}

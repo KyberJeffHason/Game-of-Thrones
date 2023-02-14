@@ -8,13 +8,11 @@ import got.common.database.*;
 import got.common.world.biome.GOTBiome;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.gold.GOTStructureGoldenCamp;
 import got.common.world.structure.other.GOTStructureStoneRuin;
 
 public class GOTBiomeMercenary extends GOTBiomeEssos {
 	public GOTBiomeMercenary(int i, boolean major) {
 		super(i, major);
-		decorator.addVillage(new GOTStructureGoldenCamp(this, 1.0f));
 		invasionSpawns.addInvasion(GOTInvasions.MYR, GOTEventSpawner.EventChance.UNCOMMON);
 		invasionSpawns.addInvasion(GOTInvasions.TYROSH, GOTEventSpawner.EventChance.UNCOMMON);
 		invasionSpawns.addInvasion(GOTInvasions.LYS, GOTEventSpawner.EventChance.UNCOMMON);

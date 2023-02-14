@@ -6,7 +6,6 @@ import got.common.entity.other.GOTEntityNPCRespawner;
 import got.common.entity.westeros.hillmen.*;
 import got.common.world.biome.GOTBiome;
 import got.common.world.map.GOTBezierType;
-import got.common.world.structure.essos.mossovy.GOTStructureMossovyWell;
 import got.common.world.structure.other.*;
 import net.minecraft.world.World;
 
@@ -56,7 +55,6 @@ public class GOTStructureHillmanVillage extends GOTVillageGen {
 			int pathEnd = 68;
 			int pathSide = 7;
 			int centreSide = 19;
-			this.addStructure(new GOTStructureMossovyWell(false), 0, -2, 0, true);
 			this.addStructure(new GOTStructureHillmanHouse(false), 0, -centreSide, 2, true);
 			this.addStructure(new GOTStructureHillmanFort(false), -pathEnd, 0, 1, true);
 			this.addStructure(new GOTStructureHillmanTavern(false), pathEnd, 0, 3, true);

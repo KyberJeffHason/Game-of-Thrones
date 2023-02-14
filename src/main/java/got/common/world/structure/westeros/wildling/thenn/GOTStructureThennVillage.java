@@ -6,7 +6,6 @@ import got.common.entity.other.GOTEntityNPCRespawner;
 import got.common.entity.westeros.wildling.thenn.*;
 import got.common.world.biome.GOTBiome;
 import got.common.world.map.GOTBezierType;
-import got.common.world.structure.essos.mossovy.GOTStructureMossovyWell;
 import got.common.world.structure.other.*;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -58,7 +57,6 @@ public class GOTStructureThennVillage extends GOTVillageGen {
 			int pathEnd = 68;
 			int pathSide = 7;
 			int centreSide = 19;
-			this.addStructure(new GOTStructureMossovyWell(false), 0, -2, 0, true);
 			this.addStructure(new GOTStructureThennHouse(false).setIsBlacksmith(), 0, -centreSide, 2, true);
 			this.addStructure(new GOTStructureThennHouse(false), -pathEnd, 0, 1, true);
 			this.addStructure(new GOTStructureThennMagnarHouse(false), pathEnd, 0, 3, true);

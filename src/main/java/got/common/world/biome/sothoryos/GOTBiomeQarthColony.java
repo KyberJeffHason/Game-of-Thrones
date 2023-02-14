@@ -16,7 +16,6 @@ public class GOTBiomeQarthColony extends GOTBiomeSothoryosSavannah {
 		super(i, major);
 		setUnreliableChance(GOTEventSpawner.EventChance.COMMON);
 		decorator.clearVillages();
-		decorator.addVillage(new GOTStructureQarthCity(this, 1.0f).setIsCastle());
 		decorator.addRandomStructure(new GOTStructureRuinedHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureBurntHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureRottenHouse(false), 4000);

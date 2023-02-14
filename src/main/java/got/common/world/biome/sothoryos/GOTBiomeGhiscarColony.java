@@ -9,7 +9,6 @@ import got.common.world.biome.GOTBiome;
 import got.common.world.map.GOTBezierType;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.ghiscar.GOTStructureGhiscarCity;
 import got.common.world.structure.other.*;
 
 public class GOTBiomeGhiscarColony extends GOTBiomeSothoryosJungle {
@@ -18,7 +17,6 @@ public class GOTBiomeGhiscarColony extends GOTBiomeSothoryosJungle {
 		setUnreliableChance(GOTEventSpawner.EventChance.COMMON);
 		decorator.treesPerChunk = 1;
 		decorator.clearVillages();
-		decorator.addVillage(new GOTStructureGhiscarCity(this, 1.0f).setIsColony());
 		decorator.addRandomStructure(new GOTStructureRuinedHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureBurntHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureRottenHouse(false), 4000);

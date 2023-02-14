@@ -4,12 +4,10 @@ import got.client.sound.GOTBiomeMusic;
 import got.client.sound.GOTBiomeMusic.MusicRegion;
 import got.common.database.GOTAchievement;
 import got.common.world.map.GOTWaypoint.Region;
-import got.common.world.structure.essos.jogos.GOTStructureJogosVillage;
 
 public class GOTBiomeJogosNhai extends GOTBiomeEssosPlains {
 	public GOTBiomeJogosNhai(int i, boolean major) {
 		super(i, major);
-		decorator.addVillage(new GOTStructureJogosVillage(this, 1.0f));
 	}
 
 	@Override
