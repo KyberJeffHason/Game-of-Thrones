@@ -54,7 +54,6 @@ import net.minecraft.world.World;
 
 public class GOTFixer {
 	public static Map<GOTWaypoint, GOTStructureBase> structures = new EnumMap<>(GOTWaypoint.class);
-	private static int slot = 0;
 	public static GOTVillageGen[] f = new GOTVillageGen[68];
 
 	public static void addSpecialLocations(World world, Random random, int i, int k) {
@@ -68,6 +67,7 @@ public class GOTFixer {
 	}
 
 	public static void affixWaypointLocations(GOTBiome biome) {
+		int slot = 0;
 		f[slot] = new GOTStructureArrynCity(biome, 0.0f).setIsCastle();
 		f[slot].affix(GOTWaypoint.BloodyGate.info(0, -1, 0), GOTWaypoint.TheEyrie, GOTWaypoint.ColdwaterBurn, GOTWaypoint.GreyGlen, GOTWaypoint.HeartsHome, GOTWaypoint.IronOak, GOTWaypoint.LongbowHall, GOTWaypoint.Ninestars, GOTWaypoint.OldAnchor, GOTWaypoint.Pebble, GOTWaypoint.Redfort, GOTWaypoint.Runestone, GOTWaypoint.Snakewood, GOTWaypoint.Strongsong, GOTWaypoint.ThePaps, GOTWaypoint.Wickenden, GOTWaypoint.WitchIsle, GOTWaypoint.GateOfTheMoon.info(0, 1, 0));
 		slot++;
