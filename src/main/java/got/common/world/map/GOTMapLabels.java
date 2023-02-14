@@ -4,7 +4,7 @@ import got.common.world.biome.GOTBiome;
 import net.minecraft.util.StatCollector;
 
 public enum GOTMapLabels {
-	NARROW("narrow", 1050, 1600, 9.0f, 70, -6.0f, 2.0f), SUNSET("sunset", 100, 1500, 15.0f, -70, -6.0f, -1.0f), SHIVERING("shivering", 2250, 500, 40.0f, 0, -6.0f, -1.0f);
+	NARROW("narrow", 1050, 1600, 9.0f, 70, -6.0f, 2.0f), SUNSET("sunset", 100, 1500, 15.0f, -70, -6.0f, -1.0f);
 
 	public int posX;
 	public int posY;
