@@ -257,6 +257,7 @@ public class GOTGuiMap extends GOTGuiMenuBase {
 		if(!focusSet) {
 			posX = 634;
 			posY = 1168;
+			zoomPower = -2;
 			focusSet = true;
 		} else {
 			posX = prevPosX;
