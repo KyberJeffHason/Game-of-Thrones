@@ -11,7 +11,6 @@ import got.common.entity.essos.myr.*;
 import got.common.entity.essos.norvos.*;
 import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.tyrosh.*;
-import got.common.entity.essos.volantis.*;
 import got.common.entity.essos.yiti.*;
 import got.common.entity.other.GOTEntityNPC;
 import got.common.entity.westeros.arryn.*;
@@ -33,7 +32,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.*;
 
 public enum GOTInvasions {
-	DOTHRAKI(GOTFaction.DOTHRAKI), JOGOS(GOTFaction.JOGOS), VOLANTIS(GOTFaction.VOLANTIS), PENTOS(GOTFaction.PENTOS), TYROSH(GOTFaction.TYROSH), MYR(GOTFaction.MYR), LYS(GOTFaction.LYS), NORVOS(GOTFaction.NORVOS), IRONBORN(GOTFaction.IRONBORN), WESTERLANDS(GOTFaction.WESTERLANDS), RIVERLANDS(GOTFaction.RIVERLANDS), NORTH(GOTFaction.NORTH), THENN(GOTFaction.WILDLING, "THENN"), WILDLING(GOTFaction.WILDLING), GIANT(GOTFaction.WILDLING, "GIANT"), ARRYN(GOTFaction.ARRYN), DRAGONSTONE(GOTFaction.DRAGONSTONE), STORMLANDS(GOTFaction.STORMLANDS), REACH(GOTFaction.REACH), DORNE(GOTFaction.DORNE), YI_TI(GOTFaction.YI_TI), GHISCAR(GOTFaction.GHISCAR), HILL_TRIBES(GOTFaction.HILL_TRIBES), IBBEN(GOTFaction.IBBEN);
+	DOTHRAKI(GOTFaction.DOTHRAKI), JOGOS(GOTFaction.JOGOS), PENTOS(GOTFaction.PENTOS), TYROSH(GOTFaction.TYROSH), MYR(GOTFaction.MYR), LYS(GOTFaction.LYS), NORVOS(GOTFaction.NORVOS), IRONBORN(GOTFaction.IRONBORN), WESTERLANDS(GOTFaction.WESTERLANDS), RIVERLANDS(GOTFaction.RIVERLANDS), NORTH(GOTFaction.NORTH), THENN(GOTFaction.WILDLING, "THENN"), WILDLING(GOTFaction.WILDLING), GIANT(GOTFaction.WILDLING, "GIANT"), ARRYN(GOTFaction.ARRYN), DRAGONSTONE(GOTFaction.DRAGONSTONE), STORMLANDS(GOTFaction.STORMLANDS), REACH(GOTFaction.REACH), DORNE(GOTFaction.DORNE), YI_TI(GOTFaction.YI_TI), GHISCAR(GOTFaction.GHISCAR), HILL_TRIBES(GOTFaction.HILL_TRIBES), IBBEN(GOTFaction.IBBEN);
 
 	public GOTFaction invasionFaction;
 	public String subfaction;
@@ -113,7 +112,6 @@ public enum GOTInvasions {
 	public static void preInit() {
 		GOTInvasions.JOGOS.invasionIcon = GOTRegistry.nomadSword;
 		GOTInvasions.DOTHRAKI.invasionIcon = GOTRegistry.nomadSword;
-		GOTInvasions.VOLANTIS.invasionIcon = GOTRegistry.summerSword;
 		GOTInvasions.NORVOS.invasionIcon = GOTRegistry.summerSword;
 		GOTInvasions.PENTOS.invasionIcon = GOTRegistry.summerSword;
 		GOTInvasions.TYROSH.invasionIcon = GOTRegistry.summerSword;
@@ -164,10 +162,6 @@ public enum GOTInvasions {
 		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiFireThrower.class, 2));
 		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiBombardier.class, 1));
 		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiBannerBearer.class, 2));
-
-		GOTInvasions.VOLANTIS.invasionMobs.add(new InvasionSpawnEntry(GOTEntityVolantisSoldier.class, 10));
-		GOTInvasions.VOLANTIS.invasionMobs.add(new InvasionSpawnEntry(GOTEntityVolantisSoldierArcher.class, 5));
-		GOTInvasions.VOLANTIS.invasionMobs.add(new InvasionSpawnEntry(GOTEntityVolantisBannerBearer.class, 2));
 
 		GOTInvasions.GHISCAR.invasionMobs.add(new InvasionSpawnEntry(GOTEntityGhiscarCorsair.class, 10));
 		GOTInvasions.GHISCAR.invasionMobs.add(new InvasionSpawnEntry(GOTEntityGhiscarLevyman.class, 5));

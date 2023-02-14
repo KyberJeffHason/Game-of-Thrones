@@ -26,7 +26,7 @@ import net.minecraft.init.*;
 import net.minecraft.item.ItemStack;
 
 public enum GOTMiniQuestFactory {
-	CRIMINAL(true), IBBEN(true), SUMMER(true), SOTHORYOS(true), ASSHAI(true), WILDLING(true), MOSSOVY(true), HOWLAND, BALON, DAENERYS, VARYS, OBERYN, STANNIS, JONSNOW, RENLY, KITRA, BUGAI, TYRION, CERSEI, RAMSAY, SANDOR, MELISANDRA, DORAN, MARGAERY, ELLARYA, ARYA, OLENNA, SAMWELL, LYSA, CATELYN, DAVEN, ARIANNE, MELLARIO, NORTH(true), RIVERLANDS(true), DORNE(true), REACH(true), STORMLANDS(true), IRONBORN(true), WESTERLANDS(true), ARRYN(true), CROWNLANDS(true), DRAGONSTONE(true), GIFT(true), HILLMEN(true), BRAAVOS(true), LORATH(true), NORVOS(true), QOHOR(true), PENTOS(true), LYS(true), MYR(true), TYROSH(true), VOLANTIS(true), GHISCAR(true), QARTH(true), LHAZAR(true), YI_TI(true), DOTHRAKI(true), JOGOS(true);
+	CRIMINAL(true), IBBEN(true), SUMMER(true), SOTHORYOS(true), ASSHAI(true), WILDLING(true), MOSSOVY(true), HOWLAND, BALON, DAENERYS, VARYS, OBERYN, STANNIS, JONSNOW, RENLY, KITRA, BUGAI, TYRION, CERSEI, RAMSAY, SANDOR, MELISANDRA, DORAN, MARGAERY, ELLARYA, ARYA, OLENNA, SAMWELL, LYSA, CATELYN, DAVEN, ARIANNE, MELLARIO, NORTH(true), RIVERLANDS(true), DORNE(true), REACH(true), STORMLANDS(true), IRONBORN(true), WESTERLANDS(true), ARRYN(true), CROWNLANDS(true), DRAGONSTONE(true), GIFT(true), HILLMEN(true), BRAAVOS(true), LORATH(true), NORVOS(true), QOHOR(true), PENTOS(true), LYS(true), MYR(true), TYROSH(true), GHISCAR(true), QARTH(true), LHAZAR(true), YI_TI(true), DOTHRAKI(true), JOGOS(true);
 
 	public static Random rand = new Random();
 	public static Map<Class<? extends GOTMiniQuest>, Integer> questClassWeights = new HashMap<>();
@@ -161,6 +161,14 @@ public enum GOTMiniQuestFactory {
 				enemies.add(fac);
 			}
 		}
+
+		if(enemies.isEmpty()) {
+			if(owner.isBadRelation(GOTFaction.WHITE_WALKER)) {
+				enemies.add(GOTFaction.WHITE_WALKER);
+			} else {
+				enemies.add(GOTFaction.NIGHT_WATCH);
+			}
+		}
 		return enemies.get(rand.nextInt(enemies.size()));
 	}
 
@@ -229,7 +237,6 @@ public enum GOTMiniQuestFactory {
 		cities.put(MYR, GOTFaction.MYR);
 		cities.put(LYS, GOTFaction.LYS);
 		cities.put(TYROSH, GOTFaction.TYROSH);
-		cities.put(VOLANTIS, GOTFaction.VOLANTIS);
 		cities.put(GHISCAR, GOTFaction.GHISCAR);
 		cities.put(QARTH, GOTFaction.QARTH);
 

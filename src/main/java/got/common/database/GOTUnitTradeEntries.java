@@ -18,7 +18,6 @@ import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
-import got.common.entity.essos.volantis.*;
 import got.common.entity.essos.yiti.*;
 import got.common.entity.other.*;
 import got.common.entity.sothoryos.sothoryos.*;
@@ -72,7 +71,6 @@ public class GOTUnitTradeEntries {
 	public static List<GOTUnitTradeEntry> RIVERLANDS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> STORMLANDS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> TYROSH_L = new ArrayList<>();
-	public static List<GOTUnitTradeEntry> VOLANTIS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> WESTERLANDS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> LHAZAR_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> YITI_L = new ArrayList<>();
@@ -116,7 +114,6 @@ public class GOTUnitTradeEntries {
 	public static List<GOTUnitTradeEntry> LYS_SLAVER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> MYR_SLAVER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> TYROSH_SLAVER_L = new ArrayList<>();
-	public static List<GOTUnitTradeEntry> VOLANTIS_SLAVER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> PROSTITUTE_KEEPER_L = new ArrayList<>();
 
 	static {
@@ -228,13 +225,6 @@ public class GOTUnitTradeEntries {
 		TYROSH_L.add(new GOTUnitTradeEntry(GOTEntityTyroshSoldier.class, GOTEntityHorse.class, "Rider", SOLDIERH, SOLDIERH_F).setMountArmor(GOTRegistry.essosHorseArmor));
 		TYROSH_L.add(new GOTUnitTradeEntry(GOTEntityTyroshBannerBearer.class, SOLDIER, SOLDIER_F));
 		TYROSH_L.add(new GOTUnitTradeEntry(GOTEntityTyroshBannerBearer.class, GOTEntityHorse.class, "Rider", SOLDIERH, SOLDIERH_F).setMountArmor(GOTRegistry.essosHorseArmor));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisLevyman.class, LEVYMAN, LEVYMAN_F));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisLevymanArcher.class, LEVYMANA, LEVYMANA_F));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisSoldier.class, SOLDIER, SOLDIER_F));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisSoldierArcher.class, SOLDIERA, SOLDIERA_F));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisSoldier.class, GOTEntityHorse.class, "Rider", SOLDIERH, SOLDIERH_F).setMountArmor(GOTRegistry.essosHorseArmor));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisBannerBearer.class, SOLDIER, SOLDIER_F));
-		VOLANTIS_L.add(new GOTUnitTradeEntry(GOTEntityVolantisBannerBearer.class, GOTEntityHorse.class, "Rider", SOLDIERH, SOLDIERH_F).setMountArmor(GOTRegistry.essosHorseArmor));
 		WESTERLANDS_L.add(new GOTUnitTradeEntry(GOTEntityWesterlandsLevyman.class, LEVYMAN, LEVYMAN_F));
 		WESTERLANDS_L.add(new GOTUnitTradeEntry(GOTEntityWesterlandsLevymanArcher.class, LEVYMANA, LEVYMANA_F));
 		WESTERLANDS_L.add(new GOTUnitTradeEntry(GOTEntityWesterlandsSoldier.class, SOLDIER, SOLDIER_F));
@@ -338,7 +328,6 @@ public class GOTUnitTradeEntries {
 		LYS_SLAVER_L.add(new GOTUnitTradeEntry(GOTEntityLysSlave.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		MYR_SLAVER_L.add(new GOTUnitTradeEntry(GOTEntityMyrSlave.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		TYROSH_SLAVER_L.add(new GOTUnitTradeEntry(GOTEntityTyroshSlave.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
-		VOLANTIS_SLAVER_L.add(new GOTUnitTradeEntry(GOTEntityVolantisSlave.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		PROSTITUTE_KEEPER_L.add(new GOTUnitTradeEntry(GOTEntityProstitute.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.PROSTITUTE));
 	}
 
@@ -359,7 +348,6 @@ public class GOTUnitTradeEntries {
 	public static GOTUnitTradeEntries RIVERLANDS = new GOTUnitTradeEntries(50.0f, RIVERLANDS_L);
 	public static GOTUnitTradeEntries STORMLANDS = new GOTUnitTradeEntries(50.0f, STORMLANDS_L);
 	public static GOTUnitTradeEntries TYROSH = new GOTUnitTradeEntries(50.0f, TYROSH_L);
-	public static GOTUnitTradeEntries VOLANTIS = new GOTUnitTradeEntries(50.0f, VOLANTIS_L);
 	public static GOTUnitTradeEntries WESTERLANDS = new GOTUnitTradeEntries(50.0f, WESTERLANDS_L);
 	public static GOTUnitTradeEntries LHAZAR = new GOTUnitTradeEntries(50.0f, LHAZAR_L);
 	public static GOTUnitTradeEntries YITI = new GOTUnitTradeEntries(50.0f, YITI_L);
@@ -403,7 +391,6 @@ public class GOTUnitTradeEntries {
 	public static GOTUnitTradeEntries LYS_SLAVER = new GOTUnitTradeEntries(0.0f, LYS_SLAVER_L);
 	public static GOTUnitTradeEntries MYR_SLAVER = new GOTUnitTradeEntries(0.0f, MYR_SLAVER_L);
 	public static GOTUnitTradeEntries TYROSH_SLAVER = new GOTUnitTradeEntries(0.0f, TYROSH_SLAVER_L);
-	public static GOTUnitTradeEntries VOLANTIS_SLAVER = new GOTUnitTradeEntries(0.0f, VOLANTIS_SLAVER_L);
 	public static GOTUnitTradeEntries PROSTITUTE_KEEPER = new GOTUnitTradeEntries(0.0f, PROSTITUTE_KEEPER_L);
 
 	public GOTUnitTradeEntry[] tradeEntries;

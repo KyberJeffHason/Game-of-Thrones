@@ -13,7 +13,6 @@ import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
-import got.common.entity.essos.volantis.*;
 import got.common.entity.other.GOTEntityNPC;
 import got.common.item.other.GOTItemBanner;
 import got.common.item.other.GOTItemBanner.BannerType;
@@ -133,7 +132,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthBartender(world));
 		map.put(isQohor, new GOTEntityQohorBartender(world));
 		map.put(isTyrosh, new GOTEntityTyroshBartender(world));
-		map.put(isVolantis, new GOTEntityVolantisBartender(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -154,7 +152,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthBlacksmith(world));
 		map.put(isQohor, new GOTEntityQohorBlacksmith(world));
 		map.put(isTyrosh, new GOTEntityTyroshBlacksmith(world));
-		map.put(isVolantis, new GOTEntityVolantisBlacksmith(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -197,7 +194,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthFarmer(world));
 		map.put(isQohor, new GOTEntityQohorFarmer(world));
 		map.put(isTyrosh, new GOTEntityTyroshSlaver(world));
-		map.put(isVolantis, new GOTEntityVolantisSlaver(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -218,7 +214,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthFarmhand(world));
 		map.put(isQohor, new GOTEntityQohorFarmhand(world));
 		map.put(isTyrosh, new GOTEntityTyroshSlave(world));
-		map.put(isVolantis, new GOTEntityVolantisSlave(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -239,7 +234,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthGuardCaptain(world));
 		map.put(isQohor, new GOTEntityQohorGuardCaptain(world));
 		map.put(isTyrosh, new GOTEntityTyroshGeneral(world));
-		map.put(isVolantis, new GOTEntityVolantisGeneral(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -260,7 +254,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthMan(world));
 		map.put(isQohor, new GOTEntityQohorMan(world));
 		map.put(isTyrosh, new GOTEntityTyroshMan(world));
-		map.put(isVolantis, new GOTEntityVolantisMan(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -291,7 +284,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthLevyman(world));
 		map.put(isQohor, new GOTEntityQohorLevyman(world));
 		map.put(isTyrosh, new GOTEntityTyroshSoldier(world));
-		map.put(isVolantis, new GOTEntityVolantisSoldier(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {
@@ -312,7 +304,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 		map.put(isQarth, new GOTEntityQarthLevymanArcher(world));
 		map.put(isQohor, new GOTEntityQohorLevymanArcher(world));
 		map.put(isTyrosh, new GOTEntityTyroshSoldierArcher(world));
-		map.put(isVolantis, new GOTEntityVolantisSoldierArcher(world));
 
 		for (Entry<Boolean, GOTEntityNPC> npc : map.entrySet()) {
 			if (Boolean.TRUE.equals(npc.getKey())) {

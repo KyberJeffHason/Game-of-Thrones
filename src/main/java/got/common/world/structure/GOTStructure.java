@@ -20,7 +20,6 @@ import got.common.world.structure.essos.pentos.*;
 import got.common.world.structure.essos.qarth.*;
 import got.common.world.structure.essos.qohor.*;
 import got.common.world.structure.essos.tyrosh.*;
-import got.common.world.structure.essos.volantis.*;
 import got.common.world.structure.essos.yiti.*;
 import got.common.world.structure.other.*;
 import got.common.world.structure.other.GOTStructureRegistry.IVillageProperties;
@@ -207,16 +206,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, GOTStructureDorneFortress.class, GOTFaction.DORNE);
 		GOTStructureRegistry.register(id++, GOTStructureDorneTavern.class, GOTFaction.DORNE);
 		GOTStructureRegistry.register(id++, GOTStructureDorneBath.class, GOTFaction.DORNE);
-
-		GOTStructureRegistry.register(id++, GOTStructureVolantisBarracks.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisBazaar.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisFortress.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisHouse.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisMansion.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisSmithy.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisStables.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisTavern.class, GOTFaction.VOLANTIS);
-		GOTStructureRegistry.register(id++, GOTStructureVolantisTower.class, GOTFaction.VOLANTIS);
 
 		GOTStructureRegistry.register(id++, GOTStructurePentosBarracks.class, GOTFaction.PENTOS);
 		GOTStructureRegistry.register(id++, GOTStructurePentosBazaar.class, GOTFaction.PENTOS);
@@ -434,10 +423,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityLittle", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.VILLAGE);
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityBig", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.TOWN);
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityMedium", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.FORT);
-
-		GOTStructureRegistry.register(id++, new GOTStructureVolantisCity(GOTBiome.volantis, 1.0f), "VolantisCityLittle", GOTFaction.VOLANTIS, (IVillageProperties<GOTStructureVolantisCity.Instance>) instance -> instance.villageType = GOTStructureVolantisCity.VillageType.VILLAGE);
-		GOTStructureRegistry.register(id++, new GOTStructureVolantisCity(GOTBiome.volantis, 1.0f), "VolantisCityMedium", GOTFaction.VOLANTIS, (IVillageProperties<GOTStructureVolantisCity.Instance>) instance -> instance.villageType = GOTStructureVolantisCity.VillageType.TOWN);
-		GOTStructureRegistry.register(id++, new GOTStructureVolantisCity(GOTBiome.volantis, 1.0f), "VolantisCityBig", GOTFaction.VOLANTIS, (IVillageProperties<GOTStructureVolantisCity.Instance>) instance -> instance.villageType = GOTStructureVolantisCity.VillageType.FORT);
 
 		GOTStructureRegistry.register(id++, new GOTStructurePentosCity(GOTBiome.pentos, 1.0f), "PentosCityLittle", GOTFaction.PENTOS, (IVillageProperties<GOTStructurePentosCity.Instance>) instance -> instance.villageType = GOTStructurePentosCity.VillageType.VILLAGE);
 		GOTStructureRegistry.register(id++, new GOTStructurePentosCity(GOTBiome.pentos, 1.0f), "PentosCityMedium", GOTFaction.PENTOS, (IVillageProperties<GOTStructurePentosCity.Instance>) instance -> instance.villageType = GOTStructurePentosCity.VillageType.TOWN);

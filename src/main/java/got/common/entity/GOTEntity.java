@@ -24,7 +24,6 @@ import got.common.entity.essos.pentos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
-import got.common.entity.essos.volantis.*;
 import got.common.entity.essos.yiti.*;
 import got.common.entity.other.*;
 import got.common.entity.sothoryos.sothoryos.*;
@@ -377,27 +376,6 @@ public class GOTEntity {
 		GOTEntityRegistry.register(GOTEntityDorneMiner.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneLumberman.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneMason.class, id++, GOTFaction.DORNE);
-
-		GOTEntityRegistry.register(GOTEntityVolantisMan.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisLevyman.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisLevymanArcher.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisSoldier.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisSoldierArcher.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisBannerBearer.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisGeneral.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisSlave.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisSlaver.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisBaker.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisBartender.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisBlacksmith.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisBrewer.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisButcher.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisFishmonger.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisFlorist.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisGoldsmith.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisLumberman.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisMason.class, id++, GOTFaction.VOLANTIS);
-		GOTEntityRegistry.register(GOTEntityVolantisMiner.class, id++, GOTFaction.VOLANTIS);
 
 		GOTEntityRegistry.register(GOTEntityPentosMan.class, id++, GOTFaction.PENTOS);
 		GOTEntityRegistry.register(GOTEntityPentosLevyman.class, id++, GOTFaction.PENTOS);
