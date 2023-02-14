@@ -13,7 +13,6 @@ import got.common.entity.essos.lhazar.*;
 import got.common.entity.essos.lorath.*;
 import got.common.entity.essos.lys.*;
 import got.common.entity.essos.myr.*;
-import got.common.entity.essos.norvos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -62,7 +61,6 @@ public class GOTUnitTradeEntries {
 	public static List<GOTUnitTradeEntry> LYS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> MYR_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> NORTH_L = new ArrayList<>();
-	public static List<GOTUnitTradeEntry> NORVOS_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> QARTH_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> QOHOR_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> REACH_L = new ArrayList<>();
@@ -103,7 +101,6 @@ public class GOTUnitTradeEntries {
 	public static List<GOTUnitTradeEntry> SUMMER_FARMER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> WESTERLANDS_FARMER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> LORATH_FARMER_L = new ArrayList<>();
-	public static List<GOTUnitTradeEntry> NORVOS_FARMER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> QOHOR_FARMER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> QARTH_FARMER_L = new ArrayList<>();
 	public static List<GOTUnitTradeEntry> YITI_FARMER_L = new ArrayList<>();
@@ -176,10 +173,6 @@ public class GOTUnitTradeEntries {
 		NORTH_L.add(new GOTUnitTradeEntry(GOTEntityNorthBannerBearer.class, SOLDIER, SOLDIER_F));
 		NORTH_L.add(new GOTUnitTradeEntry(GOTEntityNorthBannerBearer.class, GOTEntityHorse.class, "Rider", SOLDIERH, SOLDIERH_F).setMountArmor(GOTRegistry.westerosHorseArmor));
 		NORTH_L.add(new GOTUnitTradeEntry(GOTEntityNorthGuard.class, SOLDIER + 5, SOLDIER_F + 5.0f));
-		NORVOS_L.add(new GOTUnitTradeEntry(GOTEntityNorvosLevyman.class, LEVYMAN, LEVYMAN_F));
-		NORVOS_L.add(new GOTUnitTradeEntry(GOTEntityNorvosLevymanArcher.class, LEVYMANA, LEVYMANA_F));
-		NORVOS_L.add(new GOTUnitTradeEntry(GOTEntityNorvosGuard.class, SOLDIER, SOLDIER_F));
-		NORVOS_L.add(new GOTUnitTradeEntry(GOTEntityNorvosBannerBearer.class, SOLDIER, SOLDIER_F));
 		QARTH_L.add(new GOTUnitTradeEntry(GOTEntityQarthLevyman.class, LEVYMAN, LEVYMAN_F));
 		QARTH_L.add(new GOTUnitTradeEntry(GOTEntityQarthLevymanArcher.class, LEVYMANA, LEVYMANA_F));
 		QARTH_L.add(new GOTUnitTradeEntry(GOTEntityQarthGuard.class, SOLDIER, SOLDIER_F));
@@ -312,7 +305,6 @@ public class GOTUnitTradeEntries {
 		SUMMER_FARMER_L.add(new GOTUnitTradeEntry(GOTEntitySummerFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		WESTERLANDS_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityWesterlandsFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		LORATH_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityLorathFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
-		NORVOS_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityNorvosFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		QOHOR_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityQohorFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		QARTH_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityQarthFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
 		YITI_FARMER_L.add(new GOTUnitTradeEntry(GOTEntityYiTiFarmhand.class, SLAVE, SLAVE_F).setTask(GOTHiredNPCInfo.Task.FARMER));
@@ -332,7 +324,6 @@ public class GOTUnitTradeEntries {
 	public static GOTUnitTradeEntries LYS = new GOTUnitTradeEntries(50.0f, LYS_L);
 	public static GOTUnitTradeEntries MYR = new GOTUnitTradeEntries(50.0f, MYR_L);
 	public static GOTUnitTradeEntries NORTH = new GOTUnitTradeEntries(50.0f, NORTH_L);
-	public static GOTUnitTradeEntries NORVOS = new GOTUnitTradeEntries(50.0f, NORVOS_L);
 	public static GOTUnitTradeEntries QARTH = new GOTUnitTradeEntries(50.0f, QARTH_L);
 	public static GOTUnitTradeEntries QOHOR = new GOTUnitTradeEntries(50.0f, QOHOR_L);
 	public static GOTUnitTradeEntries REACH = new GOTUnitTradeEntries(50.0f, REACH_L);
@@ -373,7 +364,6 @@ public class GOTUnitTradeEntries {
 	public static GOTUnitTradeEntries SUMMER_FARMER = new GOTUnitTradeEntries(0.0f, SUMMER_FARMER_L);
 	public static GOTUnitTradeEntries WESTERLANDS_FARMER = new GOTUnitTradeEntries(0.0f, WESTERLANDS_FARMER_L);
 	public static GOTUnitTradeEntries LORATH_FARMER = new GOTUnitTradeEntries(0.0f, LORATH_FARMER_L);
-	public static GOTUnitTradeEntries NORVOS_FARMER = new GOTUnitTradeEntries(0.0f, NORVOS_FARMER_L);
 	public static GOTUnitTradeEntries QOHOR_FARMER = new GOTUnitTradeEntries(0.0f, QOHOR_FARMER_L);
 	public static GOTUnitTradeEntries QARTH_FARMER = new GOTUnitTradeEntries(0.0f, QARTH_FARMER_L);
 	public static GOTUnitTradeEntries YITI_FARMER = new GOTUnitTradeEntries(0.0f, YITI_FARMER_L);

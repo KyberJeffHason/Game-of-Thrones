@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.pentos;
 
-import got.common.world.structure.essos.common.GOTStructureEssosTownWall;
-
 public class GOTStructurePentosTownWall extends GOTStructureEssosTownWall {
 	public GOTStructurePentosTownWall(boolean flag) {
 		super(flag);

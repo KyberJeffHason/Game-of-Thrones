@@ -272,8 +272,6 @@ public enum GOTWaypoint implements GOTAbstractWaypoint {
 	NewIbbish(Region.DOTHRAKI, GOTFaction.IBBEN, 2692, 1181),
 	Nightsong(Region.STORMLANDS, GOTFaction.STORMLANDS, 588, 1875),
 	Ninestars(Region.ARRYN, GOTFaction.ARRYN, 921, 1358),
-	Norvos(Region.FREE, GOTFaction.NORVOS, 1423, 1492),
-	NySar(Region.FREE, GOTFaction.NORVOS, 1433, 1650),
 	OldAnchor(Region.ARRYN, GOTFaction.ARRYN, 949, 1349),
 	OldCastle(Region.NORTH, GOTFaction.NORTH, 757, 1138),
 	OldGhis(Region.GHISCAR, GOTFaction.GHISCAR, 2194, 2296),

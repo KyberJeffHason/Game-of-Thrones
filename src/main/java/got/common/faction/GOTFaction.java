@@ -18,7 +18,7 @@ import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public enum GOTFaction {
-	WHITE_WALKER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(550, 550, 500)), HIGH_POWER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(0, 0, 0)), WILDLING(0x749987, DimensionRegion.WESTEROS, new GOTMapRegion(615, 520, 200)), NIGHT_WATCH(0x2A2A2A, DimensionRegion.WESTEROS, new GOTMapRegion(750, 670, 150)), NORTH(0xD4CFB7, DimensionRegion.WESTEROS, new GOTMapRegion(670, 930, 400)), IRONBORN(0x4b483a, DimensionRegion.WESTEROS, new GOTMapRegion(349, 1323, 129)), WESTERLANDS(0x7c0a02, DimensionRegion.WESTEROS, new GOTMapRegion(485, 1540, 200)), RIVERLANDS(0x146f69, DimensionRegion.WESTEROS, new GOTMapRegion(675, 1437, 215)), HILL_TRIBES(0x573C2F, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), ARRYN(0x2D3257, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), DRAGONSTONE(0x6A6A6A, DimensionRegion.WESTEROS, new GOTMapRegion(923, 1549, 40)), CROWNLANDS(0xDBAB25, DimensionRegion.WESTEROS, new GOTMapRegion(876, 1566, 168)), STORMLANDS(0x014634, DimensionRegion.WESTEROS, new GOTMapRegion(820, 1865, 218)), REACH(0x617646, DimensionRegion.WESTEROS, new GOTMapRegion(500, 1820, 293)), DORNE(0xF57820, DimensionRegion.WESTEROS, new GOTMapRegion(717, 2011, 300)), NORVOS(0x2D4D2F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1437, 1468, 201)), LORATH(0xE5E5E5, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1379, 1354, 119)), MYR(0x3F3F3F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1325, 1797, 223)), LYS(0x3D3023, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1204, 2053, 65)), QOHOR(0x053246, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1590, 1594, 214)), TYROSH(0x2E2E2E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1110, 1876, 52)), GHISCAR(0xAB7731, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2115, 2180, 347)), QARTH(0x701010, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2750, 2277, 221)), LHAZAR(0x9E4B1E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2510, 1910, 175)), DOTHRAKI(0x77551F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2270, 1670, 600)), IBBEN(0x4E3A26, DimensionRegion.EAST_ESSOS, new GOTMapRegion(2761, 1052, 252)), JOGOS(0x985916, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3369, 1651, 460)), MOSSOVY(0x4B5C42, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4056, 1480, 400)), YI_TI(0xC29033, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3350, 2200, 350)), ASSHAI(0x3C353F, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4098, 2331, 644)), SOTHORYOS(0x5E6A18, DimensionRegion.OTHER, new GOTMapRegion(2375, 3540, 1084)), SUMMER_ISLANDS(0x911A17, DimensionRegion.OTHER, new GOTMapRegion(1228, 2716, 310)), ULTHOS(0x343A2C, DimensionRegion.OTHER, new GOTMapRegion(4100, 3517, 1109)), HOSTILE(true, -1), UNALIGNED(false, 0);
+	WHITE_WALKER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(550, 550, 500)), HIGH_POWER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(0, 0, 0)), WILDLING(0x749987, DimensionRegion.WESTEROS, new GOTMapRegion(615, 520, 200)), NIGHT_WATCH(0x2A2A2A, DimensionRegion.WESTEROS, new GOTMapRegion(750, 670, 150)), NORTH(0xD4CFB7, DimensionRegion.WESTEROS, new GOTMapRegion(670, 930, 400)), IRONBORN(0x4b483a, DimensionRegion.WESTEROS, new GOTMapRegion(349, 1323, 129)), WESTERLANDS(0x7c0a02, DimensionRegion.WESTEROS, new GOTMapRegion(485, 1540, 200)), RIVERLANDS(0x146f69, DimensionRegion.WESTEROS, new GOTMapRegion(675, 1437, 215)), HILL_TRIBES(0x573C2F, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), ARRYN(0x2D3257, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), DRAGONSTONE(0x6A6A6A, DimensionRegion.WESTEROS, new GOTMapRegion(923, 1549, 40)), CROWNLANDS(0xDBAB25, DimensionRegion.WESTEROS, new GOTMapRegion(876, 1566, 168)), STORMLANDS(0x014634, DimensionRegion.WESTEROS, new GOTMapRegion(820, 1865, 218)), REACH(0x617646, DimensionRegion.WESTEROS, new GOTMapRegion(500, 1820, 293)), DORNE(0xF57820, DimensionRegion.WESTEROS, new GOTMapRegion(717, 2011, 300)), LORATH(0xE5E5E5, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1379, 1354, 119)), MYR(0x3F3F3F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1325, 1797, 223)), LYS(0x3D3023, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1204, 2053, 65)), QOHOR(0x053246, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1590, 1594, 214)), TYROSH(0x2E2E2E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1110, 1876, 52)), GHISCAR(0xAB7731, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2115, 2180, 347)), QARTH(0x701010, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2750, 2277, 221)), LHAZAR(0x9E4B1E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2510, 1910, 175)), DOTHRAKI(0x77551F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2270, 1670, 600)), IBBEN(0x4E3A26, DimensionRegion.EAST_ESSOS, new GOTMapRegion(2761, 1052, 252)), JOGOS(0x985916, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3369, 1651, 460)), MOSSOVY(0x4B5C42, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4056, 1480, 400)), YI_TI(0xC29033, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3350, 2200, 350)), ASSHAI(0x3C353F, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4098, 2331, 644)), SOTHORYOS(0x5E6A18, DimensionRegion.OTHER, new GOTMapRegion(2375, 3540, 1084)), SUMMER_ISLANDS(0x911A17, DimensionRegion.OTHER, new GOTMapRegion(1228, 2716, 310)), ULTHOS(0x343A2C, DimensionRegion.OTHER, new GOTMapRegion(4100, 3517, 1109)), HOSTILE(true, -1), UNALIGNED(false, 0);
 
 	public static Random factionRand = new Random();
 	public static int CONTROL_ZONE_EXTRA_RANGE = 50;
@@ -551,7 +551,6 @@ public enum GOTFaction {
 		GOTFactionRelations.setRelations(IBBEN, JOGOS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(IBBEN, LORATH, Relation.ENEMY);
 		GOTFactionRelations.setRelations(IBBEN, MOSSOVY, Relation.FRIEND);
-		GOTFactionRelations.setRelations(IBBEN, NORVOS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(IRONBORN, NORTH, Relation.ENEMY);
 		GOTFactionRelations.setRelations(IRONBORN, RIVERLANDS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(IRONBORN, WESTERLANDS, Relation.FRIEND);
@@ -560,7 +559,6 @@ public enum GOTFaction {
 		GOTFactionRelations.setRelations(JOGOS, YI_TI, Relation.ENEMY);
 		GOTFactionRelations.setRelations(LHAZAR, DOTHRAKI, Relation.ENEMY);
 		GOTFactionRelations.setRelations(LHAZAR, GHISCAR, Relation.FRIEND);
-		GOTFactionRelations.setRelations(LORATH, NORVOS, Relation.FRIEND);
 		GOTFactionRelations.setRelations(LORATH, QOHOR, Relation.FRIEND);
 		GOTFactionRelations.setRelations(LYS, MYR, Relation.ENEMY);
 		GOTFactionRelations.setRelations(LYS, TYROSH, Relation.ENEMY);
@@ -572,7 +570,6 @@ public enum GOTFaction {
 		GOTFactionRelations.setRelations(NORTH, RIVERLANDS, Relation.FRIEND);
 		GOTFactionRelations.setRelations(NORTH, WESTERLANDS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(NORTH, WILDLING, Relation.ENEMY);
-		GOTFactionRelations.setRelations(NORVOS, QOHOR, Relation.FRIEND);
 		GOTFactionRelations.setRelations(QARTH, SOTHORYOS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(QARTH, YI_TI, Relation.FRIEND);
 		GOTFactionRelations.setRelations(QOHOR, DOTHRAKI, Relation.ENEMY);
@@ -641,7 +638,6 @@ public enum GOTFaction {
 		MYR.addControlZone(new GOTControlZone(1297, 1708, 543));
 		NIGHT_WATCH.addControlZone(new GOTControlZone(757, 573, 267));
 		NORTH.addControlZone(new GOTControlZone(749, 1111, 605));
-		NORVOS.addControlZone(new GOTControlZone(1297, 1708, 543));
 		QARTH.addControlZone(new GOTControlZone(2144, 2375, 530));
 		QARTH.addControlZone(new GOTControlZone(GOTWaypoint.Batargas, 200));
 		QARTH.addControlZone(new GOTControlZone(GOTWaypoint.Karimagar, 200));

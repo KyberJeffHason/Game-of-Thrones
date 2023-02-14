@@ -26,7 +26,6 @@ import got.common.entity.essos.lorath.GOTEntityLorathMan;
 import got.common.entity.essos.lys.*;
 import got.common.entity.essos.mossovy.*;
 import got.common.entity.essos.myr.*;
-import got.common.entity.essos.norvos.GOTEntityNorvosMan;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -96,7 +95,6 @@ public class GOTRender {
 		renders.put(GOTEntityMyrSlave.class, new GOTRenderFactionNPC("essos/slave"));
 		renders.put(GOTEntityNorthMan.class, new GOTRenderFactionNPC("westeros/north"));
 		renders.put(GOTEntityNorthHillmanWarrior.class, new GOTRenderFactionNPC("westeros/wild"));
-		renders.put(GOTEntityNorvosMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityQarthMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityQohorMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityReachMan.class, new GOTRenderFactionNPC("westeros/westeros"));
@@ -195,7 +193,6 @@ public class GOTRender {
 		renders.put(GOTEntityMaronVolmark.class, new GOTRenderLegendaryNPC("maron_volmark"));
 		renders.put(GOTEntityMathisRowan.class, new GOTRenderLegendaryNPC("mathis_rowan"));
 		renders.put(GOTEntityMelisandra.class, new GOTRenderLegendaryNPC("melisandra"));
-		renders.put(GOTEntityMellario.class, new GOTRenderLegendaryNPC("mellario"));
 		renders.put(GOTEntityMerynTrant.class, new GOTRenderLegendaryNPC("meryn_trant"));
 		renders.put(GOTEntityMissandei.class, new GOTRenderLegendaryNPC("missandei"));
 		renders.put(GOTEntityMonfordVelaryon.class, new GOTRenderLegendaryNPC("monford_velaryon"));

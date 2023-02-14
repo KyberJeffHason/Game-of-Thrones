@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.ghiscar;
 
-import got.common.world.structure.essos.common.GOTStructureEssosFortWall;
-
 public class GOTStructureGhiscarFortWall extends GOTStructureEssosFortWall {
 	public GOTStructureGhiscarFortWall(boolean flag) {
 		super(flag);

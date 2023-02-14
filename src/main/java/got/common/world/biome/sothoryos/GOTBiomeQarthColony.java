@@ -9,7 +9,6 @@ import got.common.world.biome.GOTBiome;
 import got.common.world.map.GOTBezierType;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.qarth.GOTStructureQarthCity;
 import got.common.world.structure.other.*;
 
 public class GOTBiomeQarthColony extends GOTBiomeSothoryosSavannah {

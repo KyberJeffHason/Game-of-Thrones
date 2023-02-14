@@ -207,16 +207,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, GOTStructureDorneTavern.class, GOTFaction.DORNE);
 		GOTStructureRegistry.register(id++, GOTStructureDorneBath.class, GOTFaction.DORNE);
 
-		GOTStructureRegistry.register(id++, GOTStructureNorvosBarracks.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosBazaar.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosFortress.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosHouse.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosMansion.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosSmithy.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosStables.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosTavern.class, GOTFaction.NORVOS);
-		GOTStructureRegistry.register(id++, GOTStructureNorvosTower.class, GOTFaction.NORVOS);
-
 		GOTStructureRegistry.register(id++, GOTStructureLorathBarracks.class, GOTFaction.LORATH);
 		GOTStructureRegistry.register(id++, GOTStructureLorathBazaar.class, GOTFaction.LORATH);
 		GOTStructureRegistry.register(id++, GOTStructureLorathFortress.class, GOTFaction.LORATH);
@@ -279,7 +269,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, GOTStructureGhiscarStables.class, GOTFaction.GHISCAR);
 		GOTStructureRegistry.register(id++, GOTStructureGhiscarTavern.class, GOTFaction.GHISCAR);
 		GOTStructureRegistry.register(id++, GOTStructureGhiscarTower.class, GOTFaction.GHISCAR);
-		GOTStructureRegistry.register(id++, GOTStructureGhiscarFightingPit.class, GOTFaction.GHISCAR);
 
 		GOTStructureRegistry.register(id++, GOTStructureQarthBarracks.class, GOTFaction.QARTH);
 		GOTStructureRegistry.register(id++, GOTStructureQarthBazaar.class, GOTFaction.QARTH);
@@ -413,10 +402,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityLittle", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.VILLAGE);
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityBig", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.TOWN);
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityMedium", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.FORT);
-
-		GOTStructureRegistry.register(id++, new GOTStructureNorvosCity(GOTBiome.norvos, 1.0f), "NorvosCityLittle", GOTFaction.NORVOS, (IVillageProperties<GOTStructureNorvosCity.Instance>) instance -> instance.villageType = GOTStructureNorvosCity.VillageType.VILLAGE);
-		GOTStructureRegistry.register(id++, new GOTStructureNorvosCity(GOTBiome.norvos, 1.0f), "NorvosCityMedium", GOTFaction.NORVOS, (IVillageProperties<GOTStructureNorvosCity.Instance>) instance -> instance.villageType = GOTStructureNorvosCity.VillageType.TOWN);
-		GOTStructureRegistry.register(id++, new GOTStructureNorvosCity(GOTBiome.norvos, 1.0f), "NorvosCityBig", GOTFaction.NORVOS, (IVillageProperties<GOTStructureNorvosCity.Instance>) instance -> instance.villageType = GOTStructureNorvosCity.VillageType.FORT);
 
 		GOTStructureRegistry.register(id++, new GOTStructureLorathCity(GOTBiome.lorath, 1.0f), "LorathCityLittle", GOTFaction.LORATH, (IVillageProperties<GOTStructureLorathCity.Instance>) instance -> instance.villageType = GOTStructureLorathCity.VillageType.VILLAGE);
 		GOTStructureRegistry.register(id++, new GOTStructureLorathCity(GOTBiome.lorath, 1.0f), "LorathCityMedium", GOTFaction.LORATH, (IVillageProperties<GOTStructureLorathCity.Instance>) instance -> instance.villageType = GOTStructureLorathCity.VillageType.TOWN);

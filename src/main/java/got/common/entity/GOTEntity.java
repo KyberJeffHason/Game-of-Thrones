@@ -19,7 +19,6 @@ import got.common.entity.essos.lorath.*;
 import got.common.entity.essos.lys.*;
 import got.common.entity.essos.mossovy.*;
 import got.common.entity.essos.myr.*;
-import got.common.entity.essos.norvos.*;
 import got.common.entity.essos.qarth.*;
 import got.common.entity.essos.qohor.*;
 import got.common.entity.essos.tyrosh.*;
@@ -375,26 +374,6 @@ public class GOTEntity {
 		GOTEntityRegistry.register(GOTEntityDorneMiner.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneLumberman.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.register(GOTEntityDorneMason.class, id++, GOTFaction.DORNE);
-
-		GOTEntityRegistry.register(GOTEntityNorvosMan.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosLevyman.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosLevymanArcher.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosGuard.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosBannerBearer.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosGuardCaptain.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosBaker.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosBartender.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosBlacksmith.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosBrewer.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosButcher.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosFarmer.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosFarmhand.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosFishmonger.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosFlorist.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosGoldsmith.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosLumberman.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosMason.class, id++, GOTFaction.NORVOS);
-		GOTEntityRegistry.register(GOTEntityNorvosMiner.class, id++, GOTFaction.NORVOS);
 
 		GOTEntityRegistry.register(GOTEntityLorathMan.class, id++, GOTFaction.LORATH);
 		GOTEntityRegistry.register(GOTEntityLorathLevyman.class, id++, GOTFaction.LORATH);
@@ -829,7 +808,6 @@ public class GOTEntity {
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityQuentynMartell.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityQuentynQorgyle.class, id++, GOTFaction.DORNE);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityTrystaneMartell.class, id++, GOTFaction.DORNE);
-		GOTEntityRegistry.registerLegendaryNPC(GOTEntityMellario.class, id++, GOTFaction.NORVOS);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityJaqenHghar.class, id++, GOTFaction.LORATH);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntitySalladhorSaan.class, id++, GOTFaction.LYS);
 		GOTEntityRegistry.registerLegendaryNPC(GOTEntityJonConnington.class, id++, GOTFaction.TYROSH);

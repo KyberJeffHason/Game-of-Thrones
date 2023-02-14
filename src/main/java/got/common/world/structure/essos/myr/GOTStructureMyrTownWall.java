@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.myr;
 
-import got.common.world.structure.essos.common.GOTStructureEssosTownWall;
-
 public class GOTStructureMyrTownWall extends GOTStructureEssosTownWall {
 	public GOTStructureMyrTownWall(boolean flag) {
 		super(flag);

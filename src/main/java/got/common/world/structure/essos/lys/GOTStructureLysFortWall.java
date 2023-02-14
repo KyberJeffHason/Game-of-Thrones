@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.lys;
 
-import got.common.world.structure.essos.common.GOTStructureEssosFortWall;
-
 public class GOTStructureLysFortWall extends GOTStructureEssosFortWall {
 	public GOTStructureLysFortWall(boolean flag) {
 		super(flag);

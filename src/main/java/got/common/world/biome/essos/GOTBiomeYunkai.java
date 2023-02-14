@@ -8,7 +8,6 @@ import got.common.database.GOTSpawnList;
 import got.common.world.biome.GOTBiome;
 import got.common.world.spawning.GOTBiomeSpawnList;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.ghiscar.GOTStructureGhiscarFightingPit;
 
 public class GOTBiomeYunkai extends GOTBiomeGhiscar {
 	public GOTBiomeYunkai(int i, boolean major) {

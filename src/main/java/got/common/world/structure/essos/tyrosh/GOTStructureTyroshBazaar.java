@@ -4,7 +4,6 @@ import java.util.Random;
 
 import got.common.database.*;
 import got.common.entity.essos.tyrosh.*;
-import got.common.world.structure.essos.common.GOTStructureEssosBazaar;
 import got.common.world.structure.other.GOTStructureBase;
 import net.minecraft.init.*;
 import net.minecraft.item.ItemStack;

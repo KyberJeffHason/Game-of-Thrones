@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.volantis;
 
-import got.common.world.structure.essos.common.GOTStructureEssosFortWall;
-
 public class GOTStructureVolantisFortWall extends GOTStructureEssosFortWall {
 	public GOTStructureVolantisFortWall(boolean flag) {
 		super(flag);

@@ -10,7 +10,6 @@ import got.common.world.biome.variant.GOTBiomeVariant;
 import got.common.world.map.GOTWaypoint.Region;
 import got.common.world.spawning.GOTBiomeSpawnList;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.qarth.GOTStructureQarthCity;
 import net.minecraft.init.Blocks;
 
 public class GOTBiomeQarth extends GOTBiomeQarthDesert {

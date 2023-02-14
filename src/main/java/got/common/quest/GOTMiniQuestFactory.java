@@ -231,7 +231,6 @@ public enum GOTMiniQuestFactory {
 
 		Map<GOTMiniQuestFactory, GOTFaction> cities = new EnumMap<>(GOTMiniQuestFactory.class);
 		cities.put(LORATH, GOTFaction.LORATH);
-		cities.put(NORVOS, GOTFaction.NORVOS);
 		cities.put(QOHOR, GOTFaction.QOHOR);
 		cities.put(MYR, GOTFaction.MYR);
 		cities.put(LYS, GOTFaction.LYS);

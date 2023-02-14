@@ -1,7 +1,5 @@
 package got.common.world.structure.essos.qohor;
 
-import got.common.world.structure.essos.common.GOTStructureEssosTownWall;
-
 public class GOTStructureQohorTownWall extends GOTStructureEssosTownWall {
 	public GOTStructureQohorTownWall(boolean flag) {
 		super(flag);

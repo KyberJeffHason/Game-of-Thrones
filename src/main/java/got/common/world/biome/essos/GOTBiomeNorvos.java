@@ -11,7 +11,6 @@ import got.common.world.biome.variant.GOTBiomeVariant;
 import got.common.world.feature.*;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
-import got.common.world.structure.essos.norvos.GOTStructureNorvosCity;
 import got.common.world.structure.other.*;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
