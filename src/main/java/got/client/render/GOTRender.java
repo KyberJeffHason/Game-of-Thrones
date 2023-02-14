@@ -11,7 +11,6 @@ import got.common.entity.animal.*;
 import got.common.entity.dragon.GOTEntityDragon;
 import got.common.entity.essos.*;
 import got.common.entity.essos.asshai.GOTEntityAsshaiMan;
-import got.common.entity.essos.braavos.GOTEntityBraavosMan;
 import got.common.entity.essos.dothraki.GOTEntityDothraki;
 import got.common.entity.essos.ghiscar.*;
 import got.common.entity.essos.gold.GOTEntityGoldenMan;
@@ -78,7 +77,6 @@ public class GOTRender {
 		renders.put(GOTEntityArrynMan.class, new GOTRenderFactionNPC("westeros/westeros"));
 		renders.put(GOTEntityAsshaiMan.class, new GOTRenderFactionNPC("essos/asshai"));
 		renders.put(GOTEntityAsshaiArchmag.class, new GOTRenderFactionNPC("essos/asshai"));
-		renders.put(GOTEntityBraavosMan.class, new GOTRenderFactionNPC("essos/free"));
 		renders.put(GOTEntityCrasterWife.class, new GOTRenderFactionNPC("westeros/wild"));
 		renders.put(GOTEntityCrownlandsMan.class, new GOTRenderFactionNPC("westeros/westeros"));
 		renders.put(GOTEntityDorneMan.class, new GOTRenderFactionNPC("westeros/dorne"));
@@ -244,7 +242,6 @@ public class GOTRender {
 		renders.put(GOTEntityTobhoMott.class, new GOTRenderLegendaryNPC("tobho_mott"));
 		renders.put(GOTEntityTommenBaratheon.class, new GOTRenderLegendaryNPC("tommen_baratheon", 0.75f));
 		renders.put(GOTEntityTrystaneMartell.class, new GOTRenderLegendaryNPC("trystane_martell", 0.9f));
-		renders.put(GOTEntityTychoNestoris.class, new GOTRenderLegendaryNPC("tycho_nestoris"));
 		renders.put(GOTEntityTytosBlackwood.class, new GOTRenderLegendaryNPC("tytos_blackwood"));
 		renders.put(GOTEntityTytosBrax.class, new GOTRenderLegendaryNPC("tytos_brax"));
 		renders.put(GOTEntityTywinLannister.class, new GOTRenderLegendaryNPC("tywin_lannister"));

@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import got.common.database.*;
-import got.common.entity.essos.braavos.*;
 import got.common.entity.essos.ghiscar.*;
 import got.common.entity.essos.lorath.*;
 import got.common.entity.essos.lys.*;
@@ -104,7 +103,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public BannerType getBannerType() {
 		Map<Boolean, BannerType> map = new HashMap<>();
-		map.put(isBraavos, GOTItemBanner.BannerType.BRAAVOS);
 		map.put(isGhiscar, GOTItemBanner.BannerType.GHISCAR);
 		map.put(isLorath, GOTItemBanner.BannerType.LORATH);
 		map.put(isLys, GOTItemBanner.BannerType.LYS);
@@ -126,7 +124,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public EntityCreature getBartender(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosBartender(world));
 		map.put(isGhiscar, new GOTEntityGhiscarBartender(world));
 		map.put(isLorath, new GOTEntityLorathBartender(world));
 		map.put(isLys, new GOTEntityLysBartender(world));
@@ -148,7 +145,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getBlacksmith(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosBlacksmith(world));
 		map.put(isGhiscar, new GOTEntityGhiscarBlacksmith(world));
 		map.put(isLorath, new GOTEntityLorathBlacksmith(world));
 		map.put(isLys, new GOTEntityLysBlacksmith(world));
@@ -192,7 +188,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getFarmer(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosFarmer(world));
 		map.put(isGhiscar, new GOTEntityGhiscarSlaver(world));
 		map.put(isLorath, new GOTEntityLorathFarmer(world));
 		map.put(isLys, new GOTEntityLysSlaver(world));
@@ -214,7 +209,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getFarmhand(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosFarmhand(world));
 		map.put(isGhiscar, new GOTEntityGhiscarSlave(world));
 		map.put(isLorath, new GOTEntityLorathFarmhand(world));
 		map.put(isLys, new GOTEntityLysSlave(world));
@@ -236,7 +230,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getGeneral(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosGeneral(world));
 		map.put(isGhiscar, new GOTEntityGhiscarAdmiral(world));
 		map.put(isLorath, new GOTEntityLorathGeneral(world));
 		map.put(isLys, new GOTEntityLysGeneral(world));
@@ -258,7 +251,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getMan(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosMan(world));
 		map.put(isGhiscar, new GOTEntityGhiscarMan(world));
 		map.put(isLorath, new GOTEntityLorathMan(world));
 		map.put(isLys, new GOTEntityLysMan(world));
@@ -290,7 +282,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getSoldier(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosSoldier(world));
 		map.put(isGhiscar, new GOTEntityGhiscarCorsair(world));
 		map.put(isLorath, new GOTEntityLorathSoldier(world));
 		map.put(isLys, new GOTEntityLysSoldier(world));
@@ -312,7 +303,6 @@ public abstract class GOTStructureEssosBase extends GOTStructureBase {
 
 	public GOTEntityNPC getSoldierArcher(World world) {
 		Map<Boolean, GOTEntityNPC> map = new HashMap<>();
-		map.put(isBraavos, new GOTEntityBraavosSoldierArcher(world));
 		map.put(isGhiscar, new GOTEntityGhiscarCorsairArcher(world));
 		map.put(isLorath, new GOTEntityLorathSoldierArcher(world));
 		map.put(isLys, new GOTEntityLysSoldierArcher(world));

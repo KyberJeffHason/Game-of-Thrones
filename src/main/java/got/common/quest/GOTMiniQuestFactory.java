@@ -222,7 +222,6 @@ public enum GOTMiniQuestFactory {
 		kingdoms.put(GIFT, GOTFaction.NIGHT_WATCH);
 
 		Map<GOTMiniQuestFactory, GOTFaction> cities = new EnumMap<>(GOTMiniQuestFactory.class);
-		cities.put(BRAAVOS, GOTFaction.BRAAVOS);
 		cities.put(LORATH, GOTFaction.LORATH);
 		cities.put(NORVOS, GOTFaction.NORVOS);
 		cities.put(QOHOR, GOTFaction.QOHOR);

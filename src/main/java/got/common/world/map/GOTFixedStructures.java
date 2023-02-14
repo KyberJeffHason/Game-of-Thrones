@@ -5,7 +5,7 @@ import got.common.GOTConfig;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.World;
 
-public enum GOTFixedStructures {
+public enum 	GOTFixedStructures {
 	SPAWN(809.5, 729.5), NIGHT_KING(613, 314);
 
 	public static long nanoTimeElapsed;

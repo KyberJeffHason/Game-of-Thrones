@@ -18,7 +18,6 @@ import got.common.entity.westeros.legendary.warrior.*;
 import got.common.world.biome.GOTBiome;
 import got.common.world.feature.*;
 import got.common.world.structure.essos.asshai.GOTStructureAsshaiCity;
-import got.common.world.structure.essos.braavos.GOTStructureBraavosCity;
 import got.common.world.structure.essos.dothraki.GOTStructureDothrakiVillage;
 import got.common.world.structure.essos.ghiscar.GOTStructureGhiscarCity;
 import got.common.world.structure.essos.ibben.GOTStructureIbbenVillage;
@@ -74,8 +73,6 @@ public class GOTFixer {
 		f[1].affix(GOTWaypoint.Gulltown, GOTWaypoint.Sisterton);
 		f[2] = new GOTStructureAsshaiCity(biome, 0.0f);
 		f[2].affix(GOTWaypoint.Asshai.info(0, 0, 2));
-		f[3] = new GOTStructureBraavosCity(biome, 0.0f).setIsTown();
-		f[3].affix(GOTWaypoint.Braavos.info(0, -1, 2));
 		f[4] = new GOTStructureGiftVillage(biome, 0.0f).setIsCastleBlack();
 		f[4].affix(GOTWaypoint.CastleBlack.info(0, 0, 0));
 		f[5] = new GOTStructureWildlingVillage(biome, 0.0f).setIsCraster();
@@ -257,12 +254,6 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Braavos.shift(0, -1), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityTychoNestoris(world), world, 0, 1, 1);
-			}
-		});
 
 		structures.put(GOTWaypoint.BrightwaterKeep, new Spawner() {
 			@Override

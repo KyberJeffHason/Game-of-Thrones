@@ -179,7 +179,6 @@ public class GOTRecipe {
 		braavos.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.braavosChestplate), "X X", "XXX", "XXX", Character.valueOf('X'), "ingotIron"));
 		braavos.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.braavosLeggings), "XXX", "X X", "X X", Character.valueOf('X'), "ingotIron"));
 		braavos.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.braavosBoots), "X X", "X X", Character.valueOf('X'), "ingotIron"));
-		braavos.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.banner, 1, GOTItemBanner.BannerType.BRAAVOS.bannerID), "X", "Y", "Z", Character.valueOf('X'), Blocks.wool, Character.valueOf('Y'), "stickWood", Character.valueOf('Z'), "plankWood"));
 		braavos.addAll(commonEssos);
 		braavos.addAll(tinyBasalt);
 	}
