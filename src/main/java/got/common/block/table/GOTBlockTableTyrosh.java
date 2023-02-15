@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 
 public class GOTBlockTableTyrosh extends GOTBlockCraftingTable {
 	public GOTBlockTableTyrosh() {
-		super(Material.wood, GOTFaction.TYROSH, 80);
+		super(Material.wood, GOTFaction.HIGH_POWER, 80);
 		setStepSound(Block.soundTypeWood);
 	}
 }

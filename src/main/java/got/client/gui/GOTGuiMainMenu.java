@@ -181,14 +181,12 @@ public class GOTGuiMainMenu extends GuiMainMenu {
 		waypointRoute.add(GOTWaypoint.StormsEnd);
 		waypointRoute.add(GOTWaypoint.Highgarden);
 		waypointRoute.add(GOTWaypoint.Sunspear);
-		waypointRoute.add(GOTWaypoint.OldGhis);
 		waypointRoute.add(GOTWaypoint.Tiqui);
 		waypointRoute.add(GOTWaypoint.Asshai);
 		waypointRoute.add(GOTWaypoint.EastCoast);
 		waypointRoute.add(GOTWaypoint.EastBay);
 		waypointRoute.add(GOTWaypoint.SouthUlthos);
 		waypointRoute.add(GOTWaypoint.RedForests);
-		waypointRoute.add(GOTWaypoint.Zamettar);
 		waypointRoute.add(GOTWaypoint.FourteenFlames);
 		waypointRoute.add(GOTWaypoint.KingsLanding);
 	}

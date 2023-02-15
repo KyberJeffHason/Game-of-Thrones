@@ -29,9 +29,6 @@ public class GOTBiomeQarth extends GOTBiomeQarthDesert {
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_POMEGRANATE, 0.3f);
 		decorator.grassPerChunk = 5;
 		npcSpawnList.clear();
-		ArrayList<SpawnListContainer> c0 = new ArrayList<>();
-		c0.add(GOTBiomeSpawnList.entry(GOTSpawnList.QARTH_MILITARY, 10).setSpawnChance(GOTBiome.SPAWN));
-		npcSpawnList.newFactionList(8).add(c0);
 		ArrayList<SpawnListContainer> c1 = new ArrayList<>();
 		c1.add(GOTBiomeSpawnList.entry(GOTSpawnList.MANTICORE, 10).setSpawnChance(GOTBiome.CONQUEST_SPAWN));
 		npcSpawnList.newFactionList(2).add(c1);

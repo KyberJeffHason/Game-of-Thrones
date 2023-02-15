@@ -8,7 +8,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import cpw.mods.fml.common.FMLLog;
 import got.common.*;
 import got.common.database.*;
-import got.common.entity.essos.qohor.GOTEntityQohorBlacksmith;
 import got.common.entity.other.*;
 import got.common.faction.*;
 import got.common.item.other.*;
@@ -142,11 +141,6 @@ public abstract class GOTMiniQuest {
 				ItemStack modItem = GOTItemModifierTemplate.getRandomCommonTemplate(rand);
 				dropItems.add(modItem.copy());
 				itemsRewarded.add(modItem.copy());
-			}
-			if (npc instanceof GOTEntityQohorBlacksmith && rand.nextInt(10) == 0) {
-				ItemStack mithrilBook = new ItemStack(GOTRegistry.valyrianBook);
-				dropItems.add(mithrilBook.copy());
-				itemsRewarded.add(mithrilBook.copy());
 			}
 		}
 		if (!dropItems.isEmpty()) {

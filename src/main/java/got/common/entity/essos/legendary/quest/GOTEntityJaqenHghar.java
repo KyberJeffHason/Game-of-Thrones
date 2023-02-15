@@ -112,7 +112,7 @@ public class GOTEntityJaqenHghar extends GOTEntityHumanBase {
 
 	@Override
 	public GOTFaction getFaction() {
-		return GOTFaction.LORATH;
+		return GOTFaction.HIGH_POWER;
 	}
 
 	@Override

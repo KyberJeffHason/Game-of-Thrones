@@ -26,7 +26,6 @@ import got.common.entity.animal.*;
 import got.common.entity.dragon.*;
 import got.common.entity.essos.GOTEntityStoneMan;
 import got.common.entity.essos.asshai.GOTEntityAsshaiMan;
-import got.common.entity.essos.ghiscar.GOTEntityGhiscarHarpy;
 import got.common.entity.essos.mossovy.GOTEntityMarshWraith;
 import got.common.entity.essos.yiti.GOTEntityYiTiBombardier;
 import got.common.entity.other.*;
@@ -1153,65 +1152,6 @@ public class GOTEventHandler implements IFuelHandler {
 							wraith.setAttackTarget(entity);
 							wraith.attackTargetUUID = entity.getUniqueID();
 							world.playSoundAtEntity(wraith, "got:wraith.spawn", 1.0F, 0.7F + world.rand.nextFloat() * 0.6F);
-						}
-					}
-				}
-			}
-		}
-		if (!world.isRemote && GOT.canSpawnMobs(world) && entity.isEntityAlive() && world.isDaytime()) {
-			float f = 0.0F;
-			int bounders = 0;
-			if (GOTFaction.GHISCAR.isBadRelation(GOT.getNPCFaction(entity))) {
-				float health = entity.getMaxHealth() + entity.getTotalArmorValue();
-				f = health * 2.5F;
-				int i = (int) (health / 15.0F);
-				bounders = 2 + world.rand.nextInt(i + 1);
-			} else if (entity instanceof EntityPlayer) {
-				EntityPlayer entityplayer = (EntityPlayer) entity;
-				float alignment = GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.GHISCAR);
-				if (!entityplayer.capabilities.isCreativeMode && alignment < 0.0F) {
-					f = -alignment;
-					int i = (int) (f / 50.0F);
-					bounders = 2 + world.rand.nextInt(i + 1);
-				}
-			}
-			if (f > 0.0F) {
-				f = Math.min(f, 2000.0F);
-				int chance = (int) (2000000.0F / f);
-				bounders = Math.min(bounders, 5);
-				int i = MathHelper.floor_double(entity.posX);
-				int k = MathHelper.floor_double(entity.posZ);
-				world.getTopSolidOrLiquidBlock(i, k);
-				if (world.rand.nextInt(chance) == 0 && world.getBiomeGenForCoords(i, k) instanceof GOTBiomeMeereen) {
-					List<GOTEntityGhiscarHarpy> nearbyHarpies = world.getEntitiesWithinAABB(GOTEntityGhiscarHarpy.class, entity.boundingBox.expand(12.0D, 6.0D, 12.0D));
-					if (nearbyHarpies.isEmpty()) {
-						boolean sentMessage = false;
-						boolean playedHorn = false;
-						for (int l = 0; l < bounders; l++) {
-							GOTEntityGhiscarHarpy bounder = new GOTEntityGhiscarHarpy(world);
-							for (int l1 = 0; l1 < 32; l1++) {
-								int i1 = i - world.rand.nextInt(12) + world.rand.nextInt(12);
-								int k1 = k - world.rand.nextInt(12) + world.rand.nextInt(12);
-								int j1 = world.getTopSolidOrLiquidBlock(i1, k1);
-								if (world.getBlock(i1, j1 - 1, k1).isSideSolid(world, i1, j1 - 1, k1, ForgeDirection.UP) && !world.getBlock(i1, j1, k1).isNormalCube() && !world.getBlock(i1, j1 + 1, k1).isNormalCube()) {
-									bounder.setLocationAndAngles(i1 + 0.5D, j1, k1 + 0.5D, 0.0F, 0.0F);
-									if (bounder.getCanSpawnHere() && entity.getDistanceToEntity(bounder) > 6.0D) {
-										bounder.onSpawnWithEgg(null);
-										world.spawnEntityInWorld(bounder);
-										bounder.setAttackTarget(entity);
-										if (!sentMessage && entity instanceof EntityPlayer) {
-											EntityPlayer entityplayer = (EntityPlayer) entity;
-											bounder.sendSpeechBank(entityplayer, bounder.getSpeechBank(entityplayer));
-											sentMessage = true;
-										}
-										if (!playedHorn) {
-											world.playSoundAtEntity(bounder, "got:item.horn", 2.0F, 2.0F);
-											playedHorn = true;
-										}
-										break;
-									}
-								}
-							}
 						}
 					}
 				}

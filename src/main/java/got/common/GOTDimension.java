@@ -11,7 +11,7 @@ import net.minecraft.world.*;
 import net.minecraftforge.common.DimensionManager;
 
 public enum GOTDimension {
-	GAME_OF_THRONES("GameOfThrones", 99, GOTWorldProvider.class, true, 99, EnumSet.of(DimensionRegion.EAST_ESSOS, DimensionRegion.WEST_ESSOS, DimensionRegion.WESTEROS, DimensionRegion.OTHER));
+	GAME_OF_THRONES("GameOfThrones", 99, GOTWorldProvider.class, true, 99, EnumSet.of(DimensionRegion.EAST_ESSOS, DimensionRegion.WESTEROS, DimensionRegion.OTHER));
 
 	public String dimensionName;
 	public int dimensionID;

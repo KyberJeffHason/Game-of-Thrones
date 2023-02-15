@@ -23,19 +23,6 @@ public class GOTBiomeVolantis extends GOTBiomeEssos {
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_DATE, 0.2f);
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_APPLE_PEAR, 0.1f);
 		addBiomeVariant(GOTBiomeVariant.ORCHARD_POMEGRANATE, 0.3f);
-		invasionSpawns.addInvasion(GOTInvasions.TYROSH, GOTEventSpawner.EventChance.UNCOMMON);
-		invasionSpawns.addInvasion(GOTInvasions.LYS, GOTEventSpawner.EventChance.UNCOMMON);
-		invasionSpawns.addInvasion(GOTInvasions.MYR, GOTEventSpawner.EventChance.UNCOMMON);
-		invasionSpawns.addInvasion(GOTInvasions.DOTHRAKI, GOTEventSpawner.EventChance.UNCOMMON);
-		ArrayList<SpawnListContainer> c2 = new ArrayList<>();
-		c2.add(GOTBiomeSpawnList.entry(GOTSpawnList.MYR_CONQUEST, 10).setSpawnChance(GOTBiome.CONQUEST_SPAWN));
-		npcSpawnList.newFactionList(0).add(c2);
-		ArrayList<SpawnListContainer> c3 = new ArrayList<>();
-		c3.add(GOTBiomeSpawnList.entry(GOTSpawnList.LYS_CONQUEST, 10).setSpawnChance(GOTBiome.CONQUEST_SPAWN));
-		npcSpawnList.newFactionList(0).add(c3);
-		ArrayList<SpawnListContainer> c4 = new ArrayList<>();
-		c4.add(GOTBiomeSpawnList.entry(GOTSpawnList.TYROSH_CONQUEST, 10).setSpawnChance(GOTBiome.CONQUEST_SPAWN));
-		npcSpawnList.newFactionList(0).add(c4);
 		decorator.addRandomStructure(new GOTStructureStoneRuin.RuinSandstone(1, 4), 400);
 		decorator.addRandomStructure(new GOTStructureStoneRuin.RuinStone(1, 4), 400);
 	}

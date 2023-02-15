@@ -9,7 +9,6 @@ import got.GOT;
 import got.common.*;
 import got.common.database.*;
 import got.common.enchant.*;
-import got.common.entity.essos.qohor.GOTEntityQohorBlacksmith;
 import got.common.entity.other.*;
 import got.common.entity.westeros.GOTEntityWesterosScrapTrader;
 import got.common.item.AnvilNameColorProvider;
@@ -182,9 +181,6 @@ public class GOTContainerAnvil extends Container {
 				materialPrice = (float) trade.getCost() / (float) trade.createTradeItem().stackSize;
 				break;
 			}
-		}
-		if (materialPrice <= 0.0f && isRepairMaterial(inputItem, new ItemStack(GOTRegistry.valyrianIngot)) && theTrader instanceof GOTEntityQohorBlacksmith) {
-			materialPrice = 200.0f;
 		}
 		return materialPrice;
 	}

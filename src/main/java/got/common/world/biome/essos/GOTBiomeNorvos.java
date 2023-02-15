@@ -45,7 +45,6 @@ public class GOTBiomeNorvos extends GOTBiomeEssos {
 		decorator.addTree(GOTTreeType.SPRUCE_MEGA_THIN, 20);
 		decorator.addTree(GOTTreeType.FIR, 500);
 		decorator.addTree(GOTTreeType.PINE, 500);
-		invasionSpawns.addInvasion(GOTInvasions.DOTHRAKI, GOTEventSpawner.EventChance.UNCOMMON);
 		decorator.addRandomStructure(new GOTStructureStoneRuin.RuinStone(1, 4), 400);
 		decorator.addRandomStructure(new GOTStructureSmallStoneRuin(false), 500);
 	}

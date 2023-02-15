@@ -2,10 +2,8 @@ package got.common.world.map;
 
 import java.util.*;
 
-import got.common.entity.essos.legendary.GOTEntityMissandei;
 import got.common.entity.essos.legendary.captain.*;
 import got.common.entity.essos.legendary.quest.*;
-import got.common.entity.essos.legendary.trader.*;
 import got.common.entity.essos.legendary.warrior.*;
 import got.common.entity.other.GOTEntityHummel009;
 import got.common.entity.westeros.ironborn.GOTEntityIronbornSoldier;
@@ -198,15 +196,6 @@ public class GOTFixer {
 			@Override
 			public void spawnLegendaryNPC(World world) {
 				spawnLegendaryNPC(new GOTEntityAsshaiArchmag(world), world, 0, 1, 0);
-			}
-		});
-
-		structures.put(GOTWaypoint.Astapor.shift(-1, 0), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityKraznysMoNakloz(world), world, -1, 1, 0);
-				spawnLegendaryNPC(new GOTEntityMissandei(world), world, -1, 1, -1);
-				spawnLegendaryNPC(new GOTEntityGreyWorm(world), world, -1, 1, 1);
 			}
 		});
 
@@ -539,13 +528,6 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Lys, new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntitySalladhorSaan(world), world, 0, 1, -1);
-			}
-		});
-
 		structures.put(GOTWaypoint.Maidenpool.shift(1, 0), new Spawner() {
 			@Override
 			public void spawnLegendaryNPC(World world) {
@@ -553,24 +535,10 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Meereen.shift(0, -1), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityHizdahrZoLoraq(world), world, 0, 1, 1);
-			}
-		});
-
 		structures.put(GOTWaypoint.MormontsKeep, new Spawner() {
 			@Override
 			public void spawnLegendaryNPC(World world) {
 				spawnLegendaryNPC(new GOTEntityMaegeMormont(world), world, 0, 1, 2);
-			}
-		});
-
-		structures.put(GOTWaypoint.Myr.shift(-1, 0), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityHarryStrickland(world), world, -1, 1, -1);
 			}
 		});
 
@@ -621,13 +589,6 @@ public class GOTFixer {
 				spawnLegendaryNPC(new GOTEntityBalonGreyjoy(world), world, 2, 1, 2);
 				spawnLegendaryNPC(new GOTEntityYaraGreyjoy(world), world, -2, 1, -2);
 				spawnLegendaryNPC(new GOTEntityTheonGreyjoy.TheonGreyjoyNormal(world), world, -2, 1, 2);
-			}
-		});
-
-		structures.put(GOTWaypoint.Qarth.shift(0, 1), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityXaroXhoanDaxos(world), world, 3, 1, 0);
 			}
 		});
 
@@ -820,22 +781,6 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Tyrosh, new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityJonConnington(world), world, 0, 1, -1);
-				spawnLegendaryNPC(new GOTEntityYoungGriff(world), world, 0, 1, -1);
-			}
-		});
-
-		structures.put(GOTWaypoint.VaesEfe, new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityDaenerysTargaryen(world), world, 0, 5, 3);
-				spawnLegendaryNPC(new GOTEntityJorahMormont(world), world, 0, 5, 3);
-			}
-		});
-
 		structures.put(GOTWaypoint.Volmark, new Spawner() {
 			@Override
 			public void spawnLegendaryNPC(World world) {
@@ -885,13 +830,6 @@ public class GOTFixer {
 			}
 		});
 
-		structures.put(GOTWaypoint.Yunkai.shift(-1, 0), new Spawner() {
-			@Override
-			public void spawnLegendaryNPC(World world) {
-				spawnLegendaryNPC(new GOTEntityDaarioNaharis(world), world, -1, 1, 0);
-				spawnLegendaryNPC(new GOTEntityRazdalMoEraz(world), world, -1, 1, 1);
-			}
-		});
 	}
 
 	public static class Spawner extends GOTStructureBase {

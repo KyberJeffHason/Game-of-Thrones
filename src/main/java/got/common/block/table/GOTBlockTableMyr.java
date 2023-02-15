@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 
 public class GOTBlockTableMyr extends GOTBlockCraftingTable {
 	public GOTBlockTableMyr() {
-		super(Material.wood, GOTFaction.MYR, 72);
+		super(Material.wood, GOTFaction.HIGH_POWER, 72);
 		setStepSound(Block.soundTypeWood);
 	}
 }

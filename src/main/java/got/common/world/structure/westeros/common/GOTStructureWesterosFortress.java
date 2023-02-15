@@ -514,7 +514,6 @@ public class GOTStructureWesterosFortress extends GOTStructureWesterosBase {
 			spawnLegendaryNPC(new GOTEntityTommenBaratheon(world), world, -2, 1, 1);
 			spawnLegendaryNPC(new GOTEntityMyrcellaBaratheon(world), world, -1, 1, -2);
 			spawnLegendaryNPC(new GOTEntityMerynTrant(world), world, -1, 1, 1);
-			spawnLegendaryNPC(new GOTEntityBarristanSelmy(world), world, -1, 1, 0);
 		} else {
 			GOTEntityNPC captain = getCaptain(world);
 			captain.spawnRidingHorse = false;

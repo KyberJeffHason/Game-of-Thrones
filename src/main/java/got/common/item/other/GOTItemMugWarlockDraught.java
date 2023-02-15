@@ -26,6 +26,7 @@ public class GOTItemMugWarlockDraught extends GOTItemMug {
 
 	@Override
 	public boolean shouldApplyPotionEffects(ItemStack itemstack, EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.QARTH) > 0.0f;
+		//return GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.QARTH) > 0.0f;
+		return false;
 	}
 }

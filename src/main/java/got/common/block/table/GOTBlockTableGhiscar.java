@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 
 public class GOTBlockTableGhiscar extends GOTBlockCraftingTable {
 	public GOTBlockTableGhiscar() {
-		super(Material.wood, GOTFaction.GHISCAR, 68);
+		super(Material.wood, GOTFaction.HIGH_POWER, 68);
 		setStepSound(Block.soundTypeWood);
 	}
 }
