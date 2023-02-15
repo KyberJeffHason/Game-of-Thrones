@@ -18,7 +18,7 @@ public class GOTBiomeFireField extends GOTBiomeReach {
 		decorator.doubleFlowersPerChunk = 12;
 		decorator.grassPerChunk = 8;
 		decorator.doubleGrassPerChunk = 3;
-		addFlower(Blocks.red_flower, 0, 80);
+		addFlower(Blocks.red_flower, 0, 60);
 	}
 
 	@Override

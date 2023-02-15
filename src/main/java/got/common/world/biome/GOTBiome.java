@@ -605,7 +605,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 		if (random.nextInt(5) == 0) {
 			return new GrassBlockAndMeta(Blocks.tallgrass, 2);
 		}
-		if (random.nextInt(30) == 0) {
+		if (random.nextInt(35) == 0) {
 			return new GrassBlockAndMeta(GOTRegistry.plantain, 2);
 		}
 		if (random.nextInt(200) == 0) {
@@ -906,7 +906,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 	public void setupJungleFauna() {
 		flowers.clear();
 		flowers.add(new FlowerEntry(Blocks.yellow_flower, 0, 20));
-		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 10));
+		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 5));
 		flowers.add(new FlowerEntry(GOTRegistry.essosFlower, 3, 20));
 		flowers.add(new FlowerEntry(GOTRegistry.essosFlower, 3, 20));
 		spawnableCreatureList.clear();
@@ -932,7 +932,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 		flowers.add(new FlowerEntry(Blocks.red_flower, 5, 3));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 6, 3));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 7, 3));
-		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 20));
+		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 10));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 3, 20));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 8, 20));
 		flowers.add(new FlowerEntry(Blocks.yellow_flower, 0, 30));
@@ -954,7 +954,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 	public void setupStandartForestFauna() {
 		flowers.clear();
 		flowers.add(new FlowerEntry(Blocks.yellow_flower, 0, 20));
-		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 10));
+		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 5));
 		flowers.add(new FlowerEntry(GOTRegistry.bluebell, 0, 5));
 		flowers.add(new FlowerEntry(GOTRegistry.marigold, 0, 10));
 		spawnableCreatureList.clear();
@@ -985,7 +985,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 		flowers.add(new FlowerEntry(Blocks.red_flower, 5, 3));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 6, 3));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 7, 3));
-		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 20));
+		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 10));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 3, 20));
 		flowers.add(new FlowerEntry(Blocks.red_flower, 8, 20));
 		flowers.add(new FlowerEntry(Blocks.yellow_flower, 0, 30));
@@ -1017,7 +1017,7 @@ public abstract class GOTBiome extends BiomeGenBase {
 	public void setupTaigaFauna() {
 		flowers.clear();
 		flowers.add(new FlowerEntry(Blocks.yellow_flower, 0, 20));
-		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 10));
+		flowers.add(new FlowerEntry(Blocks.red_flower, 0, 5));
 		flowers.add(new FlowerEntry(GOTRegistry.bluebell, 0, 5));
 		flowers.add(new FlowerEntry(GOTRegistry.marigold, 0, 10));
 		spawnableCreatureList.clear();
