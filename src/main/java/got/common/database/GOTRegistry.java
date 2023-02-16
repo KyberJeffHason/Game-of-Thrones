@@ -2276,11 +2276,11 @@ public class GOTRegistry {
 		mugMilk = new GOTItemMug(true, false).setCuresEffects();
 		mugOrangeJuice = new GOTItemMug(true, true).setDrinkStats(6, 0.6f);
 		mugPerry = new GOTItemMug(0.3f).setDrinkStats(4, 0.4f);
-		mugPlantainBrew = new GOTItemMug(0.0f).setDrinkStats(6, 0.6f).addPotionEffect(Potion.damageBoost.id, 120).addPotionEffect(Potion.regeneration.id, 60);
+		mugPlantainBrew = new GOTItemMug(0.0f).setDrinkStats(6, 0.6f).addPotionEffect(Potion.regeneration.id, 20);
 		mugPlumKvass = new GOTItemMug(0.2f).setDrinkStats(4, 0.4f);
 		mugPomegranateJuice = new GOTItemMug(true, true).setDrinkStats(6, 0.6f);
 		mugPomegranateWine = new GOTItemMug(0.9f).setDrinkStats(4, 0.4f);
-		mugPoppyMilk = new GOTItemMugPoppyMilk(0.0f).addPotionEffect(Potion.regeneration.id, 240);
+		mugPoppyMilk = new GOTItemMugPoppyMilk(0.0f).addPotionEffect(Potion.regeneration.id, 100).addPotionEffect(Potion.weakness.id, 100);
 		mugRaspberryJuice = new GOTItemMug(true, true).setDrinkStats(5, 0.5f);
 		mugRedGrapeJuice = new GOTItemMug(true, true).setDrinkStats(5, 0.5f);
 		mugRedWine = new GOTItemMug(1.0f).setDrinkStats(4, 0.4f);
@@ -2289,7 +2289,7 @@ public class GOTRegistry {
 		mugShadeEvening = new GOTItemMugWarlockDraught().setDrinkStats(4, 0.4f).setDamageAmount(3).addPotionEffect(Potion.nightVision.id, 300);
 		mugSourMilk = new GOTItemMug(0.2f).setDrinkStats(5, 0.5f);
 		mugTermiteTequila = new GOTItemMugTermite(0.0f).setDrinkStats(3, 0.3f);
-		mugUnsulliedTonic = new GOTItemMug(0.0f).setDrinkStats(6, 0.6f).addPotionEffect(Potion.damageBoost.id, 60).addPotionEffect(Potion.moveSpeed.id, 60).setDamageAmount(2);
+		mugUnsulliedTonic = new GOTItemMug(0.0f).setDrinkStats(6, 0.6f).addPotionEffect(Potion.damageBoost.id, 60).addPotionEffect(Potion.moveSpeed.id, 20).setDamageAmount(2);
 		mugVodka = new GOTItemMug(1.75f).setDrinkStats(3, 0.3f);
 		mugWater = new GOTItemMug(true, false);
 		mugWhisky = new GOTItemMug(1.0f).setDrinkStats(4, 0.4f);
