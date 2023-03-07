@@ -4,15 +4,8 @@ import java.util.*;
 
 import got.common.entity.animal.*;
 import got.common.entity.essos.*;
-import got.common.entity.essos.asshai.*;
 import got.common.entity.essos.gold.*;
-import got.common.entity.essos.ibben.*;
-import got.common.entity.essos.jogos.*;
-import got.common.entity.essos.mossovy.*;
-import got.common.entity.essos.yiti.*;
 import got.common.entity.other.*;
-import got.common.entity.sothoryos.sothoryos.*;
-import got.common.entity.sothoryos.summer.*;
 import got.common.entity.westeros.arryn.*;
 import got.common.entity.westeros.crownlands.*;
 import got.common.entity.westeros.dorne.*;
@@ -114,10 +107,6 @@ public class GOTSpawnList {
 		ARRYN_GUARDIAN_L.add(new GOTSpawnEntry(GOTEntityArrynGuard.class, 10, 1, 2));
 		ARRYN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityArrynLevyman.class, 10, 1, 2));
 		ARRYN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityArrynLevymanArcher.class, 5, 1, 2));
-		ASSHAI_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityAsshaiMan.class, 10, 1, 2));
-		ASSHAI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityAsshaiShadowbinder.class, 2, 1, 1));
-		ASSHAI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityAsshaiSpherebinder.class, 5, 1, 1));
-		ASSHAI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityAsshaiWarrior.class, 10, 1, 2));
 		CROCODILE_L.add(new GOTSpawnEntry(GOTEntityCrocodile.class, 10, 1, 1));
 		CROWNLANDS_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityCrownlandsMan.class, 10, 1, 2));
 		CROWNLANDS_GUARDIAN_L.add(new GOTSpawnEntry(GOTEntityCrownlandsGuard.class, 10, 1, 2));
@@ -143,22 +132,14 @@ public class GOTSpawnList {
 		HILL_TRIBES_MILITARY_L.add(new GOTSpawnEntry(GOTEntityHillmanAxeThrower.class, 3, 1, 2));
 		HILL_TRIBES_MILITARY_L.add(new GOTSpawnEntry(GOTEntityHillmanBerserker.class, 3, 1, 2));
 		HILL_TRIBES_MILITARY_L.add(new GOTSpawnEntry(GOTEntityHillmanWarrior.class, 10, 1, 2));
-		IBBEN_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityIbbenMan.class, 10, 1, 2));
-		IBBEN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityIbbenArcher.class, 5, 1, 2));
-		IBBEN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityIbbenWarrior.class, 10, 1, 2));
 		IFEKEVRON_L.add(new GOTSpawnEntry(GOTEntityIfekevron.class, 10, 1, 2));
 		IRONBORN_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityIronbornMan.class, 10, 1, 2));
 		IRONBORN_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityIronbornSoldier.class, 10, 1, 2));
 		IRONBORN_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityIronbornSoldierArcher.class, 5, 1, 2));
 		IRONBORN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityIronbornLevyman.class, 10, 1, 2));
 		IRONBORN_MILITARY_L.add(new GOTSpawnEntry(GOTEntityIronbornLevymanArcher.class, 5, 1, 2));
-		JOGOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityJogos.class, 10, 1, 2));
-		JOGOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityJogosArcher.class, 5, 1, 2));
 		JUNGLE_SCORPION_L.add(new GOTSpawnEntry(GOTEntityJungleScorpion.class, 10, 1, 1));
 		MANTICORE_L.add(new GOTSpawnEntry(GOTEntityManticore.class, 10, 1, 1));
-		MOSSOVY_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityMossovyMan.class, 10, 1, 2));
-		MOSSOVY_MILITARY_L.add(new GOTSpawnEntry(GOTEntityMossovyWitcher.class, 10, 1, 1));
-		MOSSOVY_WEREWOLF_L.add(new GOTSpawnEntry(GOTEntityMossovyWerewolf.class, 10, 1, 2));
 		NORTH_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityNorthMan.class, 10, 1, 2));
 		NORTH_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityNorthSoldier.class, 10, 1, 2));
 		NORTH_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityNorthSoldierArcher.class, 5, 1, 2));
@@ -183,17 +164,11 @@ public class GOTSpawnList {
 		RIVERLANDS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityRiverlandsLevyman.class, 10, 1, 2));
 		RIVERLANDS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityRiverlandsLevymanArcher.class, 5, 1, 2));
 		SHRYKE_L.add(new GOTSpawnEntry(GOTEntityShryke.class, 10, 1, 2));
-		SOTHORYOS_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntitySothoryosMan.class, 10, 1, 2));
-		SOTHORYOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntitySothoryosBlowgunner.class, 5, 1, 2));
-		SOTHORYOS_MILITARY_L.add(new GOTSpawnEntry(GOTEntitySothoryosWarrior.class, 10, 1, 2));
 		STORMLANDS_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityStormlandsMan.class, 10, 1, 2));
 		STORMLANDS_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityStormlandsSoldier.class, 10, 1, 2));
 		STORMLANDS_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityStormlandsSoldierArcher.class, 5, 1, 2));
 		STORMLANDS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityStormlandsLevyman.class, 10, 1, 2));
 		STORMLANDS_MILITARY_L.add(new GOTSpawnEntry(GOTEntityStormlandsLevymanArcher.class, 5, 1, 2));
-		SUMMER_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntitySummerMan.class, 10, 1, 2));
-		SUMMER_MILITARY_L.add(new GOTSpawnEntry(GOTEntitySummerArcher.class, 5, 1, 2));
-		SUMMER_MILITARY_L.add(new GOTSpawnEntry(GOTEntitySummerWarrior.class, 10, 1, 2));
 		ULTHOS_L.add(new GOTSpawnEntry(GOTEntityUlthosSpider.class, 10, 1, 2));
 		VALYRIA_L.add(new GOTSpawnEntry(GOTEntityStoneMan.class, 10, 1, 2));
 		WALKERS_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityIceSpider.class, 5, 1, 2));
@@ -212,17 +187,7 @@ public class GOTSpawnList {
 		WILDING_THENN_L.add(new GOTSpawnEntry(GOTEntityThennArcher.class, 5, 1, 2));
 		WILDING_THENN_L.add(new GOTSpawnEntry(GOTEntityThennBerserker.class, 10, 1, 2));
 		WYVERN_L.add(new GOTSpawnEntry(GOTEntityWyvern.class, 10, 1, 1));
-		YITI_CIVILIAN_L.add(new GOTSpawnEntry(GOTEntityYiTiMan.class, 10, 1, 2));
-		YITI_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityYiTiBombardier.class, 2, 1, 1));
-		YITI_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityYiTiFireThrower.class, 2, 1, 1));
-		YITI_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityYiTiFrontier.class, 10, 1, 2));
-		YITI_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityYiTiFrontierCrossbower.class, 5, 1, 1));
-		YITI_CONQUEST_L.add(new GOTSpawnEntry(GOTEntityYiTiSamurai.class, 2, 1, 2));
-		YITI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityYiTiBombardier.class, 2, 1, 1));
-		YITI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityYiTiFireThrower.class, 2, 1, 1));
-		YITI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityYiTiSamurai.class, 2, 1, 2));
-		YITI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityYiTiSoldier.class, 10, 1, 2));
-		YITI_MILITARY_L.add(new GOTSpawnEntry(GOTEntityYiTiSoldierCrossbower.class, 5, 1, 1));
+		
 	}
 
 	public static GOTSpawnList ARRYN_CIVILIAN = new GOTSpawnList(ARRYN_CIVILIAN_L);

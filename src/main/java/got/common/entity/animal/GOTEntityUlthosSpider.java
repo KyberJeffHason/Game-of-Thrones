@@ -18,7 +18,7 @@ public class GOTEntityUlthosSpider extends GOTEntitySpiderBase {
 
 	@Override
 	public GOTFaction getFaction() {
-		return GOTFaction.ULTHOS;
+		return GOTFaction.HIGH_POWER;
 	}
 
 	@Override

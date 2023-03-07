@@ -1,6 +1,8 @@
 package got;
 
 import java.awt.Color;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -10,6 +12,8 @@ import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import got.common.*;
 import got.common.block.leaves.*;
 import got.common.block.other.*;
@@ -44,6 +48,7 @@ import net.minecraft.init.*;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.*;
@@ -254,6 +259,26 @@ public class GOT {
 
 	@Mod.EventHandler
 	public void preload(FMLPreInitializationEvent event) {
+		Potion[] potionTypes = null;
+		for (Field f : Potion.class.getDeclaredFields())
+		{
+			f.setAccessible(true);
+			try {
+				if (f.getName().equals("potionTypes") || f.getName().equals("field_76425_a")) {
+					Field modfield = Field.class.getDeclaredField("modifiers");
+					modfield.setAccessible(true);
+					modfield.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+					potionTypes = (Potion[]) f.get(null);
+					final Potion[] newPotionTypes = new Potion[256];
+					System.arraycopy(potionTypes, 0, newPotionTypes, 0, potionTypes.length);
+					f.set(null, newPotionTypes);
+				}
+			} catch (Exception e) {
+				System.err.println("Severe error, please report this to the mod author:");
+				System.err.println(e);
+			}
+		}
+
 		GOTLog.findLogger();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, proxy);
 		tickHandler = new GOTTickHandlerServer();
@@ -273,6 +298,12 @@ public class GOT {
 		proxy.onPreload();
 		GOTBlockIronBank.preInit();
 	}
+
+//	@SideOnly(Side.CLIENT)
+//	@Mod.EventHandler
+//	public void preloadClient(FMLPreInitializationEvent event) {
+//		GOTLoader.preInitClient();
+//	}
 
 	public static boolean canDropLoot(World world) {
 		return world.getGameRules().getGameRuleBooleanValue("doMobLoot");

@@ -23,6 +23,7 @@ import got.common.enchant.GOTEnchantment;
 import got.common.item.other.*;
 import got.common.item.tool.*;
 import got.common.item.weapon.*;
+import got.common.registers.EffectRegister;
 import got.common.tileentity.*;
 import got.common.util.GOTEnumDyeColor;
 import net.minecraft.block.*;
@@ -1319,6 +1320,7 @@ public class GOTRegistry {
 	public static Item valyrianChainmailLeggings;
 
 	public static void assignContent() {
+		EffectRegister.registerPotions();
 		planks1 = new GOTBlockPlanks1();
 		planks2 = new GOTBlockPlanks2();
 		planks3 = new GOTBlockPlanks3();

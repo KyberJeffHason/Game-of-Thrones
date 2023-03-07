@@ -876,7 +876,7 @@ public class GOTAchievement {
 	}
 
 	public enum Category {
-		TITLES(GOTFaction.NIGHT_WATCH), GENERAL(GOTFaction.SOTHORYOS), KILL(GOTFaction.WESTERLANDS), WEAR(GOTFaction.ARRYN), VISIT(GOTFaction.WHITE_WALKER), LEGENDARY(GOTFaction.YI_TI);
+		TITLES(GOTFaction.NIGHT_WATCH), GENERAL(GOTFaction.HIGH_POWER), KILL(GOTFaction.WESTERLANDS), WEAR(GOTFaction.ARRYN), VISIT(GOTFaction.WHITE_WALKER), LEGENDARY(GOTFaction.HIGH_POWER);
 
 		public String codeName;
 		public float[] categoryColors;

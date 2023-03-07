@@ -28,7 +28,7 @@ public class GOTModChecker {
 		if (hasNEI == -1) {
 			try {
 				if (Class.forName("codechicken.nei.api.API") != null) {
-					GOTLog.logger.info("Hummel009: Found NEI installed");
+//					GOTLog.logger.info("Hummel009: Found NEI installed");
 					hasNEI = 1;
 				} else {
 					hasNEI = 0;

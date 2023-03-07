@@ -3,6 +3,8 @@ package integrator;
 import java.util.List;
 
 import codechicken.nei.recipe.*;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import got.client.gui.GOTGuiCraftingTable;
 import got.common.recipe.GOTRecipe;
 import integrator.handler.*;
@@ -20,6 +22,7 @@ public class NEIGOTIntegrator {
 		GuiUsageRecipe.usagehandlers.add(handler);
 	}
 
+	@SideOnly(Side.CLIENT)
 	public static void registerRecipes() {
 		registerHandler(new GOTHandlerAlloyForge());
 		registerHandler(new GOTHandlerBarrel());

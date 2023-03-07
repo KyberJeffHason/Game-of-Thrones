@@ -456,10 +456,6 @@ public enum GOTMiniQuestFactory {
 		HILLMEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.cooked_porkchop), 3, 8).setRewardFactor(2.0f));
 		HILLMEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.iron_ingot), 3, 10).setRewardFactor(1.5f));
 		HILLMEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.leather), 10, 30).setRewardFactor(0.5f));
-		HILLMEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 10, 30));
-		HILLMEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 30, 50));
-		HILLMEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 50, 70));
-		HILLMEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 70, 100));
 
 		IBBEN.addQuest(new QFBounty<>());
 		IBBEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.ibbenBoots), 1, 4).setRewardFactor(3.0f));
@@ -481,10 +477,6 @@ public enum GOTMiniQuestFactory {
 		IBBEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Blocks.log, 1, 1), 20, 60).setRewardFactor(0.25f));
 		IBBEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Blocks.planks, 1, 0), 80, 160).setRewardFactor(0.125f));
 		IBBEN.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Blocks.planks, 1, 1), 80, 160).setRewardFactor(0.125f));
-		IBBEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.IBBEN), 10, 30));
-		IBBEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.IBBEN), 30, 50));
-		IBBEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.IBBEN), 50, 70));
-		IBBEN.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.IBBEN), 70, 100));
 
 		JOGOS.addQuest(new QFBounty<>());
 		JOGOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Blocks.carpet, 1), 8, 15).setRewardFactor(0.75f));
@@ -510,10 +502,6 @@ public enum GOTMiniQuestFactory {
 		JOGOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.jogosBoots), 1, 2).setRewardFactor(8.0f));
 		JOGOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.jogosLeggings), 1, 2).setRewardFactor(8.0f));
 		JOGOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.nomadBow), 1, 2).setRewardFactor(8.0f));
-		JOGOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.JOGOS), 10, 30));
-		JOGOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.JOGOS), 30, 50));
-		JOGOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.JOGOS), 50, 70));
-		JOGOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.JOGOS), 70, 100));
 
 		LHAZAR.addQuest(new QFBounty<>());
 		LHAZAR.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.date), 8, 15).setRewardFactor(2.0f));
@@ -579,10 +567,6 @@ public enum GOTMiniQuestFactory {
 		MOSSOVY.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.iron_hoe), 1, 3).setRewardFactor(4.0f));
 		MOSSOVY.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.iron_shovel), 1, 3).setRewardFactor(4.0f));
 		MOSSOVY.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.pipeweed), 20, 40).setRewardFactor(0.25f));
-		MOSSOVY.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 10, 30));
-		MOSSOVY.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 30, 50));
-		MOSSOVY.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 50, 70));
-		MOSSOVY.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.MOSSOVY), 70, 100));
 
 		SOTHORYOS.addQuest(new QFBounty<>());
 		SOTHORYOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.banana), 4, 6).setRewardFactor(4.0f));
@@ -608,10 +592,6 @@ public enum GOTMiniQuestFactory {
 		SOTHORYOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.bread), 5, 8).setRewardFactor(2.0f));
 		SOTHORYOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.dye, 1, 3), 8, 20).setRewardFactor(1.0f));
 		SOTHORYOS.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.melon), 10, 20).setRewardFactor(0.75f));
-		SOTHORYOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SOTHORYOS), 10, 30));
-		SOTHORYOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SOTHORYOS), 30, 50));
-		SOTHORYOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SOTHORYOS), 50, 70));
-		SOTHORYOS.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SOTHORYOS), 70, 100));
 
 		SUMMER.addQuest(new QFBounty<>());
 		SUMMER.addQuest(new QFCollect<>().setCollectItem(new ItemStack(Items.water_bucket), 3, 5).setRewardFactor(5.0f));
@@ -646,10 +626,6 @@ public enum GOTMiniQuestFactory {
 		SUMMER.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.lionCooked), 3, 6).setRewardFactor(3.0f));
 		SUMMER.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.mango), 2, 4).setRewardFactor(4.0f));
 		SUMMER.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.orange), 4, 8).setRewardFactor(2.0f));
-		SUMMER.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SUMMER_ISLANDS), 10, 30));
-		SUMMER.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SUMMER_ISLANDS), 30, 50));
-		SUMMER.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SUMMER_ISLANDS), 50, 70));
-		SUMMER.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.SUMMER_ISLANDS), 70, 100));
 
 		YI_TI.addQuest(new QFBounty<>());
 		YI_TI.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.date), 4, 12).setRewardFactor(2.0f));
@@ -692,10 +668,6 @@ public enum GOTMiniQuestFactory {
 		YI_TI.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.whiteBisonHorn), 1, 1).setRewardFactor(30.0f));
 		YI_TI.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.wood6, 1, 2), 30, 60).setRewardFactor(0.25f));
 		YI_TI.addQuest(new QFCollect<>().setCollectItem(new ItemStack(GOTRegistry.wood8, 1, 1), 30, 60).setRewardFactor(0.25f));
-		YI_TI.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.YI_TI), 10, 30));
-		YI_TI.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.YI_TI), 30, 50));
-		YI_TI.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.YI_TI), 50, 70));
-		YI_TI.addQuest(new QFKillFaction().setKillFaction(getRandomEnemy(GOTFaction.YI_TI), 70, 100));
 	}
 
 	public static void registerQuestClass(Class<? extends GOTMiniQuest> questClass, int weight) {

@@ -2,9 +2,6 @@ package got.common.database;
 
 import java.util.*;
 
-import got.common.entity.essos.ibben.*;
-import got.common.entity.essos.jogos.*;
-import got.common.entity.essos.yiti.*;
 import got.common.entity.other.GOTEntityNPC;
 import got.common.entity.westeros.arryn.*;
 import got.common.entity.westeros.dorne.*;
@@ -25,7 +22,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.*;
 
 public enum GOTInvasions {
-	JOGOS(GOTFaction.JOGOS), IRONBORN(GOTFaction.IRONBORN), WESTERLANDS(GOTFaction.WESTERLANDS), RIVERLANDS(GOTFaction.RIVERLANDS), NORTH(GOTFaction.NORTH), THENN(GOTFaction.WILDLING, "THENN"), WILDLING(GOTFaction.WILDLING), GIANT(GOTFaction.WILDLING, "GIANT"), ARRYN(GOTFaction.ARRYN), DRAGONSTONE(GOTFaction.DRAGONSTONE), STORMLANDS(GOTFaction.STORMLANDS), REACH(GOTFaction.REACH), DORNE(GOTFaction.DORNE), YI_TI(GOTFaction.YI_TI), HILL_TRIBES(GOTFaction.HILL_TRIBES), IBBEN(GOTFaction.IBBEN);
+	IRONBORN(GOTFaction.IRONBORN), WESTERLANDS(GOTFaction.WESTERLANDS), RIVERLANDS(GOTFaction.RIVERLANDS), NORTH(GOTFaction.NORTH), THENN(GOTFaction.WILDLING, "THENN"), WILDLING(GOTFaction.WILDLING), GIANT(GOTFaction.WILDLING, "GIANT"), ARRYN(GOTFaction.ARRYN), DRAGONSTONE(GOTFaction.DRAGONSTONE), STORMLANDS(GOTFaction.STORMLANDS), REACH(GOTFaction.REACH), DORNE(GOTFaction.DORNE), HILL_TRIBES(GOTFaction.HILL_TRIBES);
 
 	public GOTFaction invasionFaction;
 	public String subfaction;
@@ -103,9 +100,7 @@ public enum GOTInvasions {
 	}
 
 	public static void preInit() {
-		GOTInvasions.JOGOS.invasionIcon = GOTRegistry.nomadSword;
 		GOTInvasions.IRONBORN.invasionIcon = GOTRegistry.westerosSword;
-		GOTInvasions.IBBEN.invasionIcon = GOTRegistry.flintSpear;
 		GOTInvasions.WESTERLANDS.invasionIcon = GOTRegistry.westerosSword;
 		GOTInvasions.RIVERLANDS.invasionIcon = GOTRegistry.westerosSword;
 		GOTInvasions.ARRYN.invasionIcon = GOTRegistry.westerosSword;
@@ -117,17 +112,11 @@ public enum GOTInvasions {
 		GOTInvasions.THENN.invasionIcon = GOTRegistry.wildlingSword;
 		GOTInvasions.WILDLING.invasionIcon = GOTRegistry.wildlingSword;
 		GOTInvasions.GIANT.invasionIcon = GOTRegistry.club;
-		GOTInvasions.YI_TI.invasionIcon = GOTRegistry.yitiSword;
 		GOTInvasions.HILL_TRIBES.invasionIcon = GOTRegistry.trident;
 		GOTInvasions.HILL_TRIBES.invasionMobs.add(new InvasionSpawnEntry(GOTEntityHillmanWarrior.class, 10));
 		GOTInvasions.HILL_TRIBES.invasionMobs.add(new InvasionSpawnEntry(GOTEntityHillmanArcher.class, 5));
 		GOTInvasions.HILL_TRIBES.invasionMobs.add(new InvasionSpawnEntry(GOTEntityHillmanBerserker.class, 2));
 		GOTInvasions.HILL_TRIBES.invasionMobs.add(new InvasionSpawnEntry(GOTEntityHillmanBannerBearer.class, 2));
-		GOTInvasions.IBBEN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityIbbenWarrior.class, 10));
-		GOTInvasions.IBBEN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityIbbenArcher.class, 5));
-		GOTInvasions.IBBEN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityIbbenBannerBearer.class, 2));
-		GOTInvasions.JOGOS.invasionMobs.add(new InvasionSpawnEntry(GOTEntityJogos.class, 10));
-		GOTInvasions.JOGOS.invasionMobs.add(new InvasionSpawnEntry(GOTEntityJogosArcher.class, 5));
 		GOTInvasions.GIANT.invasionMobs.add(new InvasionSpawnEntry(GOTEntityWildling.class, 10));
 		GOTInvasions.GIANT.invasionMobs.add(new InvasionSpawnEntry(GOTEntityWildlingArcher.class, 5));
 		GOTInvasions.GIANT.invasionMobs.add(new InvasionSpawnEntry(GOTEntityWildlingBannerBearer.class, 2));
@@ -139,13 +128,6 @@ public enum GOTInvasions {
 		GOTInvasions.THENN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityThennArcher.class, 5));
 		GOTInvasions.THENN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityThennBerserker.class, 3));
 		GOTInvasions.THENN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityThennBannerBearer.class, 2));
-
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiSoldier.class, 10));
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiSoldierCrossbower.class, 5));
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiSamurai.class, 3));
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiFireThrower.class, 2));
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiBombardier.class, 1));
-		GOTInvasions.YI_TI.invasionMobs.add(new InvasionSpawnEntry(GOTEntityYiTiBannerBearer.class, 2));
 
 		GOTInvasions.IRONBORN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityIronbornSoldier.class, 10));
 		GOTInvasions.IRONBORN.invasionMobs.add(new InvasionSpawnEntry(GOTEntityIronbornSoldierArcher.class, 5));

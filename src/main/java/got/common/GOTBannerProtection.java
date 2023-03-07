@@ -32,6 +32,8 @@ public class GOTBannerProtection {
 		Pair<Block, Integer> SILVER = Pair.of(GOTRegistry.blockMetal1, 3);
 		Pair<Block, Integer> GOLD = Pair.of(Blocks.gold_block, 0);
 		Pair<Block, Integer> VALYRIAN = Pair.of(GOTRegistry.blockMetal1, 4);
+		Pair<Block, Integer> TIN = Pair.of(GOTRegistry.blockMetal1, 1);
+		protectionBlocks.put(TIN, 6);
 		protectionBlocks.put(BRONZE, 8);
 		protectionBlocks.put(SILVER, 16);
 		protectionBlocks.put(GOLD, 32);

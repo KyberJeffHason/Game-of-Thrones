@@ -18,7 +18,7 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="DiscordProjectSettings">
-    <option name="show" value="ASK" />
+    <option name="show" value="PROJECT_FILES" />
     <option name="description" value="" />
   </component>
   <component name="GradleUISettings">

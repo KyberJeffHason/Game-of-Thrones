@@ -1,5 +1,7 @@
 package got;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import got.common.*;
 import got.common.database.*;
 import got.common.enchant.GOTEnchantmentCombining;
@@ -15,6 +17,7 @@ import got.common.world.map.*;
 import got.common.world.structure.GOTStructure;
 import got.common.world.structure.other.GOTStructureScan;
 import integrator.NEIGOTIntegrator;
+import net.minecraft.client.Minecraft;
 
 public class GOTLoader {
 
@@ -61,8 +64,12 @@ public class GOTLoader {
 		GOTCapes.preInit();
 		GOTPoisonedDrinks.preInit();
 		GOTPotionChanges.preInit();
-		if (GOTModChecker.hasNEI()) {
-			NEIGOTIntegrator.registerRecipes();
-		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public static void preInitClient() {
+//		if (GOTModChecker.hasNEI()) {
+//			NEIGOTIntegrator.registerRecipes();
+//		}
 	}
 }

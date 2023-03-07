@@ -2,6 +2,9 @@ package got.common;
 
 import java.util.*;
 
+import cpw.mods.fml.common.network.FMLNetworkEvent;
+import got.common.registers.EffectRegister;
+import javafx.scene.effect.Effect;
 import org.apache.commons.lang3.StringUtils;
 
 import com.mojang.authlib.GameProfile;
@@ -1026,6 +1029,14 @@ public class GOTEventHandler implements IFuelHandler {
 		if (entity instanceof EntityPlayerMP && event.source == GOTDamage.frost) {
 			GOTDamage.doFrostDamage((EntityPlayerMP) entity);
 		}
+		if (event.source.getEntity() instanceof EntityLivingBase) {
+			if (entity instanceof  EntityPlayer) {
+				entity.addPotionEffect( new PotionEffect(EffectRegister.COMBATLOG_POTIONID,900));
+			}
+		}
+		if (attacker instanceof EntityPlayer) {
+			attacker.addPotionEffect(new PotionEffect(EffectRegister.COMBATLOG_POTIONID, 900));
+		}
 		if (!world.isRemote) {
 			int preMaxHurtResTime = entity.maxHurtResistantTime;
 			int maxHurtResTime = 20;
@@ -1098,6 +1109,27 @@ public class GOTEventHandler implements IFuelHandler {
 				GOTEnchantmentWeaponSpecial.doChillAttack(entity);
 			}
 		}
+	}
+
+	@SubscribeEvent
+	public void onPlayerLogout(cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent event) {
+		System.out.println("sssss!!!!");
+		EntityPlayer player = event.player;
+		if (player.isPotionActive(EffectRegister.COMBATLOG_POTIONID)) {
+			IInventory inventory = player.inventory;
+
+			for (int i = 0; i < inventory.getSizeInventory(); i++) {
+				ItemStack stack = inventory.getStackInSlot(i);
+
+				if (stack != null && stack.getItem() != null) {
+					player.entityDropItem(stack, 0.0f);
+					inventory.setInventorySlotContents(i, null);
+				}
+			}
+			player.setHealth(0);
+		}
+		//event.player.setHealth(0);
+		//PotionEffect effect = player.getActivePotionEffect(this);
 	}
 
 	@SubscribeEvent
