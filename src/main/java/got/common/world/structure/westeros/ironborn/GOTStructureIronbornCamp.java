@@ -4,8 +4,8 @@ import java.util.Random;
 
 import got.common.database.GOTRegistry;
 import got.common.entity.other.GOTEntityNPC;
+import got.common.entity.westeros.ironborn.GOTEntityIronbornCaptain;
 import got.common.entity.westeros.ironborn.GOTEntityIronbornSoldier;
-import got.common.entity.westeros.legendary.warrior.GOTEntityVictarionGreyjoy;
 import got.common.world.structure.other.*;
 import net.minecraft.world.World;
 
@@ -26,7 +26,7 @@ public class GOTStructureIronbornCamp extends GOTStructureCampBase {
 
 	@Override
 	public GOTEntityNPC getCampCaptain(World world, Random random) {
-		return new GOTEntityVictarionGreyjoy(world);
+		return new GOTEntityIronbornCaptain(world);
 	}
 
 	@Override

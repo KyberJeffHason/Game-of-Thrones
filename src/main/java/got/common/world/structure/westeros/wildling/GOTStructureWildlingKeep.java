@@ -3,7 +3,6 @@ package got.common.world.structure.westeros.wildling;
 import java.util.*;
 
 import got.common.database.*;
-import got.common.entity.westeros.legendary.trader.GOTEntityCraster;
 import got.common.world.structure.westeros.common.GOTStructureWesterosBase;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -344,7 +343,6 @@ public class GOTStructureWildlingKeep extends GOTStructureWesterosBase {
 				setBlockAndMetadata(world, i17, j14, -5, GOTRegistry.gateWooden, 2);
 			}
 		}
-		spawnNPCAndSetHome(new GOTEntityCraster(world), world, 0, 1, 0, 16);
 		return true;
 	}
 }

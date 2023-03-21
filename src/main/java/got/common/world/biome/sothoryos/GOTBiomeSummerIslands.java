@@ -11,7 +11,6 @@ import got.common.world.map.GOTWaypoint.Region;
 import got.common.world.spawning.*;
 import got.common.world.spawning.GOTBiomeSpawnList.SpawnListContainer;
 import got.common.world.structure.other.*;
-import got.common.world.structure.sothoryos.summer.GOTStructureSummerVillage;
 
 public class GOTBiomeSummerIslands extends GOTBiomeSothoryosJungle {
 	public GOTBiomeSummerIslands(int i, boolean major) {
@@ -24,7 +23,6 @@ public class GOTBiomeSummerIslands extends GOTBiomeSothoryosJungle {
 		setUnreliableChance(GOTEventSpawner.EventChance.COMMON);
 		decorator.treesPerChunk = 1;
 		decorator.clearVillages();
-		decorator.addVillage(new GOTStructureSummerVillage(this, 1.0f));
 		decorator.addRandomStructure(new GOTStructureRuinedHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureBurntHouse(false), 2000);
 		decorator.addRandomStructure(new GOTStructureRottenHouse(false), 4000);

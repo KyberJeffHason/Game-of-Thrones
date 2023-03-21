@@ -3,7 +3,6 @@ package got.common.entity.westeros.gift;
 import got.common.database.*;
 import got.common.entity.ai.GOTEntityAIAttackOnCollide;
 import got.common.entity.other.GOTEntityNPC;
-import got.common.entity.westeros.legendary.warrior.GOTEntityAlliserThorne;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +16,6 @@ public class GOTEntityGiftGuard extends GOTEntityGiftMan {
 	public GOTEntityGiftGuard(World world) {
 		super(world);
 		canBeMarried = false;
-		tasks.addTask(1, new EntityAIAvoidEntity(this, GOTEntityAlliserThorne.class, 5.0f, 1.0, 1.0));
 		npcCape = GOTCapes.NIGHT;
 	}
 

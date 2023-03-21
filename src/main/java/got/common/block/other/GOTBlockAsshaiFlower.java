@@ -26,16 +26,13 @@ public class GOTBlockAsshaiFlower extends GOTBlockFlower {
 	}
 
 	public boolean isEntityVulnerable(EntityLivingBase entity) {
-		if (GOT.getNPCFaction(entity) == GOTFaction.ASSHAI) {
-			return false;
-		}
 		if (entity instanceof EntityPlayer) {
 			float max;
 			EntityPlayer entityplayer = (EntityPlayer) entity;
 			if (entityplayer.capabilities.isCreativeMode) {
 				return false;
 			}
-			float alignment = GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.ASSHAI);
+			float alignment = GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.HIGH_POWER);
 			max = 100.0f;
 			if (alignment >= max) {
 				return false;

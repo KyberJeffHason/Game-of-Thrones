@@ -8,10 +8,6 @@ import got.common.database.*;
 import got.common.entity.essos.*;
 import got.common.entity.other.GOTEntityProstitute;
 import got.common.entity.westeros.*;
-import got.common.entity.westeros.legendary.quest.GOTEntityTyrionLannister;
-import got.common.entity.westeros.legendary.reborn.GOTEntityLancelLannister;
-import got.common.entity.westeros.legendary.trader.*;
-import got.common.entity.westeros.legendary.warrior.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 
@@ -748,16 +744,7 @@ public class GOTStructureWesterosTavern extends GOTStructureWesterosBase {
 		}
 		setBlockAndMetadata(world, -1, 11, 7, GOTRegistry.chandelier, 1);
 		setBlockAndMetadata(world, 7, 11, 7, GOTRegistry.chandelier, 1);
-		if (isKingsLanding) {
-			spawnNPCAndSetHome(new GOTEntityPetyrBaelish(world), world, -4, 1, 7, 2);
-			spawnNPCAndSetHome(new GOTEntityTyrionLannister(world), world, 2, 1, 7, 16);
-			spawnNPCAndSetHome(new GOTEntityLancelLannister.LancelLannisterNormal(world), world, 2, 1, 7, 16);
-			spawnNPCAndSetHome(new GOTEntityBronn(world), world, 2, 1, 7, 16);
-			spawnNPCAndSetHome(new GOTEntityPodrickPayne(world), world, 2, 1, 7, 16);
-		} else if (isCrossroads) {
-			spawnNPCAndSetHome(new GOTEntityHotPie(world), world, -4, 1, 7, 2);
-			spawnNPCAndSetHome(new GOTEntityVargoHoat(world), world, 2, 1, 7, 16);
-		} else if (isDorne) {
+		if (isDorne) {
 			spawnNPCAndSetHome(getBartender(world), world, -4, 1, 7, 2);
 			spawnNPCAndSetHome(new GOTEntityMercenary(world), world, 2, 1, 7, 16);
 			spawnNPCAndSetHome(new GOTEntityEssosThief(world), world, 2, 1, 7, 16);

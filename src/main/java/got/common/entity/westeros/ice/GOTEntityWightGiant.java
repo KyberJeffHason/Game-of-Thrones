@@ -3,9 +3,7 @@ package got.common.entity.westeros.ice;
 import got.common.GOTDamage;
 import got.common.database.*;
 import got.common.entity.ai.GOTEntityAINearestAttackableTargetPatriot;
-import got.common.entity.essos.legendary.warrior.GOTEntityAsshaiArchmag;
 import got.common.entity.other.*;
-import got.common.entity.westeros.legendary.reborn.*;
 import got.common.entity.westeros.wildling.GOTEntityGiant;
 import got.common.faction.GOTFaction;
 import got.common.item.GOTMaterialFinder;
@@ -50,9 +48,6 @@ public class GOTEntityWightGiant extends GOTEntityGiant {
 		if (entity instanceof EntityLivingBase && entity == damagesource.getSourceOfDamage() && (itemstack = ((EntityLivingBase) entity).getHeldItem()) != null && ((EntityLivingBase) entity).getHeldItem().getItem() instanceof GOTMaterialFinder && (((GOTMaterialFinder) itemstack.getItem()).getMaterial() == GOTMaterial.VALYRIAN_TOOL || ((GOTMaterialFinder) itemstack.getItem()).getMaterial() == GOTMaterial.OBSIDIAN_TOOL || (GOTMaterialFinder) itemstack.getItem() == GOTRegistry.crowbar)) {
 			return super.attackEntityFrom(damagesource, f);
 		}
-		if (damagesource.getEntity() instanceof GOTEntityGregorClegane || damagesource.getEntity() instanceof GOTEntityAsshaiArchmag || damagesource.isFireDamage()) {
-			return super.attackEntityFrom(damagesource, f);
-		}
 		if (damageSource instanceof GOTEntitySpear && ((GOTEntitySpear) damageSource).getProjectileItem().getItem() == GOTRegistry.valyrianSpear) {
 			return super.attackEntityFrom(damagesource, f);
 		}
@@ -88,7 +83,7 @@ public class GOTEntityWightGiant extends GOTEntityGiant {
 		GOTEntityWight wight = new GOTEntityWight(worldObj);
 		GOTEntityWightGiant giant = new GOTEntityWightGiant(worldObj);
 		GOTEntityIceSpider spider = new GOTEntityIceSpider(worldObj);
-		if (entity instanceof GOTEntityBericDondarrion || entity instanceof GOTEntityGregorClegane || entity instanceof GOTEntityLancelLannister || entity instanceof GOTEntityTheonGreyjoy) {
+		if (false) {
 			super.onKillEntity(entity);
 		} else if (entity instanceof GOTEntityHumanBase) {
 			super.onKillEntity(entity);

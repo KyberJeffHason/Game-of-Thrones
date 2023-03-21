@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 
 public class GOTBlockTableSothoryos extends GOTBlockCraftingTable {
 	public GOTBlockTableSothoryos() {
-		super(Material.wood, GOTFaction.SOTHORYOS, 39);
+		super(Material.wood, GOTFaction.HIGH_POWER, 39);
 		setStepSound(Block.soundTypeWood);
 	}
 }

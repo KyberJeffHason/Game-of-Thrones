@@ -1,6 +1,5 @@
 package got.common.inventory;
 
-import got.common.entity.essos.yiti.GOTEntityYiTiBombardier;
 import got.common.entity.other.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.inventory.*;
@@ -27,11 +26,6 @@ public class GOTContainerHiredWarriorInventory extends Container {
 		arrn[0] = 4;
 		for (int i3 : arrn) {
 			GOTSlotHiredReplaceItem slot = new GOTSlotHiredReplaceItem(new GOTSlotMeleeWeapon(proxyInv, i3, 50, 48), theNPC);
-			addSlotToContainer(slot);
-		}
-		if (theNPC instanceof GOTEntityYiTiBombardier) {
-			int i4 = 5;
-			GOTSlotHiredReplaceItem slot = new GOTSlotHiredReplaceItem(new GOTSlotBomb(proxyInv, i4, 110, 48), theNPC);
 			addSlotToContainer(slot);
 		}
 		for (i = 0; i < npcFullInvSize; ++i) {

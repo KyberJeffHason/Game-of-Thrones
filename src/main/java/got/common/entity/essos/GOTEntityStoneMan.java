@@ -2,7 +2,6 @@ package got.common.entity.essos;
 
 import got.common.entity.ai.GOTEntityAIAttackOnCollide;
 import got.common.entity.other.*;
-import got.common.entity.westeros.legendary.reborn.*;
 import got.common.faction.GOTFaction;
 import got.common.item.weapon.GOTItemSword;
 import net.minecraft.entity.*;
@@ -92,7 +91,7 @@ public class GOTEntityStoneMan extends GOTEntityNPC {
 	@Override
 	public void onKillEntity(EntityLivingBase entity) {
 		GOTEntityStoneMan infected = new GOTEntityStoneMan(worldObj);
-		if (entity instanceof GOTEntityBericDondarrion || entity instanceof GOTEntityGregorClegane || entity instanceof GOTEntityLancelLannister || entity instanceof GOTEntityTheonGreyjoy) {
+		if (false) {
 			super.onKillEntity(entity);
 		} else if (entity instanceof GOTEntityHumanBase) {
 			super.onKillEntity(entity);

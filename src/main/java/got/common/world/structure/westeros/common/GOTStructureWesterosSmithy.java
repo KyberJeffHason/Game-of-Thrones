@@ -3,7 +3,6 @@ package got.common.world.structure.westeros.common;
 import java.util.Random;
 
 import got.common.database.GOTRegistry;
-import got.common.entity.westeros.legendary.trader.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 
@@ -160,12 +159,7 @@ public class GOTStructureWesterosSmithy extends GOTStructureWesterosBase {
 		setAir(world, -3, 5, 10);
 
 		setAir(world, -3, 5, 10);
-		if (issKingsLanding) {
-			spawnNPCAndSetHome(new GOTEntityTobhoMott(world), world, 0, 1, 6, 4);
-			spawnNPCAndSetHome(new GOTEntityGendryBaratheon(world), world, 0, 1, 6, 4);
-		} else {
-			spawnNPCAndSetHome(getBlacksmith(world), world, 0, 1, 6, 4);
-		}
+		spawnNPCAndSetHome(getBlacksmith(world), world, 0, 1, 6, 4);
 		return true;
 	}
 }

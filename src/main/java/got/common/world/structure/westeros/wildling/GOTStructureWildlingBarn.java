@@ -6,7 +6,6 @@ import com.google.common.math.IntMath;
 
 import got.common.database.*;
 import got.common.entity.other.GOTEntityHumanBase;
-import got.common.entity.westeros.legendary.GOTEntityCrasterWife;
 import got.common.world.structure.westeros.common.GOTStructureWesterosBase;
 import net.minecraft.entity.passive.*;
 import net.minecraft.init.Blocks;
@@ -442,13 +441,6 @@ public class GOTStructureWildlingBarn extends GOTStructureWesterosBase {
 				continue;
 			}
 			setBlockAndMetadata(world, i19, 6, 1, Blocks.hay_block, 0);
-		}
-		for (int l = 0; l <= 10; ++l) {
-			GOTEntityHumanBase wife = new GOTEntityCrasterWife(world);
-			if (random.nextBoolean()) {
-				wife.familyInfo.setChild();
-			}
-			spawnNPCAndSetHome(wife, world, 0, 1, 5, 16);
 		}
 		return true;
 	}

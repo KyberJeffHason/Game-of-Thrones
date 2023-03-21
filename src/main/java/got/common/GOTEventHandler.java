@@ -28,9 +28,7 @@ import got.common.enchant.*;
 import got.common.entity.animal.*;
 import got.common.entity.dragon.*;
 import got.common.entity.essos.GOTEntityStoneMan;
-import got.common.entity.essos.asshai.GOTEntityAsshaiMan;
 import got.common.entity.essos.mossovy.GOTEntityMarshWraith;
-import got.common.entity.essos.yiti.GOTEntityYiTiBombardier;
 import got.common.entity.other.*;
 import got.common.entity.westeros.reach.GOTEntityReachSoldier;
 import got.common.faction.*;
@@ -974,9 +972,6 @@ public class GOTEventHandler implements IFuelHandler {
 					if (attackingPlayer.isPotionActive(Potion.confusion.id)) {
 						GOTLevelData.getData(attackingPlayer).addAchievement(GOTAchievement.killWhileDrunk);
 					}
-					if (entity instanceof GOTEntityYiTiBombardier && ((GOTEntityYiTiBombardier) entity).npcItemsInv.getBomb() != null) {
-						GOTLevelData.getData(attackingPlayer).addAchievement(GOTAchievement.killBombardier);
-					}
 					if (source.getSourceOfDamage() instanceof GOTEntityCrossbowBolt) {
 						GOTLevelData.getData(attackingPlayer).addAchievement(GOTAchievement.useCrossbow);
 					}
@@ -1197,7 +1192,7 @@ public class GOTEventHandler implements IFuelHandler {
 			if (entity instanceof EntityPlayer && ((EntityPlayer) entity).capabilities.isCreativeMode) {
 				flag = false;
 			}
-			if (entity instanceof GOTEntityAsshaiMan || entity instanceof GOTEntityJungleScorpion || entity instanceof GOTEntityStoneMan) {
+			if (entity instanceof GOTEntityJungleScorpion || entity instanceof GOTEntityStoneMan) {
 				flag = false;
 			}
 			if (flag) {
@@ -1223,15 +1218,7 @@ public class GOTEventHandler implements IFuelHandler {
 				EntityPlayer entityplayer = (EntityPlayer) entity;
 				if (entityplayer.capabilities.isCreativeMode) {
 					flag = false;
-				} else {
-					float alignment = GOTLevelData.getData(entityplayer).getAlignment(GOTFaction.SOTHORYOS);
-					if (alignment > 50.0F) {
-						flag = false;
-					}
 				}
-			}
-			if (GOT.getNPCFaction(entity).isGoodRelation(GOTFaction.SOTHORYOS)) {
-				flag = false;
 			}
 			if (flag) {
 				int i = MathHelper.floor_double(entity.posX);

@@ -5,9 +5,6 @@ import got.common.util.DatabaseGenerator;
 import got.common.world.biome.GOTBiome;
 import got.common.world.structure.other.*;
 import got.common.world.structure.other.GOTStructureRegistry.IVillageProperties;
-import got.common.world.structure.sothoryos.sothoryos.*;
-import got.common.world.structure.sothoryos.sothoryos.GOTStructureSothoryosVillage.Instance;
-import got.common.world.structure.sothoryos.summer.*;
 import got.common.world.structure.westeros.arryn.*;
 import got.common.world.structure.westeros.crownlands.*;
 import got.common.world.structure.westeros.dorne.*;
@@ -189,23 +186,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, GOTStructureDorneTavern.class, GOTFaction.DORNE);
 		GOTStructureRegistry.register(id++, GOTStructureDorneBath.class, GOTFaction.DORNE);
 
-		GOTStructureRegistry.register(id++, GOTStructureSummerHouse.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerSmithy.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerTavern.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerTower.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerFort.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerStables.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerHouseRuined.class, GOTFaction.SUMMER_ISLANDS);
-		GOTStructureRegistry.register(id++, GOTStructureSummerTavernRuined.class, GOTFaction.SUMMER_ISLANDS);
-
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosPyramid.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosHouseSimple.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosHouseStilts.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosWatchtower.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosHouseLarge.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosChieftainPyramid.class, GOTFaction.SOTHORYOS);
-		GOTStructureRegistry.register(id++, GOTStructureSothoryosSmithy.class, GOTFaction.SOTHORYOS);
-
 		GOTStructureRegistry.register(id++, new GOTStructureWildlingVillage(GOTBiome.hauntedForest, 1.0f), "WildlingVillage", GOTFaction.WILDLING, (IVillageProperties<GOTStructureWildlingVillage.Instance>) instance -> instance.villageType = GOTStructureWildlingVillage.VillageType.VILLAGE);
 		GOTStructureRegistry.register(id++, new GOTStructureThennVillage(GOTBiome.thenn, 1.0f), "ThennVillage", GOTFaction.WILDLING, (IVillageProperties<GOTStructureThennVillage.Instance>) instance -> {
 		});
@@ -257,15 +237,6 @@ public class GOTStructure {
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityBig", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.TOWN);
 		GOTStructureRegistry.register(id++, new GOTStructureDorneCity(GOTBiome.dorne, 1.0f), "DorneCityMedium", GOTFaction.DORNE, (IVillageProperties<GOTStructureDorneCity.Instance>) instance -> instance.villageType = GOTStructureDorneCity.VillageType.FORT);
 
-		GOTStructureRegistry.register(id++, new GOTStructureSummerVillage(GOTBiome.summerIslands, 1.0f), "SummerVillage", GOTFaction.SUMMER_ISLANDS, (IVillageProperties<GOTStructureSummerVillage.Instance>) instance -> instance.villageType = GOTStructureSummerVillage.VillageType.VILLAGE);
-		GOTStructureRegistry.register(id++, new GOTStructureSummerVillage(GOTBiome.summerIslands, 1.0f), "SummerFortVillage", GOTFaction.SUMMER_ISLANDS, (IVillageProperties<GOTStructureSummerVillage.Instance>) instance -> instance.villageType = GOTStructureSummerVillage.VillageType.FORT);
-		GOTStructureRegistry.register(id++, new GOTStructureSummerVillage(GOTBiome.summerIslands, 1.0f).setIsRuined(), "SummerVillageRuined", GOTFaction.SUMMER_ISLANDS, (IVillageProperties<GOTStructureSummerVillage.Instance>) instance -> instance.villageType = GOTStructureSummerVillage.VillageType.VILLAGE);
-
-		GOTStructureRegistry.register(id++, new GOTStructureSothoryosVillage(GOTBiome.sothoryosJungle, 1.0f), "SothoryosVillage", GOTFaction.SOTHORYOS, (IVillageProperties<Instance>) instance -> {
-		});
-
 		GOTStructureRegistry.register(id++, DatabaseGenerator.class, 9605778);
-
-		GOTStructureSothoryosPyramidMapgen.register();
 	}
 }

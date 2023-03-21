@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class GOTBlockTableAsshai extends GOTBlockCraftingTable {
 	public GOTBlockTableAsshai() {
-		super(Material.wood, GOTFaction.ASSHAI, 84);
+		super(Material.wood, GOTFaction.HIGH_POWER, 84);
 		setStepSound(Block.soundTypeWood);
 	}
 

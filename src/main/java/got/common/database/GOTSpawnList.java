@@ -187,7 +187,7 @@ public class GOTSpawnList {
 		WILDING_THENN_L.add(new GOTSpawnEntry(GOTEntityThennArcher.class, 5, 1, 2));
 		WILDING_THENN_L.add(new GOTSpawnEntry(GOTEntityThennBerserker.class, 10, 1, 2));
 		WYVERN_L.add(new GOTSpawnEntry(GOTEntityWyvern.class, 10, 1, 1));
-		
+
 	}
 
 	public static GOTSpawnList ARRYN_CIVILIAN = new GOTSpawnList(ARRYN_CIVILIAN_L);

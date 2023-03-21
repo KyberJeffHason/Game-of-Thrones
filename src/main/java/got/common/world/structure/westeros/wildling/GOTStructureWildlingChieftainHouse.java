@@ -3,8 +3,6 @@ package got.common.world.structure.westeros.wildling;
 import java.util.Random;
 
 import got.common.database.*;
-import got.common.entity.westeros.legendary.captain.GOTEntityManceRayder;
-import got.common.entity.westeros.legendary.warrior.*;
 import got.common.entity.westeros.wildling.GOTEntityWildlingChieftain;
 import got.common.item.other.GOTItemBanner;
 import got.common.world.structure.other.GOTStructureBase;
@@ -338,13 +336,7 @@ public class GOTStructureWildlingChieftainHouse extends GOTStructureBase {
 		setBlockAndMetadata(world, -2, 1, 2, Blocks.crafting_table, 0);
 		setBlockAndMetadata(world, 2, 1, 3, Blocks.furnace, 5);
 		this.placeChest(world, random, 2, 1, 2, 5, GOTChestContents.BEYOND_WALL);
-		if (isHardhome) {
-			spawnNPCAndSetHome(new GOTEntityYgritte(world), world, 1, 1, 0, 8);
-			spawnNPCAndSetHome(new GOTEntityTormund(world), world, -1, 1, 0, 8);
-			spawnNPCAndSetHome(new GOTEntityManceRayder(world), world, -1, 1, -1, 8);
-		} else {
-			spawnNPCAndSetHome(new GOTEntityWildlingChieftain(world), world, 0, 1, 0, 8);
-		}
+		spawnNPCAndSetHome(new GOTEntityWildlingChieftain(world), world, 0, 1, 0, 8);
 		return true;
 	}
 

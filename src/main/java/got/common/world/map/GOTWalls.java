@@ -56,7 +56,6 @@ public class GOTWalls {
 		allWalls.clear();
 		wallPointDatabase = new WallPointDatabase();
 		GOTWalls.registerWall(id++, GOTWaypoint.WestWatch, GOTWaypoint.ShadowTower, GOTWaypoint.SentinelStand, GOTWaypoint.Greyguard, GOTWaypoint.Stonedoor, GOTWaypoint.HoarfrostHill, GOTWaypoint.Icemark, GOTWaypoint.Nightfort, GOTWaypoint.DeepLake, GOTWaypoint.Queensgate, GOTWaypoint.CastleBlack, GOTWaypoint.Oakenshield, GOTWaypoint.Woodswatch, GOTWaypoint.SableHall, GOTWaypoint.Rimegate, GOTWaypoint.LongBarrow, GOTWaypoint.Torches, GOTWaypoint.Greenguard, GOTWaypoint.EastWatch);
-		GOTWalls.registerWall(id++, GOTWaypoint.Anbei, GOTWaypoint.Jianmen, GOTWaypoint.Anguo, GOTWaypoint.Anjiang, GOTWaypoint.Dingguo, GOTWaypoint.Pinnu, GOTWaypoint.Pingjiang, GOTWaypoint.Wude, GOTWaypoint.Wusheng, GOTWaypoint.Zhenguo, GOTWaypoint.Lungmen, GOTWaypoint.Pingbei);
 
 		GOTWalls.registerWall(id++, new int[] { 2847, 1273 }, new int[] { 2820, 1292 }, new int[] { 2771, 1308 }, new int[] { 2732, 1308 });
 		GOTWalls.registerWall(id++, new int[] { 2732, 1308 }, new int[] { 2683, 1294 }, new int[] { 2628, 1294 }, new int[] { 2588, 1275 });

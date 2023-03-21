@@ -6,8 +6,6 @@ import got.client.GOTTextures;
 import got.client.model.GOTModelHuman;
 import got.client.render.other.*;
 import got.common.entity.essos.*;
-import got.common.entity.essos.asshai.GOTEntityAsshaiAlchemist;
-import got.common.entity.essos.legendary.warrior.GOTEntityAsshaiArchmag;
 import got.common.entity.other.GOTEntityNPC;
 import net.minecraft.entity.*;
 import net.minecraft.util.ResourceLocation;
@@ -54,7 +52,7 @@ public class GOTRenderFactionNPC extends GOTRenderBiped {
 	@Override
 	public void renderModel(EntityLivingBase entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		super.renderModel(entity, f, f1, f2, f3, f4, f5);
-		if (entity instanceof GOTEntityShryke || entity instanceof GOTEntityAsshaiAlchemist || entity instanceof GOTEntityAsshaiArchmag || entity instanceof GOTEntityIfekevron) {
+		if (entity instanceof GOTEntityShryke || entity instanceof GOTEntityIfekevron) {
 			ResourceLocation eyes = GOTTextures.getEyesTexture(this.getEntityTexture(entity), new int[][] { { 9, 12 }, { 13, 12 } }, 2, 1);
 			GOTGlowingEyes.renderGlowingEyes(entity, eyes, eyesModel, f, f1, f2, f3, f4, f5);
 		}
