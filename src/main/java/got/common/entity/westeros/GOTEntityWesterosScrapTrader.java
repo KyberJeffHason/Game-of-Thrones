@@ -47,8 +47,8 @@ public class GOTEntityWesterosScrapTrader extends GOTEntityHumanBase implements 
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public void dropFewItems(boolean flag, int i) {

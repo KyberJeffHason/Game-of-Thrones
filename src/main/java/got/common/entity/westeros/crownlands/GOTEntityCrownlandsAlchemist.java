@@ -16,8 +16,8 @@ public class GOTEntityCrownlandsAlchemist extends GOTEntityCrownlandsMan impleme
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public GOTTradeEntries getBuyPool() {

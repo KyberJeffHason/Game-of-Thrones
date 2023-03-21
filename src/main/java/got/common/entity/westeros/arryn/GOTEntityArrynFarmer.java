@@ -19,8 +19,8 @@ public class GOTEntityArrynFarmer extends GOTEntityArrynMan implements GOTTradea
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
+        return true;
+    }
 
 	@Override
 	public float getAlignmentBonus() {

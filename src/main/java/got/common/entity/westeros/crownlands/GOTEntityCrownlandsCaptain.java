@@ -26,8 +26,8 @@ public class GOTEntityCrownlandsCaptain extends GOTEntityCrownlandsGuard impleme
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 50.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public EntityAIBase createCrownlandsAttackAI() {

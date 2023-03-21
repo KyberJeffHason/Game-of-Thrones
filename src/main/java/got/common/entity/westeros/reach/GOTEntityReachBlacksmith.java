@@ -24,8 +24,8 @@ public class GOTEntityReachBlacksmith extends GOTEntityReachMan implements GOTTr
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public void dropFewItems(boolean flag, int i) {

@@ -23,8 +23,8 @@ public class GOTEntityWildlingChieftain extends GOTEntityWildling implements GOT
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 50.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public float getAlignmentBonus() {

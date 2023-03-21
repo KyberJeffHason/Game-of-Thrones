@@ -27,8 +27,8 @@ public class GOTEntityStormlandsCaptain extends GOTEntityStormlandsSoldier imple
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 50.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public EntityAIBase createStormlandsAttackAI() {

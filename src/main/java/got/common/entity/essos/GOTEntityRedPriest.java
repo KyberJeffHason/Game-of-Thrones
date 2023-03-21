@@ -40,8 +40,8 @@ public class GOTEntityRedPriest extends GOTEntityHumanBase implements GOTTradeab
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	public EntityAIBase createMaesterAttackAI() {
 		return new GOTEntityAIAttackOnCollide(this, 1.4, false);

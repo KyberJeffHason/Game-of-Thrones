@@ -23,11 +23,6 @@ public class GOTEntityArrynBlacksmith extends GOTEntityArrynMan implements GOTTr
 	}
 
 	@Override
-	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
-
-	@Override
 	public void dropFewItems(boolean flag, int i) {
 		super.dropFewItems(flag, i);
 		dropItem(Items.iron_ingot, 1 + rand.nextInt(3) + rand.nextInt(i + 1));
@@ -36,6 +31,11 @@ public class GOTEntityArrynBlacksmith extends GOTEntityArrynMan implements GOTTr
 	@Override
 	public float getAlignmentBonus() {
 		return 2.0f;
+	}
+
+	@Override
+	public boolean canTradeWith(EntityPlayer var1) {
+		return false;
 	}
 
 	@Override

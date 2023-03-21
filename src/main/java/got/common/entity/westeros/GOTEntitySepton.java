@@ -40,8 +40,8 @@ public class GOTEntitySepton extends GOTEntityHumanBase implements GOTTradeable 
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	public EntityAIBase createMaesterAttackAI() {
 		return new GOTEntityAIAttackOnCollide(this, 1.4, false);

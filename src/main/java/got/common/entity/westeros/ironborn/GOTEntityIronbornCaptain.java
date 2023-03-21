@@ -26,8 +26,8 @@ public class GOTEntityIronbornCaptain extends GOTEntityIronbornSoldier implement
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 50.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public EntityAIBase createIronbornAttackAI() {

@@ -18,8 +18,8 @@ public class GOTEntityHillmanBartender extends GOTEntityHillman implements GOTTr
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public void dropHillmanItems(boolean flag, int i) {

@@ -16,8 +16,8 @@ public class GOTEntityIronbornPriest extends GOTEntityIronbornMan implements GOT
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public GOTTradeEntries getBuyPool() {

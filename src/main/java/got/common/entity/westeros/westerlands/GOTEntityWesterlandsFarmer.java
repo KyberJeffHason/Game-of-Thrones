@@ -19,8 +19,8 @@ public class GOTEntityWesterlandsFarmer extends GOTEntityWesterlandsMan implemen
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return GOTLevelData.getData(entityplayer).getAlignment(getFaction()) >= 0.0f && isFriendly(entityplayer);
-	}
+        return true;
+    }
 
 	@Override
 	public float getAlignmentBonus() {

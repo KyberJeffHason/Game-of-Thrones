@@ -21,8 +21,8 @@ public class GOTEntityGoldenCaptain extends GOTEntityGoldenWarrior implements GO
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-		return isFriendly(entityplayer);
-	}
+        return false;
+    }
 
 	@Override
 	public float getAlignmentBonus() {
