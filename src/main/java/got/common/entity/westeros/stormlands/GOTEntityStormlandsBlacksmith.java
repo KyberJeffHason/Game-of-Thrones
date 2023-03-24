@@ -24,7 +24,7 @@ public class GOTEntityStormlandsBlacksmith extends GOTEntityStormlandsMan implem
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override

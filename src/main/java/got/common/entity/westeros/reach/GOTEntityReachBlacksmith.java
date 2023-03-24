@@ -24,7 +24,7 @@ public class GOTEntityReachBlacksmith extends GOTEntityReachMan implements GOTTr
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override

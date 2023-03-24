@@ -23,7 +23,7 @@ public class GOTEntityThennBlacksmith extends GOTEntityThenn implements GOTTrade
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override

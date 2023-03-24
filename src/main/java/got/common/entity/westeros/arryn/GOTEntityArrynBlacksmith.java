@@ -35,7 +35,7 @@ public class GOTEntityArrynBlacksmith extends GOTEntityArrynMan implements GOTTr
 
 	@Override
 	public boolean canTradeWith(EntityPlayer var1) {
-		return false;
+		return true;
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class GOTEntityIronbornBlacksmith extends GOTEntityIronbornMan implements
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override

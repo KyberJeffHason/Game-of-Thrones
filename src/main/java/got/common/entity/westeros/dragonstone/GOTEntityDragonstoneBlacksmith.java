@@ -24,7 +24,7 @@ public class GOTEntityDragonstoneBlacksmith extends GOTEntityDragonstoneMan impl
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override

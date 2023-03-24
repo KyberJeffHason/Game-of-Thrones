@@ -24,7 +24,7 @@ public class GOTEntityGiftBlacksmith extends GOTEntityGiftMan implements GOTTrad
 
 	@Override
 	public boolean canTradeWith(EntityPlayer entityplayer) {
-        return false;
+        return true;
     }
 
 	@Override
