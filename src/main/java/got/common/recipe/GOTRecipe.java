@@ -206,9 +206,6 @@ public class GOTRecipe {
 		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosPike), "  X", " YX", "Y  ", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood"));
 		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosSpear), "  X", " Y ", "Y  ", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood"));
 		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosSword), "X", "X", "Y", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood"));
-		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosLongsword), "X", "Y", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), GOTRegistry.westerosSword));
-		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosGreatsword), "X", "X", "Y", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), GOTRegistry.westerosSword));
-		commonWesteros.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.westerosGreatsword), "X", "Y", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), GOTRegistry.westerosLongsword));
 	}
 
 	public static void createCrownlandsRecipes() {

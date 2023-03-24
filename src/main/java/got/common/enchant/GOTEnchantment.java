@@ -30,7 +30,7 @@ public abstract class GOTEnchantment {
 	public static GOTEnchantment meleeUnreach1 = new GOTEnchantmentMeleeReach("meleeUnreach1", 0.75F).setEnchantWeight(4);
 
 	public static GOTEnchantment knockback1 = new GOTEnchantmentKnockback("knockback1", 1).setEnchantWeight(6);
-	public static GOTEnchantment knockback2 = new GOTEnchantmentKnockback("knockback2", 2).setEnchantWeight(2).setSkilful();
+	public static GOTEnchantment knockback2 = new GOTEnchantmentKnockback("knockback2", 2).setEnchantWeight(0);
 
 	public static GOTEnchantment toolSpeed1 = new GOTEnchantmentToolSpeed("toolSpeed1", 1.5F).setEnchantWeight(20);
 	public static GOTEnchantment toolSpeed2 = new GOTEnchantmentToolSpeed("toolSpeed2", 2.0F).setEnchantWeight(10);

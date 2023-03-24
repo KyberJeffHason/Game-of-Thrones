@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3050393f-8e5a-4469-b08a-51b2f06f1627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/arryn/GOTEntityArrynBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/arryn/GOTEntityArrynBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/crownlands/GOTEntityCrownlandsBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/crownlands/GOTEntityCrownlandsBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/dorne/GOTEntityDorneBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/dorne/GOTEntityDorneBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/dragonstone/GOTEntityDragonstoneBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/dragonstone/GOTEntityDragonstoneBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/gift/GOTEntityGiftBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/gift/GOTEntityGiftBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/ironborn/GOTEntityIronbornBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/ironborn/GOTEntityIronbornBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/north/GOTEntityNorthBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/north/GOTEntityNorthBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/reach/GOTEntityReachBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/reach/GOTEntityReachBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/riverlands/GOTEntityRiverlandsBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/riverlands/GOTEntityRiverlandsBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/stormlands/GOTEntityStormlandsBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/stormlands/GOTEntityStormlandsBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/westerlands/GOTEntityWesterlandsBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/westerlands/GOTEntityWesterlandsBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/wildling/thenn/GOTEntityThennBlacksmith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/entity/westeros/wildling/thenn/GOTEntityThennBlacksmith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerAnvil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerAnvil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerTrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerTrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/recipe/GOTRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/recipe/GOTRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/lang/ru_RU.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/lang/ru_RU.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
