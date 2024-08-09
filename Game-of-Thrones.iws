@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3050393f-8e5a-4469-b08a-51b2f06f1627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Game of Thrones Build-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Game of Thrones Build-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/lang/en_US.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/lang/ru_RU.lang" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/lang/ru_RU.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/client/gui/GOTGuiMainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/gui/GOTGuiMainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/GOTEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/GOTEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/database/GOTMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/database/GOTMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/database/GOTRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/database/GOTRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/enchant/GOTEnchantment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/enchant/GOTEnchantment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/enchant/GOTEnchantmentCombining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/enchant/GOTEnchantmentCombining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/faction/GOTFaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/faction/GOTFaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerAnvil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/inventory/GOTContainerAnvil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/GOTWeaponStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/GOTWeaponStats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/common/recipe/GOTRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/recipe/GOTRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/world/map/GOTRoads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/world/map/GOTRoads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/world/map/GOTWaypoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/world/map/GOTWaypoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/lang/en_US.lang" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/lang/ru_RU.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/lang/ru_RU.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,16 +103,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Minecraft Client (1)">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
@@ -254,7 +268,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>

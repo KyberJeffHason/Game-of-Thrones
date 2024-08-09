@@ -70,7 +70,7 @@ public abstract class GOTEnchantment {
 	public static GOTEnchantment rangedWeak2 = new GOTEnchantmentRangedDamage("rangedWeak2", 0.5F).setEnchantWeight(3);
 
 	public static GOTEnchantment rangedKnockback1 = new GOTEnchantmentRangedKnockback("rangedKnockback1", 1).setEnchantWeight(6);
-	public static GOTEnchantment rangedKnockback2 = new GOTEnchantmentRangedKnockback("rangedKnockback2", 2).setEnchantWeight(2).setSkilful();
+	public static GOTEnchantment rangedKnockback2 = new GOTEnchantmentRangedKnockback("rangedKnockback2", 2).setEnchantWeight(0);
 
 	public static GOTEnchantment fire = new GOTEnchantmentWeaponSpecial("fire").setEnchantWeight(0).setApplyToProjectile();
 	public static GOTEnchantment chill = new GOTEnchantmentWeaponSpecial("chill").setEnchantWeight(0).setApplyToProjectile();

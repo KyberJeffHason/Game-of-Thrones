@@ -103,7 +103,6 @@ public class GOTRoads {
 		GOTRoads.registerRoad(id++, GOTWaypoint.Oldtown, near(GOTWaypoint.Oldtown, -1, 0));
 		GOTRoads.registerRoad(id++, GOTWaypoint.Oldtown, new int[] { 393, 1966 }, new int[] { 377, 1988 }, near(GOTWaypoint.ThreeTowers1, 1, 0));
 		GOTRoads.registerRoad(id++, GOTWaypoint.RamsGate, near(GOTWaypoint.RamsGate, -1, 0));
-		GOTRoads.registerRoad(id++, GOTWaypoint.Rhyos, GOTWaypoint.Oros);
 		GOTRoads.registerRoad(id++, GOTWaypoint.RillwaterCrossing, near(GOTWaypoint.RillwaterCrossing, 0, 1));
 		GOTRoads.registerRoad(id++, GOTWaypoint.RisvellsCastle, near(GOTWaypoint.RisvellsCastle, 0, 1));
 		GOTRoads.registerRoad(id++, GOTWaypoint.Riverrun, near(GOTWaypoint.Riverrun, 1, 0));
@@ -153,7 +152,7 @@ public class GOTRoads {
 		GOTRoads.registerRoad(id++, near(GOTWaypoint.WhiteHarbour, -9, 0), GOTWaypoint.WhiteHarbour);
 		GOTRoads.registerRoad(id++, near(GOTWaypoint.Winterfell, 0, -1), near(GOTWaypoint.Winterfell, 0, 1));
 		GOTRoads.registerRoad(id++, near(GOTWaypoint.Winterfell, 0, 1), GOTWaypoint.ServinsCastle, new int[] { 628, 973 }, near(GOTWaypoint.MoatKailin, 0, -1));
-		GOTRoads.registerRoad(id++, new int[] { 1251, 1464 }, new int[] { 1246, 1424 }, new int[] { 1227, 1388 }, new int[] { 1208, 1335 });
+		//GOTRoads.registerRoad(id++, new int[] { 1251, 1464 }, new int[] { 1246, 1424 }, new int[] { 1227, 1388 }, new int[] { 1208, 1335 });
 	}
 
 	public static void registerHiddenRoad(int id, Object... waypoints) {

@@ -18,7 +18,7 @@ import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public enum GOTFaction {
-	WHITE_WALKER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(550, 550, 500)), HIGH_POWER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(0, 0, 0)), WILDLING(0x749987, DimensionRegion.WESTEROS, new GOTMapRegion(615, 520, 200)), NIGHT_WATCH(0x2A2A2A, DimensionRegion.WESTEROS, new GOTMapRegion(750, 670, 150)), NORTH(0xD4CFB7, DimensionRegion.WESTEROS, new GOTMapRegion(670, 930, 400)), IRONBORN(0x4b483a, DimensionRegion.WESTEROS, new GOTMapRegion(349, 1323, 129)), WESTERLANDS(0x7c0a02, DimensionRegion.WESTEROS, new GOTMapRegion(485, 1540, 200)), RIVERLANDS(0x146f69, DimensionRegion.WESTEROS, new GOTMapRegion(675, 1437, 215)), HILL_TRIBES(0x573C2F, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), ARRYN(0x2D3257, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), DRAGONSTONE(0x6A6A6A, DimensionRegion.WESTEROS, new GOTMapRegion(923, 1549, 40)), CROWNLANDS(0xDBAB25, DimensionRegion.WESTEROS, new GOTMapRegion(876, 1566, 168)), STORMLANDS(0x014634, DimensionRegion.WESTEROS, new GOTMapRegion(820, 1865, 218)), REACH(0x617646, DimensionRegion.WESTEROS, new GOTMapRegion(500, 1820, 293)), DORNE(0xF57820, DimensionRegion.WESTEROS, new GOTMapRegion(717, 2011, 300)), HOSTILE(true, -1), UNALIGNED(false, 0);
+	WHITE_WALKER(0x8ddaf8,  DimensionRegion.WESTEROS, new GOTMapRegion(550, 550, 500)), HIGH_POWER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(0, 0, 0)), WILDLING(0x749987, DimensionRegion.WESTEROS, new GOTMapRegion(615, 520, 200)), NIGHT_WATCH(0x2A2A2A, DimensionRegion.WESTEROS, new GOTMapRegion(750, 670, 150)), NORTH(0xD4CFB7, DimensionRegion.WESTEROS, new GOTMapRegion(670, 930, 400)), IRONBORN(0x4b483a, DimensionRegion.WESTEROS, new GOTMapRegion(349, 1323, 129)), WESTERLANDS(0x7c0a02, DimensionRegion.WESTEROS, new GOTMapRegion(485, 1540, 200)), RIVERLANDS(0x146f69, DimensionRegion.WESTEROS, new GOTMapRegion(675, 1437, 215)), HILL_TRIBES(0x573C2F, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), ARRYN(0x2D3257, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)), DRAGONSTONE(0x6A6A6A, DimensionRegion.WESTEROS, new GOTMapRegion(923, 1549, 40)), CROWNLANDS(0xDBAB25, DimensionRegion.WESTEROS, new GOTMapRegion(876, 1566, 168)), STORMLANDS(0x014634, DimensionRegion.WESTEROS, new GOTMapRegion(820, 1865, 218)), REACH(0x617646, DimensionRegion.WESTEROS, new GOTMapRegion(500, 1820, 293)), DORNE(0xF57820, DimensionRegion.WESTEROS, new GOTMapRegion(717, 2011, 300)), HOSTILE(true, -1), UNALIGNED(false, 0);
 
 	public static Random factionRand = new Random();
 	public static int CONTROL_ZONE_EXTRA_RANGE = 50;
@@ -518,10 +518,12 @@ public enum GOTFaction {
 	}
 
 	public static void onInit() {
+		WHITE_WALKER.allowPlayer = false;
 		for (GOTFaction f : GOTFaction.values()) {
-			if (f.allowPlayer && f != WHITE_WALKER) {
-				GOTFactionRelations.setRelations(f, WHITE_WALKER, Relation.MORTAL_ENEMY);
+			if (!f.allowPlayer || f == WHITE_WALKER) {
+				continue;
 			}
+			GOTFactionRelations.setRelations(f, WHITE_WALKER, GOTFactionRelations.Relation.MORTAL_ENEMY);
 		}
 		GOTFactionRelations.setRelations(ARRYN, CROWNLANDS, Relation.ENEMY);
 		GOTFactionRelations.setRelations(ARRYN, HILL_TRIBES, Relation.ENEMY);
@@ -577,12 +579,12 @@ public enum GOTFaction {
 		STORMLANDS.addControlZone(new GOTControlZone(687, 1600, 404));
 		WESTERLANDS.addControlZone(new GOTControlZone(703, 1416, 550));
 		WESTERLANDS.approvesWarCrimes = true;
-		WHITE_WALKER.addControlZone(new GOTControlZone(360, 297, 240));
-		WHITE_WALKER.addControlZone(new GOTControlZone(494, 551, 206));
-		WHITE_WALKER.addControlZone(new GOTControlZone(546, 245, 191));
-		WHITE_WALKER.addControlZone(new GOTControlZone(667, 239, 186));
-		WHITE_WALKER.addControlZone(new GOTControlZone(696, 504, 207));
-		WHITE_WALKER.addControlZone(new GOTControlZone(757, 573, 267));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(360, 297, 240));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(494, 551, 206));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(546, 245, 191));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(667, 239, 186));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(696, 504, 207));
+//		WHITE_WALKER.addControlZone(new GOTControlZone(757, 573, 267));
 		WHITE_WALKER.approvesWarCrimes = true;
 		WILDLING.addControlZone(new GOTControlZone(757, 573, 267));
 		WILDLING.approvesWarCrimes = true;

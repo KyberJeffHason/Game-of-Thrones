@@ -42,8 +42,6 @@ public class GOTEnchantmentCombining {
 		combine(GOTEnchantment.durable1, GOTEnchantment.durable2, 300);
 		combine(GOTEnchantment.durable2, GOTEnchantment.durable3, 1500);
 
-		combine(GOTEnchantment.knockback1, GOTEnchantment.knockback2, 2500);
-
 		combine(GOTEnchantment.toolSpeed1, GOTEnchantment.toolSpeed2, 200);
 		combine(GOTEnchantment.toolSpeed2, GOTEnchantment.toolSpeed3, 800);
 		combine(GOTEnchantment.toolSpeed3, GOTEnchantment.toolSpeed4, 1500);
@@ -64,8 +62,6 @@ public class GOTEnchantmentCombining {
 
 		combine(GOTEnchantment.rangedStrong1, GOTEnchantment.rangedStrong2, 400);
 		combine(GOTEnchantment.rangedStrong2, GOTEnchantment.rangedStrong3, 1500);
-
-		combine(GOTEnchantment.rangedKnockback1, GOTEnchantment.rangedKnockback2, 2500);
 	}
 
 	public static class CombineRecipe {

@@ -30,12 +30,14 @@ public class GOTWeaponStats {
 		GOTWeaponStats.registerMeleeSpeed(GOTItemLongsword.class, 0.8f);
 		GOTWeaponStats.registerMeleeReach(GOTItemGreatsword.class, 1.5f);
 		GOTWeaponStats.registerMeleeReach(GOTItemLongsword.class, 1.25f);
+		GOTWeaponStats.registerMeleeReach(GOTItemDornePolearm.class, 1.5f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemDagger.class, 1.5f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemSpear.class, 0.833f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemPolearm.class, 0.667f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemPolearmLong.class, 0.5f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemLance.class, 0.5f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemBattleaxe.class, 0.75f);
+		GOTWeaponStats.registerMeleeSpeed(GOTItemDornePolearm.class, 0.75f);
 		GOTWeaponStats.registerMeleeSpeed(GOTItemHammer.class, 0.667f);
 		GOTWeaponStats.registerMeleeReach(GOTItemDagger.class, 0.75f);
 		GOTWeaponStats.registerMeleeReach(GOTItemSpear.class, 1.3f);

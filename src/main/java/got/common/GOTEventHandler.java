@@ -115,6 +115,38 @@ public class GOTEventHandler implements IFuelHandler {
 		}
 	}
 
+	@SubscribeEvent
+	public void onLivingCombatLOG(LivingEvent.LivingUpdateEvent event) {
+		if (event.entityLiving instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) event.entityLiving;
+
+			// If player doesn't have the effect, nothing to do.
+			if (!player.isPotionActive(EffectRegister.COMBATLOG_POTIONID)) {
+				return;
+			}
+
+			// Store the effect
+			PotionEffect effect = player.getActivePotionEffect(Potion.potionTypes[EffectRegister.COMBATLOG_POTIONID]);
+
+			// If player is drinking milk
+			if (player.isUsingItem() && player.getItemInUse().getItem() == Items.milk_bucket) {
+				// Store the effect details before it's removed
+				int duration = effect.getDuration();
+				int amplifier = effect.getAmplifier();
+
+				// Wait a moment (after milk has removed the effects) then reapply the effect
+				new java.util.Timer().schedule(
+						new java.util.TimerTask() {
+							@Override
+							public void run() {
+								player.addPotionEffect(new PotionEffect(EffectRegister.COMBATLOG_POTIONID, duration, amplifier));
+							}
+						},
+						500 // Delay in milliseconds
+				);
+			}
+		}
+	}
 	@Override
 	public int getBurnTime(ItemStack itemstack) {
 		Item item = itemstack.getItem();

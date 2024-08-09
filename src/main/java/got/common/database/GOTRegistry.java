@@ -31,7 +31,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.*;
 import net.minecraft.item.*;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.EnumChatFormatting;
@@ -903,6 +902,8 @@ public class GOTRegistry {
 	public static Item kingsguardBoots;
 	public static Item kingsguardChestplate;
 	public static Item kingsguardHelmet;
+	public static Item facCoin;
+	public static Item dragonGlassShard;
 	public static Item kingsguardLeggings;
 	public static Item ladyForlorn;
 	public static Item lamentation;
@@ -1257,6 +1258,7 @@ public class GOTRegistry {
 	public static Item westerosPike;
 	public static Item westerosSpear;
 	public static Item westerosSword;
+	public static Item westerosPolearm;
 	public static Item westkingBoots;
 	public static Item westkingChestplate;
 	public static Item westkingHelmet;
@@ -1268,6 +1270,12 @@ public class GOTRegistry {
 	public static Item whiteWalkersLeggings;
 	public static Item widowWail;
 	public static Item wildberry;
+
+	public static Item dragonGlassBattleaxe;
+	public static Item dragonGlassSpear;
+	public static Item dragonGlassSword;
+	public static Item dragonGlassPike;
+
 	public static Item wildlingAxe;
 	public static Item wildlingBattleaxe;
 	public static Item wildlingDagger;
@@ -1285,6 +1293,7 @@ public class GOTRegistry {
 	public static Item yitiBootsFrontier;
 	public static Item yitiBootsSamurai;
 	public static Item yitiBow;
+	public static Item dorneBow;
 	public static Item yitiChestplate;
 	public static Item yitiChestplateFrontier;
 	public static Item yitiChestplateSamurai;
@@ -1299,6 +1308,7 @@ public class GOTRegistry {
 	public static Item yitiLeggingsFrontier;
 	public static Item yitiLeggingsSamurai;
 	public static Item yitiPike;
+	public static Item dornePolearm;
 	public static Item yitiPolearm;
 	public static Item yitiSpear;
 	public static Item yitiSteelIngot;
@@ -2042,6 +2052,8 @@ public class GOTRegistry {
 		cornCooked = new GOTItemFood(4, 0.4f, false);
 		cracker = new GOTItemCracker();
 		cranberry = new GOTItemBerry();
+		facCoin = new Item().setCreativeTab(GOTCreativeTabs.tabMisc);
+		dragonGlassShard = new Item().setCreativeTab(GOTCreativeTabs.tabMisc);
 		crossbowBolt = new GOTItemCrossbowBolt();
 		crossbowBoltPoisoned = new GOTItemCrossbowBolt().setPoisoned();
 		crowbar = new GOTItemLegendaryCrowbar(GOTMaterial.IRON).setCreativeTab(null);
@@ -2553,6 +2565,7 @@ public class GOTRegistry {
 		westerosPike = new GOTItemPike(GOTMaterial.IRON);
 		westerosSpear = new GOTItemSpear(GOTMaterial.IRON);
 		westerosSword = new GOTItemSword(GOTMaterial.IRON);
+		westerosPolearm = new GOTItemPolearm(GOTMaterial.IRON).addWeaponDamage(0.25f);
 		westerosLongsword = new GOTItemLongsword(GOTMaterial.IRON);
 		westerosGreatsword = new GOTItemGreatsword(GOTMaterial.IRON);
 		westkingBoots = new GOTItemArmor(GOTMaterial.WESTKING, 3).setCreativeTab(GOTCreativeTabs.tabStory);
@@ -2574,8 +2587,16 @@ public class GOTRegistry {
 		wildlingPolearm = new GOTItemPolearm(GOTMaterial.IRON);
 		wildlingSpear = new GOTItemSpear(GOTMaterial.IRON);
 		wildlingSword = new GOTItemSword(GOTMaterial.IRON);
+
+		dragonGlassBattleaxe = new GOTItemBattleaxe(GOTMaterial.DRAGON_GLASS);
+		dragonGlassSpear = new GOTItemSpear(GOTMaterial.DRAGON_GLASS);
+		dragonGlassPike = new GOTItemPike(GOTMaterial.DRAGON_GLASS);
+		dragonGlassSword = new GOTItemSword(GOTMaterial.DRAGON_GLASS);
+
+
 		wineGlass = new GOTItemVessel();
 		woodPlate = new GOTItemPlate(woodPlateBlock);
+		dorneBow = new GOTItemBow(GOTMaterial.DORNE_BOW).setDrawTime(16);
 		yam = new ItemSeedFood(1, 0.4f, yamCrop, Blocks.farmland).setPotionEffect(Potion.hunger.id, 15, 0, 0.4f);
 		yamRoast = new GOTItemFood(6, 0.6f, false);
 		yitiBattleaxe = new GOTItemBattleaxe(GOTMaterial.IRON);
@@ -2603,6 +2624,7 @@ public class GOTRegistry {
 		yitiSword = new GOTItemSword(GOTMaterial.IRON);
 		zebraCooked = new GOTItemFood(6, 0.6f, true);
 		zebraRaw = new GOTItemFood(2, 0.1f, true);
+		dornePolearm = new GOTItemDornePolearm(GOTMaterial.DORNE_TOOL).addWeaponDamage(-0.75f);
 	}
 
 	public static void assignMetadata() {
@@ -3326,6 +3348,7 @@ public class GOTRegistry {
 		registerItem(valyrianHoe, "valyrianHoe");
 		registerItem(fuseItem, "fuse");
 		registerItem(westerosSword, "westerosSword");
+		registerItem(westerosPolearm, "westorPolearm");
 		registerItem(northHelmet, "northHelmet");
 		registerItem(northChestplate, "northChestplate");
 		registerItem(northLeggings, "northLeggings");
@@ -3415,7 +3438,13 @@ public class GOTRegistry {
 		registerItem(wildlingHammer, "wildlingHammer");
 		registerItem(wildlingSpear, "wildlingSpear");
 		registerItem(wildlingAxe, "wildlingAxe");
+		registerItem(dragonGlassSword, "dragonGlassSword");
+		registerItem(dragonGlassSpear,"dragonGlassSpear");
+		registerItem(dragonGlassPike, "dragonGlassPike");
+		registerItem(dragonGlassBattleaxe, "dragonGlassBattleaxe");
 		registerItem(mango, "mango");
+		registerItem(facCoin, "facCoin");
+		registerItem(dragonGlassShard, "dragonGlassShard");
 		registerItem(mugMangoJuice, "mugMangoJuice");
 		registerItem(banana, "banana");
 		registerItem(bananaBread, "bananaBread");
@@ -3639,11 +3668,13 @@ public class GOTRegistry {
 		registerItem(yitiSpear, "yitiSpear");
 		registerItem(yitiPolearm, "yitiPolearm");
 		registerItem(yitiPike, "yitiPike");
+		registerItem(dornePolearm, "dornePolearm");
 		registerItem(yitiHelmet, "yitiHelmet");
 		registerItem(yitiChestplate, "yitiChestplate");
 		registerItem(yitiLeggings, "yitiLeggings");
 		registerItem(yitiBoots, "yitiBoots");
 		registerItem(yitiBow, "yitiBow");
+		registerItem(dorneBow, "dorneBow");
 		registerItem(yitiHorseArmor, "yitiHorseArmor");
 		registerItem(yitiSteelIngot, "yitiSteelIngot");
 		registerItem(mugTermiteTequila, "mugTermiteTequila");

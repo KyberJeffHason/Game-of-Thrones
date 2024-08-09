@@ -73,7 +73,10 @@ public class GOTMaterial {
 
 	public static ToolMaterial BRONZE_TOOL = EnumHelper.addToolMaterial("GOT_BRONZE_TOOL", 2, 500, 5.0F, 1.5F, 10);
 	public static ToolMaterial IRON = EnumHelper.addToolMaterial("GOT_IRON", 2, 625, 6.0F, 2.0F, 14);
+	public static ToolMaterial DRAGON_GLASS = EnumHelper.addToolMaterial("GOT_DRAGONGLASS", 2, 625, 6.0F, 2.0F, 14);
 	public static ToolMaterial WOOD = EnumHelper.addToolMaterial("GOT_WOOD", 0, 147, 2.0F, 0.0F, 15);
+	public static ToolMaterial DORNE_TOOL = EnumHelper.addToolMaterial("GOT_DORNE", 2, 625, 6.0F, 2.0F, 14);
+	public static ToolMaterial DORNE_BOW = EnumHelper.addToolMaterial("GOT_DORNEBOW", 0, 147, 2.0F, 0.0F, 15);
 	public static ToolMaterial STONE = EnumHelper.addToolMaterial("GOT_STONE", 1, 327, 4.0F, 1.0F, 5);
 	public static ToolMaterial COBALT_TOOL = EnumHelper.addToolMaterial("GOT_COBALT_TOOL", 3, 3902, 8.0F, 3.0F, 10);
 	public static ToolMaterial FLINT_TOOL = EnumHelper.addToolMaterial("GOT_FLINT_TOOL", 1, 327, 4.0F, 1.0F, 5);
@@ -155,7 +158,12 @@ public class GOTMaterial {
 		YITI.customCraftingMaterial = Items.iron_ingot;
 		YITI_FRONTIER.customCraftingMaterial = Items.iron_ingot;
 		YITI_SAMURAI.customCraftingMaterial = Items.iron_ingot;
+//		DRAGON_GLASS.customCraftingMaterial = GOTRegistry.dragonGlassShard;
+//		DORNE_BOW.customCraftingMaterial = Items.gold_nugget;
+//		DORNE_TOOL.customCraftingMaterial = Items.gold_ingot;
 
+		DRAGON_GLASS.setRepairItem(new ItemStack(GOTRegistry.dragonGlassShard));
+		DORNE_BOW.setRepairItem(new ItemStack(Items.gold_nugget));
 		BRONZE_TOOL.setRepairItem(new ItemStack(GOTRegistry.bronzeIngot));
 		COBALT_TOOL.setRepairItem(new ItemStack(GOTRegistry.alloySteelIngot));
 		FLINT_TOOL.setRepairItem(new ItemStack(Items.flint));
@@ -168,5 +176,6 @@ public class GOTMaterial {
 		IRON.setRepairItem(new ItemStack(Items.iron_ingot));
 		WOOD.setRepairItem(new ItemStack(Item.getItemFromBlock(Blocks.planks)));
 		STONE.setRepairItem(new ItemStack(Item.getItemFromBlock(Blocks.cobblestone)));
+		DORNE_TOOL.setRepairItem(new ItemStack((Items.gold_ingot)));
 	}
 }

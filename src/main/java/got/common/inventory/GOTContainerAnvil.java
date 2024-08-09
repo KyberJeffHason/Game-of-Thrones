@@ -480,180 +480,180 @@ public class GOTContainerAnvil extends Container {
 			if (nameChange && GOTContainerAnvil.costsToRename(inputItem)) {
 				++renameCost;
 			}
-//			if (isTrader && (scrollCombine = GOTEnchantmentCombining.getCombinationResult(inputItem, combinerItem)) != null) {
-//				invOutput.setInventorySlotContents(0, scrollCombine.createOutputItem());
-//				materialCost = scrollCombine.cost;
-//				reforgeCost = 0;
-//				engraveOwnerCost = 0;
-//				isSmithScrollCombine = true;
-//				return;
-//			}
+			if (isTrader && (scrollCombine = GOTEnchantmentCombining.getCombinationResult(inputItem, combinerItem)) != null) {
+				invOutput.setInventorySlotContents(0, scrollCombine.createOutputItem());
+				materialCost = scrollCombine.cost;
+				reforgeCost = 0;
+				engraveOwnerCost = 0;
+				isSmithScrollCombine = true;
+				return;
+			}
 			boolean combining = false;
-//			if (combinerItem != null) {
-//				enchantingWithBook = combinerItem.getItem() == Items.enchanted_book && Items.enchanted_book.func_92110_g(combinerItem).tagCount() > 0;
-//				if (enchantingWithBook && !GOTConfig.enchantingVanilla) {
-//					invOutput.setInventorySlotContents(0, null);
-//					materialCost = 0;
-//					return;
-//				}
-//				GOTEnchantment combinerItemEnchant = null;
-//				if (combinerItem.getItem() instanceof GOTItemEnchantment) {
-//					combinerItemEnchant = ((GOTItemEnchantment) combinerItem.getItem()).theEnchant;
-//				} else if (combinerItem.getItem() instanceof GOTItemModifierTemplate) {
-//					combinerItemEnchant = GOTItemModifierTemplate.getModifier(combinerItem);
-//				}
-//				if (!enchantingWithBook && combinerItemEnchant == null) {
-//					if (inputCopy.isItemStackDamageable() && inputCopy.getItem() == combinerItem.getItem()) {
-//						int inputUseLeft = inputItem.getMaxDamage() - inputItem.getItemDamageForDisplay();
-//						int combinerUseLeft = combinerItem.getMaxDamage() - combinerItem.getItemDamageForDisplay();
-//						int restoredUses = combinerUseLeft + inputCopy.getMaxDamage() * 12 / 100;
-//						int newUsesLeft = inputUseLeft + restoredUses;
-//						int newDamage = inputCopy.getMaxDamage() - newUsesLeft;
-//						newDamage = Math.max(newDamage, 0);
-//						if (newDamage < inputCopy.getItemDamage()) {
-//							inputCopy.setItemDamage(newDamage);
-//							int restoredUses1 = inputCopy.getMaxDamage() - inputUseLeft;
-//							int restoredUses2 = inputCopy.getMaxDamage() - combinerUseLeft;
-//							combineCost += Math.max(0, Math.min(restoredUses1, restoredUses2) / 100);
-//						}
-//						combining = true;
-//					} else if (!alteringNameColor) {
-//						invOutput.setInventorySlotContents(0, null);
-//						materialCost = 0;
-//						return;
-//					}
-//				}
-//				HashMap outputEnchants = new HashMap<>(inputEnchants);
-//				if (GOTConfig.enchantingVanilla) {
-//					Map combinerEnchants = EnchantmentHelper.getEnchantments(combinerItem);
-//					for (Object obj : combinerEnchants.keySet()) {
-//						int combinerEnchLevel;
-//						int combinerEnchID = (Integer) obj;
-//						Enchantment combinerEnch = Enchantment.enchantmentsList[combinerEnchID];
-//						int inputEnchLevel = 0;
-//						if (outputEnchants.containsKey(combinerEnchID)) {
-//							inputEnchLevel = (Integer) outputEnchants.get(combinerEnchID);
-//						}
-//						int combinedEnchLevel = inputEnchLevel == (combinerEnchLevel = (Integer) combinerEnchants.get(combinerEnchID)) ? ++combinerEnchLevel : Math.max(combinerEnchLevel, inputEnchLevel);
-//						combinerEnchLevel = combinedEnchLevel;
-//						int levelsAdded = combinerEnchLevel - inputEnchLevel;
-//						boolean canApply = combinerEnch.canApply(inputItem);
-//						if (thePlayer.capabilities.isCreativeMode || inputItem.getItem() == Items.enchanted_book) {
-//							canApply = true;
-//						}
-//						for (Object objIn : outputEnchants.keySet()) {
-//							int inputEnchID = (Integer) objIn;
-//							Enchantment inputEnch = Enchantment.enchantmentsList[inputEnchID];
-//							if (inputEnchID == combinerEnchID || combinerEnch.canApplyTogether(inputEnch) && inputEnch.canApplyTogether(combinerEnch)) {
-//								continue;
-//							}
-//							canApply = false;
-//							combineCost += levelsAdded;
-//						}
-//						if (!canApply) {
-//							continue;
-//						}
-//						combinerEnchLevel = Math.min(combinerEnchLevel, combinerEnch.getMaxLevel());
-//						outputEnchants.put(combinerEnchID, combinerEnchLevel);
-//						int costPerLevel = 0;
-//						int enchWeight = combinerEnch.getWeight();
-//						switch (enchWeight) {
-//						case 1:
-//							costPerLevel = 8;
-//							break;
-//						case 2:
-//							costPerLevel = 4;
-//							break;
-//						case 5:
-//							costPerLevel = 2;
-//							break;
-//						case 10:
-//							costPerLevel = 1;
-//							break;
-//						default:
-//							break;
-//						}
-//						combineCost += costPerLevel * levelsAdded;
-//					}
-//				} else {
-//					outputEnchants.clear();
-//				}
-//				EnchantmentHelper.setEnchantments(outputEnchants, inputCopy);
-//				int maxMods = 3;
-//				ArrayList<GOTEnchantment> outputMods = new ArrayList<>(inputModifiers);
-//				List<GOTEnchantment> combinerMods = GOTEnchantmentHelper.getEnchantList(combinerItem);
-//				if (combinerItemEnchant != null) {
-//					combinerMods.add(combinerItemEnchant);
-//				}
-//				for (GOTEnchantment combinerMod : combinerMods) {
-//					boolean canApply = combinerMod.canApply(inputItem, false);
-//					if (canApply) {
-//						for (GOTEnchantment mod : outputMods) {
-//							if (mod.isCompatibleWith(combinerMod) && combinerMod.isCompatibleWith(mod)) {
-//								continue;
-//							}
-//							canApply = false;
-//						}
-//					}
-//					int numOutputMods = 0;
-//					for (GOTEnchantment mod : outputMods) {
-//						if (mod.bypassAnvilLimit()) {
-//							continue;
-//						}
-//						++numOutputMods;
-//					}
-//					if (!combinerMod.bypassAnvilLimit() && numOutputMods >= maxMods) {
-//						canApply = false;
-//					}
-//					if (!canApply) {
-//						continue;
-//					}
-//					outputMods.add(combinerMod);
-//					if (!combinerMod.isBeneficial()) {
-//						continue;
-//					}
-//					combineCost += Math.max(1, (int) combinerMod.getValueModifier());
-//				}
-//				GOTEnchantmentHelper.setEnchantList(inputCopy, outputMods);
-//			}
-//			if (combineCost > 0) {
-//				combining = true;
-//			}
-//			int numEnchants = 0;
-//			for (Object obj : inputEnchants.keySet()) {
-//				int enchID = (Integer) obj;
-//				Enchantment ench = Enchantment.enchantmentsList[enchID];
-//				int enchLevel = (Integer) inputEnchants.get(enchID);
-//				++numEnchants;
-//				int costPerLevel = 0;
-//				int enchWeight = ench.getWeight();
-//				switch (enchWeight) {
-//				case 1:
-//					costPerLevel = 8;
-//					break;
-//				case 2:
-//					costPerLevel = 4;
-//					break;
-//				case 5:
-//					costPerLevel = 2;
-//					break;
-//				case 10:
-//					costPerLevel = 1;
-//					break;
-//				default:
-//					break;
-//				}
-//				baseAnvilCost += numEnchants + enchLevel * costPerLevel;
-//			}
-//			if (enchantingWithBook && !inputCopy.getItem().isBookEnchantable(inputCopy, combinerItem)) {
-//				inputCopy = null;
-//			}
-//			for (GOTEnchantment mod : inputModifiers) {
-//				if (!mod.isBeneficial()) {
-//					continue;
-//				}
-//				baseAnvilCost += Math.max(1, (int) mod.getValueModifier());
-//			}
+			if (combinerItem != null) {
+				enchantingWithBook = combinerItem.getItem() == Items.enchanted_book && Items.enchanted_book.func_92110_g(combinerItem).tagCount() > 0;
+				if (enchantingWithBook && !GOTConfig.enchantingVanilla) {
+					invOutput.setInventorySlotContents(0, null);
+					materialCost = 0;
+					return;
+				}
+				GOTEnchantment combinerItemEnchant = null;
+				if (combinerItem.getItem() instanceof GOTItemEnchantment) {
+					combinerItemEnchant = ((GOTItemEnchantment) combinerItem.getItem()).theEnchant;
+				} else if (combinerItem.getItem() instanceof GOTItemModifierTemplate) {
+					combinerItemEnchant = GOTItemModifierTemplate.getModifier(combinerItem);
+				}
+				if (!enchantingWithBook && combinerItemEnchant == null) {
+					if (inputCopy.isItemStackDamageable() && inputCopy.getItem() == combinerItem.getItem()) {
+						int inputUseLeft = inputItem.getMaxDamage() - inputItem.getItemDamageForDisplay();
+						int combinerUseLeft = combinerItem.getMaxDamage() - combinerItem.getItemDamageForDisplay();
+						int restoredUses = combinerUseLeft + inputCopy.getMaxDamage() * 12 / 100;
+						int newUsesLeft = inputUseLeft + restoredUses;
+						int newDamage = inputCopy.getMaxDamage() - newUsesLeft;
+						newDamage = Math.max(newDamage, 0);
+						if (newDamage < inputCopy.getItemDamage()) {
+							inputCopy.setItemDamage(newDamage);
+							int restoredUses1 = inputCopy.getMaxDamage() - inputUseLeft;
+							int restoredUses2 = inputCopy.getMaxDamage() - combinerUseLeft;
+							combineCost += Math.max(0, Math.min(restoredUses1, restoredUses2) / 100);
+						}
+						combining = true;
+					} else if (!alteringNameColor) {
+						invOutput.setInventorySlotContents(0, null);
+						materialCost = 0;
+						return;
+					}
+				}
+				HashMap outputEnchants = new HashMap<>(inputEnchants);
+				if (GOTConfig.enchantingVanilla) {
+					Map combinerEnchants = EnchantmentHelper.getEnchantments(combinerItem);
+					for (Object obj : combinerEnchants.keySet()) {
+						int combinerEnchLevel;
+						int combinerEnchID = (Integer) obj;
+						Enchantment combinerEnch = Enchantment.enchantmentsList[combinerEnchID];
+						int inputEnchLevel = 0;
+						if (outputEnchants.containsKey(combinerEnchID)) {
+							inputEnchLevel = (Integer) outputEnchants.get(combinerEnchID);
+						}
+						int combinedEnchLevel = inputEnchLevel == (combinerEnchLevel = (Integer) combinerEnchants.get(combinerEnchID)) ? ++combinerEnchLevel : Math.max(combinerEnchLevel, inputEnchLevel);
+						combinerEnchLevel = combinedEnchLevel;
+						int levelsAdded = combinerEnchLevel - inputEnchLevel;
+						boolean canApply = combinerEnch.canApply(inputItem);
+						if (thePlayer.capabilities.isCreativeMode || inputItem.getItem() == Items.enchanted_book) {
+							canApply = true;
+						}
+						for (Object objIn : outputEnchants.keySet()) {
+							int inputEnchID = (Integer) objIn;
+							Enchantment inputEnch = Enchantment.enchantmentsList[inputEnchID];
+							if (inputEnchID == combinerEnchID || combinerEnch.canApplyTogether(inputEnch) && inputEnch.canApplyTogether(combinerEnch)) {
+								continue;
+							}
+							canApply = false;
+							combineCost += levelsAdded;
+						}
+						if (!canApply) {
+							continue;
+						}
+						combinerEnchLevel = Math.min(combinerEnchLevel, combinerEnch.getMaxLevel());
+						outputEnchants.put(combinerEnchID, combinerEnchLevel);
+						int costPerLevel = 0;
+						int enchWeight = combinerEnch.getWeight();
+						switch (enchWeight) {
+						case 1:
+							costPerLevel = 8;
+							break;
+						case 2:
+							costPerLevel = 4;
+							break;
+						case 5:
+							costPerLevel = 2;
+							break;
+						case 10:
+							costPerLevel = 1;
+							break;
+						default:
+							break;
+						}
+						combineCost += costPerLevel * levelsAdded;
+					}
+				} else {
+					outputEnchants.clear();
+				}
+				EnchantmentHelper.setEnchantments(outputEnchants, inputCopy);
+				int maxMods = 3;
+				ArrayList<GOTEnchantment> outputMods = new ArrayList<>(inputModifiers);
+				List<GOTEnchantment> combinerMods = GOTEnchantmentHelper.getEnchantList(combinerItem);
+				if (combinerItemEnchant != null) {
+					combinerMods.add(combinerItemEnchant);
+				}
+				for (GOTEnchantment combinerMod : combinerMods) {
+					boolean canApply = combinerMod.canApply(inputItem, false);
+					if (canApply) {
+						for (GOTEnchantment mod : outputMods) {
+							if (mod.isCompatibleWith(combinerMod) && combinerMod.isCompatibleWith(mod)) {
+								continue;
+							}
+							canApply = false;
+						}
+					}
+					int numOutputMods = 0;
+					for (GOTEnchantment mod : outputMods) {
+						if (mod.bypassAnvilLimit()) {
+							continue;
+						}
+						++numOutputMods;
+					}
+					if (!combinerMod.bypassAnvilLimit() && numOutputMods >= maxMods) {
+						canApply = false;
+					}
+					if (!canApply) {
+						continue;
+					}
+					outputMods.add(combinerMod);
+					if (!combinerMod.isBeneficial()) {
+						continue;
+					}
+					combineCost += Math.max(1, (int) combinerMod.getValueModifier());
+				}
+				GOTEnchantmentHelper.setEnchantList(inputCopy, outputMods);
+			}
+			if (combineCost > 0) {
+				combining = true;
+			}
+			int numEnchants = 0;
+			for (Object obj : inputEnchants.keySet()) {
+				int enchID = (Integer) obj;
+				Enchantment ench = Enchantment.enchantmentsList[enchID];
+				int enchLevel = (Integer) inputEnchants.get(enchID);
+				++numEnchants;
+				int costPerLevel = 0;
+				int enchWeight = ench.getWeight();
+				switch (enchWeight) {
+				case 1:
+					costPerLevel = 8;
+					break;
+				case 2:
+					costPerLevel = 4;
+					break;
+				case 5:
+					costPerLevel = 2;
+					break;
+				case 10:
+					costPerLevel = 1;
+					break;
+				default:
+					break;
+				}
+				baseAnvilCost += numEnchants + enchLevel * costPerLevel;
+			}
+			if (enchantingWithBook && !inputCopy.getItem().isBookEnchantable(inputCopy, combinerItem)) {
+				inputCopy = null;
+			}
+			for (GOTEnchantment mod : inputModifiers) {
+				if (!mod.isBeneficial()) {
+					continue;
+				}
+				baseAnvilCost += Math.max(1, (int) mod.getValueModifier());
+			}
 			if (inputCopy.isItemStackDamageable()) {
 				boolean canRepair = false;
 				int availableMaterials = 0;
