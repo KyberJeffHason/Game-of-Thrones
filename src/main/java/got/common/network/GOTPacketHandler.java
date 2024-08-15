@@ -25,6 +25,7 @@ public class GOTPacketHandler {
 		networkWrapper.registerMessage(GOTPacketBannerData.Handler.class, GOTPacketBannerData.class, id++, Side.CLIENT);
 		networkWrapper.registerMessage(GOTPacketBannerRequestInvalidName.Handler.class, GOTPacketBannerRequestInvalidName.class, id++, Side.SERVER);
 		networkWrapper.registerMessage(GOTPacketBannerValidate.Handler.class, GOTPacketBannerValidate.class, id++, Side.CLIENT);
+		networkWrapper.registerMessage(LOTRPacketParticleFX.Handler.class, LOTRPacketParticleFX.class, id++, Side.CLIENT);
 		networkWrapper.registerMessage(GOTPacketBiomeVariantsUnwatch.Handler.class, GOTPacketBiomeVariantsUnwatch.class, id++, Side.CLIENT);
 		networkWrapper.registerMessage(GOTPacketBiomeVariantsWatch.Handler.class, GOTPacketBiomeVariantsWatch.class, id++, Side.CLIENT);
 		networkWrapper.registerMessage(GOTPacketBlockFX.Handler.class, GOTPacketBlockFX.class, id++, Side.CLIENT);

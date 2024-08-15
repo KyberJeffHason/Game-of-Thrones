@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3050393f-8e5a-4469-b08a-51b2f06f1627" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/got/client/ROMEMusic/MusicEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/got/client/ROMEMusic/ROMEMusicTrack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/got/common/util/Zone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/got/common/util/ZoneLib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game-of-Thrones.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/client/GOTClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/GOTClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/sounds.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/network/GOTPacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/network/GOTPacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/registers/EffectRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/registers/EffectRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +99,16 @@
     "last_opened_file_path": "C:/Users/User/Documents/GitHub/Game-of-Thrones/src/main/java/got/common/util"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\Game-of-Thrones\src\main\java\got\common\util" />
+      <recent name="C:\Users\User\Documents\GitHub\Game-of-Thrones\src\main\java\got\client" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="got.common.network" />
+      <recent name="got.common.potions" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Minecraft Client (1)">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
