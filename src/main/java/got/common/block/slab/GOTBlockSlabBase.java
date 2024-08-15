@@ -97,6 +97,216 @@ public abstract class GOTBlockSlabBase extends BlockSlab {
 
 	public static class SlabItems {
 
+		public static class SlabWOTRMC15Double
+				extends ItemSlab {
+			public SlabWOTRMC15Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle15, (BlockSlab) GOTRegistry.slabWOTRMCDouble15, true);
+			}
+		}
+
+		public static class SlabWOTRMC15Single
+				extends ItemSlab {
+			public SlabWOTRMC15Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle15, (BlockSlab) GOTRegistry.slabWOTRMCDouble15, false);
+			}
+		}
+
+		public static class SlabWOTRMC14Double
+				extends ItemSlab {
+			public SlabWOTRMC14Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle14, (BlockSlab) GOTRegistry.slabWOTRMCDouble14, true);
+			}
+		}
+
+		public static class SlabWOTRMC14Single
+				extends ItemSlab {
+			public SlabWOTRMC14Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle14, (BlockSlab) GOTRegistry.slabWOTRMCDouble14, false);
+			}
+		}
+
+		public static class SlabWOTRMC13Double
+				extends ItemSlab {
+			public SlabWOTRMC13Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle13, (BlockSlab) GOTRegistry.slabWOTRMCDouble13, true);
+			}
+		}
+
+		public static class SlabWOTRMC13Single
+				extends ItemSlab {
+			public SlabWOTRMC13Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle13, (BlockSlab) GOTRegistry.slabWOTRMCDouble13, false);
+			}
+		}
+
+		public static class SlabWOTRMC12Double
+				extends ItemSlab {
+			public SlabWOTRMC12Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle12, (BlockSlab) GOTRegistry.slabWOTRMCDouble12, true);
+			}
+		}
+
+		public static class SlabWOTRMC12Single
+				extends ItemSlab {
+			public SlabWOTRMC12Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle12, (BlockSlab) GOTRegistry.slabWOTRMCDouble12, false);
+			}
+		}
+
+		public static class SlabWOTRMC11Double
+				extends ItemSlab {
+			public SlabWOTRMC11Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle11, (BlockSlab) GOTRegistry.slabWOTRMCDouble11, true);
+			}
+		}
+
+		public static class SlabWOTRMC11Single
+				extends ItemSlab {
+			public SlabWOTRMC11Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle11, (BlockSlab) GOTRegistry.slabWOTRMCDouble11, false);
+			}
+		}
+
+		public static class SlabWOTRMC10Double
+				extends ItemSlab {
+			public SlabWOTRMC10Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle10, (BlockSlab) GOTRegistry.slabWOTRMCDouble10, true);
+			}
+		}
+
+		public static class SlabWOTRMC10Single
+				extends ItemSlab {
+			public SlabWOTRMC10Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle10, (BlockSlab) GOTRegistry.slabWOTRMCDouble10, false);
+			}
+		}
+
+		public static class SlabWOTRMC9Double
+				extends ItemSlab {
+			public SlabWOTRMC9Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle9, (BlockSlab) GOTRegistry.slabWOTRMCDouble9, true);
+			}
+		}
+
+		public static class SlabWOTRMC9Single
+				extends ItemSlab {
+			public SlabWOTRMC9Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle9, (BlockSlab) GOTRegistry.slabWOTRMCDouble9, false);
+			}
+		}
+
+		public static class SlabWOTRMC8Double
+				extends ItemSlab {
+			public SlabWOTRMC8Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle8, (BlockSlab) GOTRegistry.slabWOTRMCDouble8, true);
+			}
+		}
+
+		public static class SlabWOTRMC8Single
+				extends ItemSlab {
+			public SlabWOTRMC8Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle8, (BlockSlab) GOTRegistry.slabWOTRMCDouble8, false);
+			}
+		}
+
+		public static class SlabWOTRMC7Double
+				extends ItemSlab {
+			public SlabWOTRMC7Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle7, (BlockSlab) GOTRegistry.slabWOTRMCDouble7, true);
+			}
+		}
+
+		public static class SlabWOTRMC7Single
+				extends ItemSlab {
+			public SlabWOTRMC7Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle7, (BlockSlab) GOTRegistry.slabWOTRMCDouble7, false);
+			}
+		}
+
+		public static class SlabWOTRMC6Double
+				extends ItemSlab {
+			public SlabWOTRMC6Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle6, (BlockSlab) GOTRegistry.slabWOTRMCDouble6, true);
+			}
+		}
+
+		public static class SlabWOTRMC6Single
+				extends ItemSlab {
+			public SlabWOTRMC6Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle6, (BlockSlab) GOTRegistry.slabWOTRMCDouble6, false);
+			}
+		}
+
+		public static class SlabWOTRMC5Double
+				extends ItemSlab {
+			public SlabWOTRMC5Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle5, (BlockSlab) GOTRegistry.slabWOTRMCDouble5, true);
+			}
+		}
+
+		public static class SlabWOTRMC5Single
+				extends ItemSlab {
+			public SlabWOTRMC5Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle5, (BlockSlab) GOTRegistry.slabWOTRMCDouble5, false);
+			}
+		}
+
+		public static class SlabWOTRMC4Double
+				extends ItemSlab {
+			public SlabWOTRMC4Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle4, (BlockSlab) GOTRegistry.slabWOTRMCDouble4, true);
+			}
+		}
+
+		public static class SlabWOTRMC4Single
+				extends ItemSlab {
+			public SlabWOTRMC4Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle4, (BlockSlab) GOTRegistry.slabWOTRMCDouble4, false);
+			}
+		}
+
+		public static class SlabWOTRMC3Double
+				extends ItemSlab {
+			public SlabWOTRMC3Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle3, (BlockSlab) GOTRegistry.slabWOTRMCDouble3, true);
+			}
+		}
+
+		public static class SlabWOTRMC3Single
+				extends ItemSlab {
+			public SlabWOTRMC3Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle3, (BlockSlab) GOTRegistry.slabWOTRMCDouble3, false);
+			}
+		}
+
+		public static class SlabWOTRMC2Double
+				extends ItemSlab {
+			public SlabWOTRMC2Double(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle2, (BlockSlab) GOTRegistry.slabWOTRMCDouble2, true);
+			}
+		}
+
+		public static class SlabWOTRMC2Single
+				extends ItemSlab {
+			public SlabWOTRMC2Single(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle2, (BlockSlab) GOTRegistry.slabWOTRMCDouble2, false);
+			}
+		}
+
+		public static class SlabWOTRMCDouble
+				extends ItemSlab {
+			public SlabWOTRMCDouble(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle, (BlockSlab) GOTRegistry.slabWOTRMCDouble, true);
+			}
+		}
+
+		public static class SlabWOTRMCSingle
+				extends ItemSlab {
+			public SlabWOTRMCSingle(Block block) {
+				super(block, (BlockSlab) GOTRegistry.slabWOTRMCSingle, (BlockSlab) GOTRegistry.slabWOTRMCDouble, false);
+			}
+		}
+
 		public static class BoneDouble extends ItemSlab {
 			public BoneDouble(Block block) {
 				super(block, (BlockSlab) GOTRegistry.slabBoneSingle, (BlockSlab) GOTRegistry.slabBoneDouble, true);
