@@ -6,7 +6,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BleedingPotion extends CustomPotion {
@@ -16,6 +18,11 @@ public class BleedingPotion extends CustomPotion {
     private static final int COOLDOWN_TICKS = 10;
 
     private static final float DAMAGE_AMOUNT = 1.0F;
+    private static final int TICK_HISTORY_SIZE = 40; // Store the last 40 ticks of motion data
+
+    // Map to store motionX history for each entity
+    private Map<EntityLivingBase, List<Double>> motionXHistory = new HashMap<>();
+
 
     public BleedingPotion(int id, boolean isBad, int fluidColor, ResourceLocation tex, String namePot) {
         super(id, isBad, fluidColor, tex, namePot);
@@ -27,39 +34,35 @@ public class BleedingPotion extends CustomPotion {
 
     private Map<EntityLivingBase, Double[]> lastPositions = new HashMap<>();
 
-    public boolean isMoving(EntityLivingBase entity) {
-        // Retrieve the last known position of the entity
-        Double[] lastPos = lastPositions.get(entity);
 
-        // If no last position is recorded, initialize it and assume no movement
-        if (lastPos == null) {
-            lastPositions.put(entity, new Double[]{entity.posX, entity.posY, entity.posZ});
-            return false;
+    public boolean isMoving(EntityLivingBase entity) {
+        // Get or initialize the motionX history list for the entity
+        List<Double> history = motionXHistory.computeIfAbsent(entity, k -> new ArrayList<>());
+
+        // Add the current motionX to the history list
+        history.add(entity.motionX);
+
+        // Trim the history list to the last 40 ticks
+        if (history.size() > TICK_HISTORY_SIZE) {
+            history.remove(0);
         }
 
-        // Calculate the difference in position between the current and last known positions
-        double deltaX = entity.posX - lastPos[0];
-        double deltaY = entity.posY - lastPos[1];
-        double deltaZ = entity.posZ - lastPos[2];
+        // Check the last 20-40 ticks for non-zero motionX
+        int startCheckIndex = Math.max(0, history.size() - 40);  // Start checking at most 40 ticks ago
+        int endCheckIndex = Math.max(0, history.size() - 20);    // Check up to the last 20 ticks
 
-        // Update the last position to the current position
-        lastPositions.put(entity, new Double[]{entity.posX, entity.posY, entity.posZ});
+        for (int i = startCheckIndex; i < endCheckIndex; i++) {
+            if (history.get(i) != 0.0) {
+                return true;
+            }
+        }
 
-        // Define thresholds for significant movement
-        final double horizontalThreshold = 0.05D; // Increased threshold for X and Z axes
-        final double verticalThreshold = 0.05D;   // Increased threshold for Y axis
-
-        // Check if the entity has moved significantly in any direction
-        boolean hasMoved = Math.abs(deltaX) > horizontalThreshold || Math.abs(deltaZ) > horizontalThreshold || Math.abs(deltaY) > verticalThreshold;
-
-        return hasMoved;
+        return false;
     }
-
 
     @Override
     public void performEffect(EntityLivingBase entity, int amplifier) {
         if (isMoving(entity) || isJumping(entity)) {
-            System.out.println("cocks");
         	//if(entity.getRNG().nextFloat() < 0.1f) {
         		entity.attackEntityFrom(DamageSource.generic, DAMAGE_AMOUNT * (amplifier + 1));
         	//}
