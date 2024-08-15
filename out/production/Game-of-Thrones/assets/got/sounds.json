@@ -855,5 +855,122 @@
         [
             "zebra/say"
         ]
+    },
+    "custom_menu1": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/custom_menu1",
+                "stream": true
+            }
+        ]
+    },
+    "custom_menu2": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/custom_menu2",
+                "stream": true
+            }
+        ]
+    },
+    "combatmusic_1": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/combatmusic_1",
+                "stream": true
+            }
+        ]
+    },
+    "combatmusic_2": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/combatmusic_2",
+                "stream": true
+            }
+        ]
+    },
+    "combatmusic_3": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/combatmusic_3",
+                "stream": true
+            }
+        ]
+    },
+    "dragon_boss_combat_music": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/dragon_boss_combat_music",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_1": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_1",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_2": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_2",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_3": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_3",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_4": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_4",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_5": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_5",
+                "stream": true
+            }
+        ]
+    },
+    "ambient_void": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/ambient_void",
+                "stream": true
+            }
+        ]
+    },
+    "calm_tavern_music": {
+        "category": "music",
+        "sounds": [
+            {
+                "name": "rome_music/calm_tavern_music",
+                "stream": true
+            }
+        ]
     }
 }

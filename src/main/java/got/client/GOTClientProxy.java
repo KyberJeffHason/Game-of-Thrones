@@ -3,6 +3,8 @@ package got.client;
 import java.util.*;
 import java.util.Map.Entry;
 
+import got.client.ROMEMusic.MusicEventHandler;
+import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
 
 import com.mojang.authlib.GameProfile;
@@ -480,6 +482,10 @@ public class GOTClientProxy extends GOTCommonProxy {
 		System.setProperty("fml.skipFirstTextureLoad", "false");
 		GOTItemRendererManager.preInit();
 		GOTArmorModels.preInit();
+
+		// Регистрация музыки в хендлер
+		MinecraftForge.EVENT_BUS.register(MusicEventHandler.INSTANCE);
+		FMLCommonHandler.instance().bus().register(MusicEventHandler.INSTANCE);
 	}
 
 	@Override
