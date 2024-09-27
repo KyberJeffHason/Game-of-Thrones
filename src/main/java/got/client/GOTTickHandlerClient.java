@@ -2,6 +2,9 @@ package got.client;
 
 import java.util.*;
 
+import got.common.network.base.PacketDispatcher;
+import got.common.network.clientToServer.PacketSendAttackCooldown;
+import got.rome.ExtendedPlayer;
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
@@ -57,6 +60,8 @@ import net.minecraftforge.client.event.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.world.WorldEvent;
+
+import static got.common.libs.GOTLib.getAttackCooldown;
 
 public class GOTTickHandlerClient {
 	public static ResourceLocation portalOverlay = new ResourceLocation("got:textures/misc/frost_overlay.png");
@@ -309,6 +314,17 @@ public class GOTTickHandlerClient {
 		Minecraft minecraft = Minecraft.getMinecraft();
 		EntityClientPlayerMP entityplayer = minecraft.thePlayer;
 		WorldClient world = minecraft.theWorld;
+		if (GOTAttackTiming.coolDownTick >= 1 ) {
+			GOTAttackTiming.coolDownTick++;
+		}
+
+		if (GOTAttackTiming.coolDownTick >= 2) {
+			GOTAttackTiming.coolDownTick = 0;
+			if(ExtendedPlayer.get(GOTAttackTiming.mc.thePlayer).getAttackCooldown() <= 0) {
+				ExtendedPlayer.get(GOTAttackTiming.mc.thePlayer).setAttackCooldown(getAttackCooldown(GOTAttackTiming.mc.thePlayer));
+				PacketDispatcher.sendToServer(new PacketSendAttackCooldown());
+			}
+		}
 		if (event.phase == TickEvent.Phase.START) {
 			clientTick++;
 			if (GOTConfig.fixRenderDistance && !FMLClientHandler.instance().hasOptifine()) {

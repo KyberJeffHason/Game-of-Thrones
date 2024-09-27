@@ -22,6 +22,8 @@ public class GOTAttackTiming {
 	public static ItemStack attackItem;
 	public static int lastCheckTick = -1;
 
+	public static int coolDownTick;
+
 	public static void doAttackTiming() {
 		int currentTick = GOTTickHandlerClient.clientTick;
 		if (lastCheckTick == -1) {
@@ -37,8 +39,12 @@ public class GOTAttackTiming {
 			if (pressed) {
 				KeyBinding.onTick(attackKey.getKeyCode());
 			}
-			if (pressed) {
-				if (attackTime <= 0) {
+			if (pressed && !GOTAttackTiming.mc.thePlayer.capabilities.isCreativeMode) {
+				coolDownTick = 1;
+				if (attackTime > 0) {
+					while (attackKey.isPressed()) {
+					}
+				} else {
 					ItemStack itemstack = GOTAttackTiming.mc.thePlayer.getHeldItem();
 					attackTime = fullAttackTime = GOTWeaponStats.getAttackTimePlayer(itemstack);
 					attackItem = itemstack;

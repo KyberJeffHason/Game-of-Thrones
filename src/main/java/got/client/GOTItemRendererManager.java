@@ -1,5 +1,6 @@
 package got.client;
 
+import java.lang.reflect.Field;
 import java.util.*;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -7,6 +8,7 @@ import got.client.render.other.*;
 import got.common.database.GOTRegistry;
 import got.common.item.other.GOTItemAnimalJar;
 import got.common.item.weapon.*;
+import got.common.itemreg.GOTItems;
 import got.common.util.GOTAPI;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureMap;
@@ -42,6 +44,27 @@ public class GOTItemRendererManager implements IResourceManagerReloadListener {
 				if (largeItemRenderer != null) {
 					largeItemRenderers.add(largeItemRenderer);
 				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			for (Field field : GOTItems.class.getFields()) {
+				boolean isLarge;
+				if (!(field.get(null) instanceof Item)) continue;
+				Item item = (Item) field.get(null);
+				MinecraftForgeClient.registerItemRenderer(item, null);
+				GOTRenderLargeItem largeItemRenderer = GOTRenderLargeItem.getRendererIfLarge(item);
+				boolean bl = isLarge = largeItemRenderer != null;
+				if (item instanceof GOTItemCrossbow) {
+					MinecraftForgeClient.registerItemRenderer(item, new GOTRenderCrossbow());
+				} else if (item instanceof GOTItemBow) {
+					MinecraftForgeClient.registerItemRenderer(item, new GOTRenderBow(largeItemRenderer));
+				} else if (isLarge) {
+					MinecraftForgeClient.registerItemRenderer(item, largeItemRenderer);
+				}
+				if (largeItemRenderer == null) continue;
+				largeItemRenderers.add(largeItemRenderer);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -23,6 +23,7 @@ import got.common.enchant.GOTEnchantment;
 import got.common.item.other.*;
 import got.common.item.tool.*;
 import got.common.item.weapon.*;
+import got.common.itemreg.GOTItems;
 import got.common.registers.EffectRegister;
 import got.common.tileentity.*;
 import got.common.util.GOTEnumDyeColor;
@@ -3465,6 +3466,7 @@ public class GOTRegistry {
 		registerItem(bronzeHelmet, "bronzeHelmet");
 		registerItem(bronzeChestplate, "bronzeChestplate");
 		registerItem(bronzeLeggings, "bronzeLeggings");
+		GOTItems.autoRegisterItems();
 		registerItem(bronzeBoots, "bronzeBoots");
 		registerItem(silverNugget, "silverNugget");
 		registerItem(copperNugget, "copperNugget");

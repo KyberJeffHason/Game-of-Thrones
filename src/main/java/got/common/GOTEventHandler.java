@@ -4,7 +4,9 @@ import java.util.*;
 
 import cpw.mods.fml.common.network.FMLNetworkEvent;
 import got.common.registers.EffectRegister;
+import got.rome.ExtendedPlayer;
 import javafx.scene.effect.Effect;
+import net.minecraftforge.event.entity.EntityEvent;
 import org.apache.commons.lang3.StringUtils;
 
 import com.mojang.authlib.GameProfile;
@@ -113,6 +115,17 @@ public class GOTEventHandler implements IFuelHandler {
 				event.drops.add(silkDrop);
 			}
 		}
+	}
+
+	@SubscribeEvent
+	public void onEntityConstructing(EntityEvent.EntityConstructing event)
+	{
+	/*
+	Be sure to check if the entity being constructed is the correct type for the extended properties you're about to add! The null check may not be necessary - I only use it to make sure properties are only registered once per entity
+	*/
+		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null)
+			// This is how extended properties are registered using our convenient method from earlier
+			ExtendedPlayer.register((EntityPlayer) event.entity);
 	}
 
 	@SubscribeEvent

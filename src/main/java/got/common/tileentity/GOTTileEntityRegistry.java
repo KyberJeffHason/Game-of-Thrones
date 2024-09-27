@@ -1,6 +1,7 @@
 package got.common.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import got.common.block.base.DecorationTileEntity;
 
 public class GOTTileEntityRegistry {
 
@@ -25,5 +26,6 @@ public class GOTTileEntityRegistry {
 		GameRegistry.registerTileEntity(GOTTileEntitySignCarvedValyrian.class, "GOTSignCarvedValyrian");
 		GameRegistry.registerTileEntity(GOTTileEntityMillstone.class, "GOTMillstone");
 		GameRegistry.registerTileEntity(GOTTileEntityBookshelf.class, "GOTBookshelf");
+		GameRegistry.registerTileEntity(DecorationTileEntity.class, "GOTDecorationTileEntity");
 	}
 }

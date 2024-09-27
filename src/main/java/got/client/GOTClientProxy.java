@@ -3,7 +3,17 @@ package got.client;
 import java.util.*;
 import java.util.Map.Entry;
 
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import got.client.ROMEMusic.MusicEventHandler;
+import got.client.render.DecorationRenderer;
+import got.common.block.base.DecorationTileEntity;
+import got.common.decorations.DecorationsRegister;
+import got.common.decorations.base.Decoration;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
 
@@ -45,6 +55,7 @@ import net.minecraft.potion.*;
 import net.minecraft.util.*;
 import net.minecraft.world.*;
 import net.minecraft.world.chunk.Chunk;
+import software.bernie.geckolib3.renderers.geo.RenderBlockItem;
 
 public class GOTClientProxy extends GOTCommonProxy {
 	public static ResourceLocation enchantmentTexture = new ResourceLocation("textures/misc/enchanted_item_glint.png");
@@ -127,6 +138,11 @@ public class GOTClientProxy extends GOTCommonProxy {
 		Minecraft mc = Minecraft.getMinecraft();
 		GOTGuiBanner gui = new GOTGuiBanner(banner);
 		mc.displayGuiScreen(gui);
+	}
+
+	@Override
+	public EntityPlayer getPlayerEntity(MessageContext ctx) {
+		return (ctx.side.isClient() ? Minecraft.getMinecraft().thePlayer : super.getPlayerEntity(ctx));
 	}
 
 	@Override
@@ -466,10 +482,21 @@ public class GOTClientProxy extends GOTCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(GOTTileEntityKebabStand.class, new GOTRenderKebabStand());
 		ClientRegistry.bindTileEntitySpecialRenderer(GOTTileEntitySignCarved.class, new GOTRenderSignCarved());
 		ClientRegistry.bindTileEntitySpecialRenderer(GOTTileEntitySignCarvedValyrian.class, new GOTRenderSignCarvedValyrian());
+		ClientRegistry.bindTileEntitySpecialRenderer(DecorationTileEntity.class, new DecorationRenderer());
+
+		for(Decoration d : DecorationsRegister.getDecorations()) {
+			bindItemRender(d.getItem(), new DecorationTileEntity(), new DecorationRenderer(d.getItem()));
+		}
+
 		FMLCommonHandler.instance().bus().register(new GOTEntityDragon3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTEntityMammoth3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTEntityElephant3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTKeyHandler(GOTPacketHandler.networkWrapper));
+	}
+
+	public static void bindItemRender(Block block, TileEntity tile, DecorationRenderer tesr){
+		Item blockItem = ItemBlock.getItemFromBlock(block);
+		MinecraftForgeClient.registerItemRenderer(blockItem,new RenderBlockItem(tesr, tile));
 	}
 
 	@Override
@@ -479,6 +506,7 @@ public class GOTClientProxy extends GOTCommonProxy {
 
 	@Override
 	public void onPreload() {
+		DecorationsRegister.registerDecorations();
 		System.setProperty("fml.skipFirstTextureLoad", "false");
 		GOTItemRendererManager.preInit();
 		GOTArmorModels.preInit();

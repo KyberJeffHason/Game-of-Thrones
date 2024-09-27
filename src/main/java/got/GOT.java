@@ -23,14 +23,17 @@ import got.common.block.wbeam.GOTBlockWoodBeam;
 import got.common.block.wood.GOTBlockWoodBase;
 import got.common.command.*;
 import got.common.database.*;
+import got.common.decorations.DecorationsRegister;
 import got.common.entity.GOTEntity;
 import got.common.entity.essos.gold.GOTEntityGoldenMan;
 import got.common.entity.other.*;
 import got.common.faction.GOTFaction;
 import got.common.fellowship.GOTFellowship;
+import got.common.handlers.AttackHandler;
 import got.common.item.other.*;
 import got.common.item.other.GOTItemBanner.BannerType;
 import got.common.network.GOTPacketHandler;
+import got.common.network.base.PacketDispatcher;
 import got.common.util.*;
 import got.common.world.GOTWorldType;
 import got.common.world.biome.GOTBiome;
@@ -55,6 +58,7 @@ import net.minecraft.world.*;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = "got")
@@ -90,6 +94,7 @@ public class GOT {
 
 	@Mod.EventHandler
 	public void load(FMLInitializationEvent event) {
+		MinecraftForge.EVENT_BUS.register(AttackHandler.INSTANCE);
 		proxy.onLoad();
 		Set<Block> set = GOTAPI.getObjectFieldsOfType(GOTRegistry.class, Block.class);
 		for (Block block : set) {
@@ -259,6 +264,7 @@ public class GOT {
 
 	@Mod.EventHandler
 	public void preload(FMLPreInitializationEvent event) {
+		DecorationsRegister.registerDecorations();
 		Potion[] potionTypes = null;
 		for (Field f : Potion.class.getDeclaredFields())
 		{
@@ -279,6 +285,7 @@ public class GOT {
 			}
 		}
 
+		PacketDispatcher.registerPackets();
 		GOTLog.findLogger();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, proxy);
 		tickHandler = new GOTTickHandlerServer();
