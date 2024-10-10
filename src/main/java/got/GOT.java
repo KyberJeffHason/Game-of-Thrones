@@ -61,7 +61,7 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Mod(modid = "got")
+@Mod(modid = "got", dependencies = "required-after:geckolib3")
 public class GOT {
 	@SidedProxy(clientSide = "got.client.GOTClientProxy", serverSide = "got.common.GOTCommonProxy")
 	public static GOTCommonProxy proxy;
