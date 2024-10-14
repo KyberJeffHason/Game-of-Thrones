@@ -31,7 +31,6 @@ public class GOTEventSpawner {
 				GOTEventSpawner.spawnInvasions(world, shuffled);
 			}
 		}
-		GOTJaqenHgharTracker.performSpawning(world);
 	}
 
 	public static void spawnBandits(World world, List<ChunkCoordIntPair> spawnChunks) {

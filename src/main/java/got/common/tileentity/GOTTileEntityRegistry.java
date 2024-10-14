@@ -2,7 +2,6 @@ package got.common.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import got.common.block.base.DecorationTileEntity;
-
 public class GOTTileEntityRegistry {
 
 	public static void onInit() {

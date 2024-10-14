@@ -643,6 +643,42 @@ public abstract class GOTBlockSlabBase extends BlockSlab {
 			}
 		}
 
+		public static class iceSlabDouble extends ItemSlab {
+			public iceSlabDouble(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabIceSingle, (BlockSlab) GOTRegistry.slabIceDouble, true);
+			}
+		}
+
+		public static class iceSlabSingle extends ItemSlab {
+			public iceSlabSingle(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabIceSingle, (BlockSlab) GOTRegistry.slabIceDouble, false);
+			}
+		}
+
+		public static class icePackedSlabDouble extends ItemSlab {
+			public icePackedSlabDouble(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabPackedIceSingle, (BlockSlab) GOTRegistry.slabPackedIceDouble, true);
+			}
+		}
+
+		public static class icePackedSlabSingle extends ItemSlab {
+			public icePackedSlabSingle(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabPackedIceSingle, (BlockSlab) GOTRegistry.slabPackedIceDouble, false);
+			}
+		}
+
+		public static class snowSlabDouble extends ItemSlab {
+			public snowSlabDouble(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabSnowSingle, (BlockSlab) GOTRegistry.slabSnowDouble, true);
+			}
+		}
+
+		public static class snowSlabSingle extends ItemSlab {
+			public snowSlabSingle(Block block) {
+				super(block,(BlockSlab) GOTRegistry.slabSnowSingle, (BlockSlab) GOTRegistry.slabSnowDouble, false);
+			}
+		}
+
 	}
 
 }

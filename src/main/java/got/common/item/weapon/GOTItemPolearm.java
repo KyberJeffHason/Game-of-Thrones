@@ -7,4 +7,8 @@ public class GOTItemPolearm extends GOTItemSword {
 		super(material);
 	}
 
+	@Override
+	public EnumAction getItemUseAction(ItemStack itemstack) {
+		return EnumAction.none;
+	}
 }

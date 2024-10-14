@@ -44,7 +44,7 @@ public enum GOTClimateType {
 						biome.biomeColors.setFoggy(false);
 						break;
 					case WINTER:
-						biome.setTemperatureRainfall(0.0F, 2.0F);
+						biome.setTemperatureRainfall(-0.5F, 0.4F).setDisableSnow();
 						biome.biomeColors.setGrass(0xffffff);
 						biome.biomeColors.setSky(4212300);
 						biome.biomeColors.setFog(6188664);

@@ -23,18 +23,6 @@ public class GOTEntityJaqenHghar extends GOTEntityHumanBase {
 		setSize(0.6f, 1.8f);
 		getNavigator().setAvoidsWater(true);
 		getNavigator().setBreakDoors(true);
-		tasks.addTask(0, new EntityAISwimming(this));
-		tasks.addTask(1, new GOTEntityAIHiredRemainStill(this));
-		tasks.addTask(2, new GOTEntityAIAttackOnCollide(this, 1.4, false));
-		tasks.addTask(3, new GOTEntityAIFollowHiringPlayer(this));
-		tasks.addTask(4, new EntityAIOpenDoor(this, true));
-		tasks.addTask(5, new EntityAIWander(this, 1.0));
-		tasks.addTask(6, new GOTEntityAIEat(this, GOTFoods.ESSOS, 8000));
-		tasks.addTask(6, new GOTEntityAIDrink(this, GOTFoods.ESSOS_DRINK, 8000));
-		tasks.addTask(7, new EntityAIWatchClosest2(this, EntityPlayer.class, 8.0f, 0.02f));
-		tasks.addTask(7, new EntityAIWatchClosest2(this, GOTEntityNPC.class, 5.0f, 0.02f));
-		tasks.addTask(8, new EntityAIWatchClosest(this, EntityLiving.class, 8.0f, 0.02f));
-		tasks.addTask(9, new EntityAILookIdle(this));
 	}
 
 	public boolean addMQOfferFor(EntityPlayer entityplayer) {
@@ -169,19 +157,4 @@ public class GOTEntityJaqenHghar extends GOTEntityHumanBase {
 		familyInfo.setMale(true);
 	}
 
-	@Override
-	public boolean speakTo(EntityPlayer entityplayer) {
-		if (GOTJaqenHgharTracker.isWandererActive(getUniqueID())) {
-			if (questInfo.getOfferFor(entityplayer) != null) {
-				return super.speakTo(entityplayer);
-			}
-			if (addMQOfferFor(entityplayer)) {
-				GOTJaqenHgharTracker.setWandererActive(getUniqueID());
-				String speechBank = "legendary/jaqen_welcome";
-				this.sendSpeechBank(entityplayer, speechBank);
-				return true;
-			}
-		}
-		return super.speakTo(entityplayer);
-	}
 }

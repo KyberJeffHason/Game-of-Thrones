@@ -13,7 +13,7 @@ public class GOTItemBattleaxe extends GOTItemSword {
 		super(material);
 		efficiencyOnProperMaterial = material.getEfficiencyOnProperMaterial();
 		setHarvestLevel("axe", material.getHarvestLevel());
-		gotWeaponDamage += 2.0f;
+		gotWeaponDamage += 1.0f;
 	}
 
 	@Override
@@ -25,6 +25,10 @@ public class GOTItemBattleaxe extends GOTItemSword {
 		return f;
 	}
 
+	@Override
+	public EnumAction getItemUseAction(ItemStack itemstack) {
+		return EnumAction.none;
+	}
 
 	@Override
 	public boolean onBlockDestroyed(ItemStack itemstack, World world, Block block, int i, int j, int k, EntityLivingBase entity) {

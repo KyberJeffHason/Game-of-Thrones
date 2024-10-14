@@ -6,6 +6,7 @@ import java.util.*;
 import cpw.mods.fml.common.FMLLog;
 import got.common.GOTLevelData;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
 
@@ -118,7 +119,7 @@ public class GOTFellowshipData {
 			ArrayList<GOTFellowship> clearing = new ArrayList<>();
 			for (GOTFellowship fs : fellowshipMap.values()) {
 				boolean foundMember = false;
-				for (EntityPlayer entityplayer : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
+				for (EntityPlayer entityplayer : (List< EntityPlayerMP>) MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
 					if (!fs.containsPlayer(entityplayer.getUniqueID())) {
 						continue;
 					}

@@ -1,5 +1,6 @@
 ﻿
 attribute.name.generic.movementSpeedAir=Speed (Air)
+got.warning=Вы не можете использовать данное снаряжение
 color.black=Black
 color.blue=Blue
 color.brown=Brown
@@ -75,7 +76,7 @@ entity.got.AuraneWaters.name=Aurane Waters
 entity.got.BaelorBlacktyde.name=Baelor Blacktyde
 entity.got.BalonGreyjoy.name=Balon Greyjoy
 entity.got.Banner.name=Banner
-entity.got.BannerWall.name=Wall Banner
+entity.got.BannerWall.name=Wall Banner6
 entity.got.BarbreyDustin.name=Barbrey Dustin
 entity.got.Barrel.name=Barrel
 entity.got.BarristanSelmy.name=Barristan Selmy
@@ -1089,6 +1090,7 @@ item.got:dragon_glass_pike.name=Пика из драконьего стекла
 item.got:dorne_bow.name=Лук Пустынь
 item.got:dorne_polearm.name=Глефа Дорна
 item.got:westor_polearm.name=Секира Вестероса
+item.got:iron_islands_axe.name=Двуручный топор Железных Островов
 got.faction.HIGH_POWER.name=Тортуга
 got.faction.HIGH_POWER.subtitle=
 got.achievement.KILL_PROSTITUTE.desc=Kill the whore
@@ -2121,10 +2123,14 @@ got.enchant.looting1=Lucky
 got.enchant.looting2=Fortunate
 got.enchant.looting3=Blessed
 got.enchant.meleeReach.desc=%s melee reach
-got.enchant.meleeReach1=Long
+got.enchant.meleeReach1=Long I
+got.enchant.meleeReach2=Long II
+got.enchant.meleeReach3=Long III
 got.enchant.meleeSlow1=Slow
 got.enchant.meleeSpeed.desc=%s melee speed
-got.enchant.meleeSpeed1=Swift
+got.enchant.meleeSpeed1=Swift I
+got.enchant.meleeSpeed1=Swift II
+got.enchant.meleeSpeed1=Swift III
 got.enchant.meleeUnreach1=Stunted
 got.enchant.nameFormat=%s %s
 got.enchant.protect.desc=%s protection
@@ -4501,6 +4507,7 @@ item.got:areo_hotah_axe.name=Areo Hotah Axe
 item.got:armor_stand.name=Armor Stand
 item.got:arrow_fire.name=Burning Arrow
 item.got:arrow_poisoned.name=Poisoned Arrow
+item.got:arryn_claymore.name=Клеймор Долины Аррен
 item.got:arryn_boots.name=Boots of Arryn Vale
 item.got:arryn_chestplate.name=Chestplate of Arryn Vale
 item.got:arryn_helmet.name=Helmet of Arryn Vale
@@ -5201,13 +5208,13 @@ item.got:clay_plate.name=Clay Plate
 item.got:club.name=Hill Tribe Club
 item.got:cobalt_blue.name=Blue Cobalt
 item.got:coin.1.name=Copper penny
-item.got:coin.1024.name=Silver moon
-item.got:coin.16.name=Copper groat
-item.got:coin.16384.name=Valyrian lord
-item.got:coin.256.name=Silver stag
-item.got:coin.4.name=Copper half-groat
-item.got:coin.4096.name=Golden dragon
-item.got:coin.64.name=Silver star
+item.got:coin.3125.name=Silver moon
+item.got:coin.25.name=Copper groat
+item.got:coin.78125.name=Valyrian lord
+item.got:coin.625.name=Silver stag
+item.got:coin.5.name=Copper half-groat
+item.got:coin.15625.name=Golden dragon
+item.got:coin.125.name=Silver star
 item.got:coin.nominal.name=Nominal
 item.got:command_horn.name=Horn of Command
 item.got:command_sword.name=Sword of Command
@@ -5487,6 +5494,7 @@ item.got:nomad_battleaxe.name=Nomad Battleaxe
 item.got:nomad_bow.name=Nomad Bow
 item.got:nomad_spear.name=Nomadi Spear
 item.got:nomad_sword.name=Nomad Arakh
+item.got:north_great_sword.name=Двуручный Меч Севера
 item.got:north_boots.name=North Boots
 item.got:north_chestplate.name=North
 item.got:north_helmet.name=North Helmet
@@ -5546,6 +5554,7 @@ item.got:rabbit_raw.name=Raw Rabbit
 item.got:rabbit_stew.name=Rabbit Stew
 item.got:raisins.name=Raisins
 item.got:raspberry.name=Raspberries
+item.got:reach_pike.name=Пика Простора
 item.got:reach_boots.name=Boots of Reach
 item.got:reach_chestplate.name=Chestplate of Reach
 item.got:reach_helmet.name=Helmet of Reach
@@ -5571,6 +5580,7 @@ item.got:rhino_cooked.name=Cooked Rhino
 item.got:rhino_horn.name=Rhino Horn
 item.got:rhino_raw.name=Raw Rhino
 item.got:rice.name=Rice
+item.got:riverlands_trident.name= Тризуб Речных Земель
 item.got:riverlands_boots.name=Boots of Riverlands
 item.got:riverlands_chestplate.name=Chestplate of Riverlands
 item.got:riverlands_helmet.name=Helmet of Riverlands
@@ -5629,6 +5639,7 @@ item.got:sothoryos_spear.name=Sothoryos Spear
 item.got:sothoryos_sword.name=Sothoryos Sword
 item.got:spawn_egg.name=Spawn
 item.got:stone_spear.name=Stone Spear
+item.got:stormlands_hammer.name=Двуручный Молот Штормовых Земель
 item.got:stormlands_boots.name=Boots of Stormlands
 item.got:stormlands_chestplate.name=Chestplate of Stormlands
 item.got:stormlands_helmet.name=Helmet of Stormlands
@@ -5722,6 +5733,7 @@ item.got:westerlandsguard_boots.name=Boots of Red Cloacks
 item.got:westerlandsguard_chestplate.name=Chestplate of Red Cloacks
 item.got:westerlandsguard_helmet.name=Helmet of Red Cloacks
 item.got:westerlandsguard_leggings.name=Leggings of Red Cloacks
+item.got:westerlands_cross_bow.name=Арбалет Западных Земель
 item.got:westeros_bow.name=Westeros Bow
 item.got:westeros_dagger.name=Westeros Dagger
 item.got:westeros_dagger_poisoned.name=Poisoned Westeros Dagger
@@ -5785,6 +5797,203 @@ tile.concrete.name=%s Concrete
 tile.concrete_powder.name=%s Concrete Powder
 tile.dirt.0.name=Dirt
 tile.dirt.coarse.name=Barryn Dirt
+tile.got:moredain_smalltile.name=Кирпич из Яшмы
+tile.got:moredain_smalltile_stairs.name=Ступеньки из Яшмовых Кирпичей
+Плита из Яшмовых Кирпичей
+Ограда из Яшмовых Кирпичей
+tile.got:moredain_detailbrick.name=Крупный Кирпич из Яшмы
+tile.got:moredain_smalltile_stairs.name=Ступеньки из Крупных Яшмовых Кирпичей
+Плита из Крупных Яшмовых Кирпичей
+Ограда из Крупных Яшмовых Кирпичей
+tile.got:moredain_largetiledark.name=Яшмовая Кладка
+tile.got:moredain_largetiledark_stairs.name=Ступеньки из Яшмовой Кладки
+Плита из Яшмовой Кладки
+Ограда из Яшмовой Кладки
+tile.got:moredain_smooth.name=Гладкая Яшма
+tile.got:moredain_border.name=Яшмовая Колонна
+tile.got:moredain_bordeк_stairs.name=Ступеньки из Яшмовой Колоны
+tile.got:galadrim_brick.name=Кирпичи из Мрамора
+tile.got:galadrim_brick_stairs.name=Ступеньки из Мраморного Кирпича
+Плита из Мраморного Кирпича
+Ограда из Мраморного Кирпича
+tile.got:galadrim_rock.name=Мрамор
+tile.got:galadrim_rock_stairs.name=Ступеньки из Мрамора
+Плита из Мрамора
+Ограда из Мрамора
+tile.got:galadrim_square.name=Мраморная Колонна
+tile.got:galadrim_square_stairs.name=Ступеньки из Мраморной Колонны
+tile.got:galadrim_border.name=Гладкий Мрамор
+tile.got:khand_smoothrock.name=Светло-серый Мрамор
+tile.got:khand_smoothrock_stairs.name=Ступеньки из светло-серого Мрамора
+Плита из светло-серого Мрамора
+Ограда из светло-серого Мрамора
+tile.got:khand_rock.name=Светло-серый Потрескавшийся Мрамор
+tile.got:khand_rock_stairs.name=Ступеньки из светло-серого Потрескавшегося Мрамора
+Плита из светло-серого Потрескавшегося Мрамора
+Ограда из светло-серого Потрескавшегося Мрамора
+tile.got:khand_detailedbrick_stairs.name=Ступеньки из светло-серого Крупного Мраморного Кирпича
+tile.got:khand_detailedbrick.name=Крупные Кирпичи из светло-серого Мрамора
+Плита из светло-серого Крупного Мраморного Кирпича
+Ограда из светло-серого Крупного Мраморного Кирпича
+tile.got:khand_brick.name=Кирпичи из светло-сеорого Мрамора
+tile.got:khand_brick_stairs.name=Ступеньки из светло-серого Мраморного Кирпича.
+Плита из светло-серого Мраморного Кирпича
+Ограда из светло-серого Мраморного Кирпича
+tile.got:khand_platerough.name=Гладкий светло-серый Мрамора
+tile.got:angmar_smoothrock.name=Сланец
+tile.got:angmar_smoothrock_stairs.name=Ступеньки из Сланца
+Плита из Потрескавшегося Сланца
+Ограда из Потрескавшегося Сланца
+tile.got:angmar_rock.name=Потрескавшийся Сланец
+tile.got:angmar_rock_stairs.name=Ступеньки из Потрескавшегося Сланца
+Плита из Потрескавшегося Сланца
+Ограда из Потрескавшегося Сланца
+tile.got:angmar_brick.name=Сланцевые Кирпичи
+tile.got:angmar_brick_stairs.name=Ступеньки из Сланцевых Кирпичей
+Плита из Сланцевых Кирпичей
+Ограда из Сланцевых Кирпичей
+tile.got:angmar_detailedbrick.name=Крупные Кирпичи из Сланца
+tile.got:angmar_detailedbrick_stairs.name=Ступеньки из Крупных Сланцевых Кирпичей
+Плита из Крупных Сланцевых Кирпичей
+Ограда из Крупных Сланцевых Кирпичей
+tile.got:angmar_dent.name=Гладкий Сланец
+tile.got:angmar_dent_stairs.name=Ступеньки из Гладкого Сланца
+tile.got:dalemossy_detailedbrick.name=Замшелый Тёмный Песчанник
+tile.got:dalemossy_detailedbrick_stairs.name=Ступеньки из Замшелого Тёмного Песчанника
+Плита из Замшелого Тёмного Песчанника
+Ограда из Замшелого Тёмного Песчанника
+tile.got:dale_detailedbrick.name=Тёмный Песчанник
+tile.got:dale_detailedbrick.name=Ступеньки из Тёмного Песчанника
+Плита из Тёмного Песчанника
+Ограда из Тёмного Песчанника
+tile.got:dalemossy_smallbrick.name=Замшелые Кирпичи из Тёмного Песчанника
+tile.got:dalemossy_smallbrick_stairs.name=Ступеньки из Замшелых Тёмных Песчанниковых Кирпичей
+Плита из Замшелых Тёмных Песчанников Кирпичей
+Ограда из Замшелых Тёмных Песчанниковых Кирпичей
+tile.got:dale_dungeon.name=Гладкий Тёмный Песчанник
+tile.got:khazaddum_smoothrock.name=Серый Сланец
+tile.got:khazaddum_smoothrock_stairs.name=Ступеньки из Серого Сланца
+Плита из Серого Сланца
+Ограда из Серого Сланца
+tile.got:khazaddum_rock.name=Потрескавшийся Серый Сланец
+tile.got:khazaddum_rock_stairs.name=Ступеньки из Пострескавшегося Серого Сланца
+Плита из Потрескавшегося Серого Сланца
+Ограда из Потрескавшегося Серого Сланца
+tile.got:khazaddum_brick.name=Кирпичи из Серого Сланца.
+tile.got:khazaddum_brick_stairs.name=Ступеньки из Серого Сланцевого Кирпича.
+Плита из Серых Сланцевых Кирпичей
+Ограда из Серых Сланцевых Кирпичей
+tile.got:khazaddum_detailedbrick.name=Крупные Кирпичи из Серого Сланца
+tile.got:khazaddum_detailedbrick_stairs.name=Ступеньки из Крупных Серых Сланцевых Кирпичей
+Плита из Крупных Серых Сланцевых Кирпичей
+Ограда из Крупных Серых Сланцевых Кирпичей
+tile.got:khazaddum_dent.name=Серый Гладкий Сланец
+tile.got:khazaddum_dent.name=Ступеньки из Серого Гладкого Сланца
+tile.got:cerinrim_smoothrock.name=Опока
+tile.got:cerinrim_smoothrock_stairs.name=Ступеньки из Опоки
+Плита из Опоки
+Ограда из Опоки
+tile.got:cerinrim_rock.name=Потрескавшаяся Опока
+tile.got:cerinrim_rock_stairs.name=Ступеньки из Потсрескавшейся Опоки
+Плита из Потсрескавшейся Опоки
+Ограда из Потрескавшейся Опоки
+tile.got:cerinrim_brick.name=Опоковые Кирпичи
+tile.got:cerinrim_brick_stairs.name=Ступеньки из Опокового Кирпича
+Плита из Опокового Кирпичи
+Ограда из Опокового Кирпича
+tile.got:cerinrim_detailedbrick.name=Крупные Опоковые Кирпичи
+tile.got:cerinrim_detailedbrick_stairs.name=Ступеньки из Крупных Опоковых Кирпичей
+Плита из Крупных Опоковых Кирпичей
+Ограда из Крупных Опоковых Кирпичей
+tile.got:cerinrim_plate.name=Гладкая Опока
+tile.got:cerinrim_dent.name=Опоковая Колонна
+tile.got:avaridark_rock.name=Серый Гранит
+tile.got:avaridark_rock_stairs.name=Ступеньки из Серого Гранита
+Плита из Серого Гранита
+Ограда из Серого Гранита
+tile.got:avaridark_fullblock.name=Гладкий Серый Гранит
+tile.got:avaridark_fullblock.name=Серая Гранитовая Колонна
+tile.got:avaridark_block2.name=Кирпичи из Серого Гранита
+tile.got:avaridark_block2_stairs.name=Ступеньки из Серых Гранитных Кирпичей
+Плита из Серых Гранитных Кирпичей
+Ограда из Серых Гранитных Кирпичей
+tile.got:logathrim_smoothrock.name=Травертин
+tile.got:logathrim_smoothcrock_stairs.name=Ступеньки из Травертина
+Плита из Травертина
+Ограда из Травертина
+tile.got:logathrim_rock.name=Потрескавшийся Травертин
+tile.got:logathrim_rock_stairs.name=Ступеньки из Потсрескавшегося Травертина
+Плита из Потрескавшегося Травертина
+Ограда из Потрескавшегося Травертина
+tile.got:logathrim_chunks.name=Пористый Травертин
+tile.got:logathrim_chunks_stairs.name=Ступеньки из Пористого Травертина
+Плита из Пористого Травертина
+Ограда из Пористого Травертина
+tile.got:logathrim_brick.name=Травертиновые Кирпичи
+tile.got:logathrim_brick_stairs.name=Ступеньки из Травертиновых Кирпичей
+Плита из Травертиновых Кирпичей
+Ограда из Травертиновых Кирпичей
+tile.got:logathrim_largebricks.name=Крупные Травертиновые Кирпичи
+tile.got:logathrim_largebricks_stairs.name=Ступеньки из Крупных Травертиновых Кирпичей
+Плита из Крупных Травертиновых Кирпичей
+Ограда из Крупных Травертиновых Кирпичей
+tile.got:logathrim_dungeon.name=Гладкий Травертин
+tile.got:jinzhun_smoothrock.name=Алеврит
+tile.got:jinzhun_smoothrock_stairs.name=Ступеньки из Алеврита
+Плита из Алеврита
+Ограда из Алеврита
+tile.got:jinzhun_rock.name=Потрескавшийся Алеврит
+tile.got:jinzhun_rock_stairs.name=Ступеньки из Потрескавшегося Алеврита
+Плита из Потрескавшегося Алеврита
+tile.got:jinzhun_brick.name=Алевритовые Кирпичи
+tile.got:jinzhun_brick_stairs.name=Ступеньки из Алевритовых Кирпичей
+Плита из Алевритовых Кирпичей
+Ограда из Алевритовых Кирпичей
+tile.got:jinzhun_detailedbrick.name=Крупные Алевритовые Кирпичи
+tile.got:jinzhun_detailedbrick_staits.name=Ступеньки из Крупных Алевритовых Кирпичей
+Плита из Крупных Алевритовых Кирпичей
+Ограда из Крупных Алевритовых Кирпичей
+tile.got:jinzhun_dent.name=Гладкий Алеврит
+tile.got:gondor_smoothrock.name=Доломит
+tile.got:gondor_smoothrock_stairs.name=Ступеньки из Доломита
+Плита из Доломита
+Ограда из Доломита
+tile.got:gondor_rock.name=Потрескавшийся Доломит
+tile.got:gondor_rock_stairs.name=Ступеньки из Потрескавшегося Доломита
+Плита из Потрескавшегося Доломита
+Ограда из Потрескавшегося Доломита
+tile.got:gondor_brick.name=Доломитовые Кирпичи
+tile.got:gondor_brick_stairs.name=Ступеньки из Доломитовых Кирпичей
+Плита из Доломитовых Кирпичей
+Ограда из Доломитовых Кирпичей
+tile.got:gondor_detailedbrick.name=Крупные Доломитовые Кирпичи
+tile.got:gondor_detailedbrick_stairs.name=Ступеньки из Крупных Доломитовых Кирпичей
+Плита из Крупных Доломитовых Кирпичей
+Ограда из Крупных Доломитовых Кирпичей
+tile.got:gondor_dent.name=Колонна из Доломита
+tile.got:gondor_platerough.name=Гладкий Доломит
+tile.got:rednearharad_brick.name=Кирпичи из Красного Песчанника
+tile.got:rednearharad_brick_stairs.name=Ступеньки из Кирпичей Красного Песчанника
+tile.got:rednearharad_detailedbrick.name=Крупные Кирпичи из Красного Песчанника
+tile.got:rednearharad_detailedbrick_stairs.name=Ступеньки из Крупных Кирпичей Красного Песчанника
+tile.got:w_s_l_a_b27.1name=Плита из Крупных Кирпичей Красного Песчанника
+Ограда из Красного Песчанника
+tile.got:rednearharad_smooth.name=Гладкий Красный Песчанник
+tile.got:rednearharad_smalltiledark.name=Грязные Кирпичи из Красного Песчанника
+tile.got:rednearharad_smalltiledark.name=Ступеньки из Грязных Кирпичей Красного Песчанника
+Плита из Грязных Кирпичей Красного Песчанникау
+tile.got:nearharad_rock.name=Твёрдый Песчанник
+tile.got:nearharad_rock_stairs.name=Ступеньки из Твёрдого Песчанника
+tile.got:nearharad_bigbrick.name=Кирпичи из Твёрдого Песчанника
+tile.got:nearharad_bigbrick_stairs.name=Ступеньки из Кирпичей Твёрдого Песчанника
+tile.got:nearharad_smooth.name=Гладкий Твёрдый Песчанник
+tile.got:nearharad_chiselcircle.name=Колонна из Твёрдого Песчанника
+tile.got:slab_ice_single.0.name=Полублок из льда
+tile.got:slab_packed_ice_single.0.name=Полублок из плотного льда
+tile.got:stairs_ice.name=Ступеньки из льда
+tile.got:stairs_packed_ice.name=Ступеньки из плотного льда
+tile.got:slab_snow_single.0.name=Полублок из снега
+tile.got:stairs_snow.name=Ступеньки из снега
 tile.got.bomb.double_strength=Двухкратная сила
 tile.got.bomb.fire=Зажигательная
 tile.got.bomb.triple_strength=Трёхкратная сила

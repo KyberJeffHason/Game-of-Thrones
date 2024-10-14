@@ -42,9 +42,6 @@ public class GOTBlockBerryBush extends Block implements IPlantable, IGrowable {
 
 	@Override
 	public void func_149853_b(World world, Random random, int i, int j, int k) {
-		if (random.nextInt(3) == 0) {
-			growBerries(world, i, j, k);
-		}
 	}
 
 	public ArrayList<ItemStack> getBerryDrops(World world, int i, int j, int k, int meta) {

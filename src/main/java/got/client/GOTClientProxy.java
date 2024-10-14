@@ -3,23 +3,12 @@ package got.client;
 import java.util.*;
 import java.util.Map.Entry;
 
-import cpw.mods.fml.common.network.simpleimpl.MessageContext;
-import got.client.ROMEMusic.MusicEventHandler;
-import got.client.render.DecorationRenderer;
-import got.common.block.base.DecorationTileEntity;
-import got.common.decorations.DecorationsRegister;
-import got.common.decorations.base.Decoration;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.client.MinecraftForgeClient;
-import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
 
 import com.mojang.authlib.GameProfile;
 
 import cpw.mods.fml.client.registry.*;
+import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import got.client.effect.*;
@@ -55,6 +44,18 @@ import net.minecraft.potion.*;
 import net.minecraft.util.*;
 import net.minecraft.world.*;
 import net.minecraft.world.chunk.Chunk;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
+import got.client.ROMEMusic.MusicEventHandler;
+import got.client.render.DecorationRenderer;
+import got.common.block.base.DecorationTileEntity;
+import got.common.decorations.DecorationsRegister;
+import got.common.decorations.base.Decoration;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
 import software.bernie.geckolib3.renderers.geo.RenderBlockItem;
 
 public class GOTClientProxy extends GOTCommonProxy {
@@ -493,7 +494,6 @@ public class GOTClientProxy extends GOTCommonProxy {
 		FMLCommonHandler.instance().bus().register(new GOTEntityElephant3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTKeyHandler(GOTPacketHandler.networkWrapper));
 	}
-
 	public static void bindItemRender(Block block, TileEntity tile, DecorationRenderer tesr){
 		Item blockItem = ItemBlock.getItemFromBlock(block);
 		MinecraftForgeClient.registerItemRenderer(blockItem,new RenderBlockItem(tesr, tile));
@@ -510,8 +510,6 @@ public class GOTClientProxy extends GOTCommonProxy {
 		System.setProperty("fml.skipFirstTextureLoad", "false");
 		GOTItemRendererManager.preInit();
 		GOTArmorModels.preInit();
-
-		// Регистрация музыки в хендлер
 		MinecraftForge.EVENT_BUS.register(MusicEventHandler.INSTANCE);
 		FMLCommonHandler.instance().bus().register(MusicEventHandler.INSTANCE);
 	}

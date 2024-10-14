@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.zip.*;
 
+import net.minecraft.command.ICommandSender;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.input.BOMInputStream;
 
@@ -85,7 +86,7 @@ public class GOTSpeech {
 		if (MinecraftServer.getServer() == null) {
 			return;
 		}
-		for (EntityPlayer player : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
+		for (ICommandSender player : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
 			player.addChatMessage(message);
 		}
 	}

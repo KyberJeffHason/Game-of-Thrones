@@ -6,11 +6,11 @@ import java.util.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
+import org.lwjgl.Sys;
 
 public abstract class GOTEnchantment {
 	public static List<GOTEnchantment> allEnchantments = new ArrayList<>();
 	public static Map<String, GOTEnchantment> enchantsByName = new HashMap<>();
-
 	public static GOTEnchantment strong1 = new GOTEnchantmentDamage("strong1", 0.5F).setEnchantWeight(10);
 	public static GOTEnchantment strong2 = new GOTEnchantmentDamage("strong2", 1.0F).setEnchantWeight(5);
 	public static GOTEnchantment strong3 = new GOTEnchantmentDamage("strong3", 2.0F).setEnchantWeight(2).setSkilful();
@@ -23,10 +23,14 @@ public abstract class GOTEnchantment {
 	public static GOTEnchantment durable2 = new GOTEnchantmentDurability("durable2", 1.5F).setEnchantWeight(8);
 	public static GOTEnchantment durable3 = new GOTEnchantmentDurability("durable3", 2.0F).setEnchantWeight(4).setSkilful();
 
-	public static GOTEnchantment meleeSpeed1 = new GOTEnchantmentMeleeSpeed("meleeSpeed1", 1.25F).setEnchantWeight(6);
+	public static GOTEnchantment meleeSpeed1 = new GOTEnchantmentMeleeSpeed("meleeSpeed1", 1.1F).setEnchantWeight(6);
+	public static GOTEnchantment meleeSpeed2 = new GOTEnchantmentMeleeSpeed("meleeSpeed2", 1.2F).setEnchantWeight(6);
+	public static GOTEnchantment meleeSpeed3 = new GOTEnchantmentMeleeSpeed("meleeSpeed3", 1.3F).setEnchantWeight(6);
 	public static GOTEnchantment meleeSlow1 = new GOTEnchantmentMeleeSpeed("meleeSlow1", 0.75F).setEnchantWeight(4);
 
-	public static GOTEnchantment meleeReach1 = new GOTEnchantmentMeleeReach("meleeReach1", 1.25F).setEnchantWeight(6);
+	public static GOTEnchantment meleeReach1 = new GOTEnchantmentMeleeReach("meleeReach1", 1.1F).setEnchantWeight(6);
+	public static GOTEnchantment meleeReach2 = new GOTEnchantmentMeleeReach("meleeReach2", 1.2F).setEnchantWeight(6);
+	public static GOTEnchantment meleeReach3 = new GOTEnchantmentMeleeReach("meleeReach3", 1.3F).setEnchantWeight(6);
 	public static GOTEnchantment meleeUnreach1 = new GOTEnchantmentMeleeReach("meleeUnreach1", 0.75F).setEnchantWeight(4);
 
 	public static GOTEnchantment knockback1 = new GOTEnchantmentKnockback("knockback1", 1).setEnchantWeight(6);

@@ -27,7 +27,7 @@ public class GOTItemSword extends ItemSword implements GOTMaterialFinder {
 	public GOTItemSword(Item.ToolMaterial material) {
 		super(material);
 		setCreativeTab(GOTCreativeTabs.tabCombat);
-		gotWeaponDamage = material.getDamageVsEntity() + 4.0f;
+		gotWeaponDamage = material.getDamageVsEntity() + 5.0f;
 		gotMaterial = material;
 	}
 

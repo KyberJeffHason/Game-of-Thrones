@@ -5,9 +5,9 @@ import java.util.*;
 import com.mojang.authlib.GameProfile;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import got.GOT;
 import got.client.gui.*;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import got.common.block.other.GOTBlockFlowerPot;
 import got.common.database.*;
 import got.common.entity.animal.GOTEntityHorse;
@@ -398,7 +398,6 @@ public class GOTCommonProxy implements IGuiHandler {
 		}
 		return null;
 	}
-
 	public EntityPlayer getPlayerEntity(MessageContext ctx) {
 		return ctx.getServerHandler().playerEntity;
 	}

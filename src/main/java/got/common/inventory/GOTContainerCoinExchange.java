@@ -79,9 +79,9 @@ public class GOTContainerCoinExchange extends Container {
 			int coins = exchangeInv.getStackInSlot(slot).stackSize;
 			int coinsTaken = 0;
 			if (slot == 0) {
-				coinsTaken = coins / 4;
+				coinsTaken = coins / 5;
 			} else if (slot == 1) {
-				coinsTaken = coins * 4;
+				coinsTaken = coins * 5;
 			}
 			coinInputInv.decrStackSize(0, coinsTaken);
 			for (int i = 0; i < exchangeInv.getSizeInventory(); ++i) {
@@ -130,15 +130,15 @@ public class GOTContainerCoinExchange extends Container {
 					int coinType = coin.getItemDamage();
 					if (coinType > 0) {
 						int coinsFloor = coins;
-						while (coinsFloor * 4 > exchangeInv.getInventoryStackLimit()) {
+						while (coinsFloor * 5 > exchangeInv.getInventoryStackLimit()) {
 							--coinsFloor;
 						}
-						exchangeInv.setInventorySlotContents(0, new ItemStack(GOTRegistry.coin, coinsFloor * 4, coinType - 1));
+						exchangeInv.setInventorySlotContents(0, new ItemStack(GOTRegistry.coin, coinsFloor * 5, coinType - 1));
 					} else {
 						exchangeInv.setInventorySlotContents(0, null);
 					}
 					if (coinType < GOTItemCoin.values.length - 1 && coins >= 4) {
-						exchangeInv.setInventorySlotContents(1, new ItemStack(GOTRegistry.coin, coins / 4, coinType + 1));
+						exchangeInv.setInventorySlotContents(1, new ItemStack(GOTRegistry.coin, coins / 5, coinType + 1));
 					} else {
 						exchangeInv.setInventorySlotContents(1, null);
 					}

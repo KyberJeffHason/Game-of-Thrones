@@ -2,10 +2,9 @@ package got.common;
 
 import java.util.*;
 
-import cpw.mods.fml.common.network.FMLNetworkEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import got.common.registers.EffectRegister;
 import got.rome.ExtendedPlayer;
-import javafx.scene.effect.Effect;
 import net.minecraftforge.event.entity.EntityEvent;
 import org.apache.commons.lang3.StringUtils;
 
@@ -78,6 +77,7 @@ import net.minecraftforge.event.entity.player.*;
 import net.minecraftforge.event.entity.player.PlayerEvent.*;
 import net.minecraftforge.event.terraingen.SaplingGrowTreeEvent;
 import net.minecraftforge.event.world.*;
+import org.lwjgl.Sys;
 
 public class GOTEventHandler implements IFuelHandler {
 	public GOTItemBow proxyBowItemServer;
@@ -95,6 +95,28 @@ public class GOTEventHandler implements IFuelHandler {
 		DamageSource source = event.source;
 		if (source instanceof EntityDamageSourceIndirect) {
 			source.getSourceOfDamage();
+		}
+	}
+
+	@SubscribeEvent
+	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		EntityPlayer entityplayer = event.player;
+		World world = entityplayer.worldObj;
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem() instanceof GOTItemCrossbow && GOTItemCrossbow.isLoaded(entityplayer.getHeldItem())) {
+			new java.util.Timer().schedule(
+					new java.util.TimerTask() {
+						@Override
+						public void run() {
+							for (int slot = 0; slot < entityplayer.inventory.mainInventory.length; ++slot) {
+								ItemStack itemstack = entityplayer.inventory.mainInventory[slot];
+								if (itemstack == null || !(itemstack.getItem() instanceof GOTItemCrossbow)) {
+									continue;
+								}
+								GOTItemCrossbow.setLoaded(itemstack, null);
+							}
+						}
+					}, 3000
+			);
 		}
 	}
 
@@ -128,6 +150,7 @@ public class GOTEventHandler implements IFuelHandler {
 			ExtendedPlayer.register((EntityPlayer) event.entity);
 	}
 
+
 	@SubscribeEvent
 	public void onLivingCombatLOG(LivingEvent.LivingUpdateEvent event) {
 		if (event.entityLiving instanceof EntityPlayer) {
@@ -142,7 +165,7 @@ public class GOTEventHandler implements IFuelHandler {
 			PotionEffect effect = player.getActivePotionEffect(Potion.potionTypes[EffectRegister.COMBATLOG_POTIONID]);
 
 			// If player is drinking milk
-			if (player.isUsingItem() && player.getItemInUse().getItem() == Items.milk_bucket) {
+			if (player.isUsingItem() && player.getItemInUse().getItem() != null && player.getItemInUse().getItem() == (Items.milk_bucket)) {
 				// Store the effect details before it's removed
 				int duration = effect.getDuration();
 				int amplifier = effect.getAmplifier();
@@ -536,9 +559,44 @@ public class GOTEventHandler implements IFuelHandler {
 		Entity entity = event.target;
 		World world = entity.worldObj;
 		EntityPlayer entityplayer = event.entityPlayer;
+		//IAttributeInstance entityAttribute = entityplayer.getEntityAttribute(SharedMonsterAttributes.knockbackResistance);
+		GOTPlayerData pd = GOTLevelData.getData(entityplayer);
 		if (!world.isRemote && (entity instanceof EntityHanging || entity instanceof GOTBannerProtectable) && GOTBannerProtection.isProtected(world, entity, GOTBannerProtection.forPlayer(entityplayer, GOTBannerProtection.Permission.FULL), true)) {
 			event.setCanceled(true);
 		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.dornePolearm) && pd.getPledgeFaction() != GOTFaction.DORNE) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.arrynClaymore) && pd.getPledgeFaction() != GOTFaction.ARRYN) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.stormlandsHammer) && pd.getPledgeFaction() != GOTFaction.STORMLANDS) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.ironBornAxe) && pd.getPledgeFaction() != GOTFaction.IRONBORN) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.reachPike) && pd.getPledgeFaction() != GOTFaction.REACH) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.riverlandsTrident) && pd.getPledgeFaction() != GOTFaction.RIVERLANDS) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.northGreatSword) && pd.getPledgeFaction() != GOTFaction.NORTH) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+
+//		if (!world.isRemote && entityplayer.getHeldItem() != null && entityplayer.getHeldItem().getItem().equals(GOTRegistry.dornePolearm))
+//			entityAttribute.setBaseValue(1.0F);
+//
+//		entityAttribute.setBaseValue(0.0F);
 	}
 
 	@SubscribeEvent
@@ -791,6 +849,23 @@ public class GOTEventHandler implements IFuelHandler {
 		if (!world.isRemote && GOTPoisonedDrinks.isDrinkPoisoned(itemstack)) {
 			GOTPoisonedDrinks.addPoisonEffect(entityplayer, itemstack);
 		}
+	}
+
+	@SubscribeEvent
+	public void onItemUseTick(PlayerUseItemEvent.Tick event) {
+		EntityPlayer entityplayer = event.entityPlayer;
+		World world = entityplayer.worldObj;
+		ItemStack itemstack = event.item;
+		GOTPlayerData pd = GOTLevelData.getData(entityplayer);
+		if (!world.isRemote && itemstack.getItem().equals(GOTRegistry.westerlandsCrossBow) && pd.getPledgeFaction() != GOTFaction.WESTERLANDS) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+		if (!world.isRemote && itemstack.getItem().equals(GOTRegistry.dorneBow) && pd.getPledgeFaction() != GOTFaction.DRAGONSTONE) {
+			entityplayer.addChatMessage(new ChatComponentTranslation("got.warning"));
+			event.setCanceled(true);
+		}
+
 	}
 
 	@SubscribeEvent
@@ -1422,6 +1497,7 @@ public class GOTEventHandler implements IFuelHandler {
 		dragon.getReproductionHelper().setBreederName(evt.entityPlayer.getCommandSenderName());
 		dragon.getLifeStageHelper().setLifeStage(GOTDragonLifeStage.EGG);
 		world.spawnEntityInWorld(dragon);
+
 	}
 
 	@SubscribeEvent

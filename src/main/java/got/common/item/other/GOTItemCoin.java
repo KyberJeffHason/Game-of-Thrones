@@ -14,7 +14,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.*;
 
 public class GOTItemCoin extends Item {
-	public static int[] values = { 1, 4, 16, 64, 256, 1024, 4096, 16384 };
+	public static int[] values = { 1, 5, 25, 125, 625, 3125, 15625, 78125 };
 	@SideOnly(value = Side.CLIENT)
 	public IIcon[] coinIcons;
 

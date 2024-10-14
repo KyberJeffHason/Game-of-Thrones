@@ -3,6 +3,7 @@ package got.common.item.weapon;
 import java.util.List;
 
 import cpw.mods.fml.relauncher.*;
+import got.common.GOTEventHandler;
 import got.common.database.*;
 import got.common.enchant.*;
 import got.common.entity.other.GOTEntityCrossbowBolt;
@@ -18,6 +19,7 @@ import net.minecraft.world.World;
 public class GOTItemCrossbow extends ItemBow {
 	public double boltDamageFactor;
 	public Item.ToolMaterial crossbowMaterial;
+	public int crossbowPullTime;
 	@SideOnly(value = Side.CLIENT)
 	public IIcon[] crossbowPullIcons;
 
@@ -27,6 +29,7 @@ public class GOTItemCrossbow extends ItemBow {
 		setMaxDamage((int) (crossbowMaterial.getMaxUses() * 1.25f));
 		setMaxStackSize(1);
 		boltDamageFactor = 1.0f + Math.max(0.0f, (crossbowMaterial.getDamageVsEntity() - 2.0f) * 0.1f);
+		crossbowPullTime = 50;
 	}
 
 	@SideOnly(value = Side.CLIENT)
@@ -113,7 +116,13 @@ public class GOTItemCrossbow extends ItemBow {
 	}
 
 	public int getMaxDrawTime() {
-		return 50;
+		return crossbowPullTime;
+	}
+
+	public GOTItemCrossbow setDrawTime(int i) {
+		crossbowPullTime = i;
+		return this;
+
 	}
 
 	@Override
@@ -201,7 +210,7 @@ public class GOTItemCrossbow extends ItemBow {
 		crossbowPullIcons[2] = iconregister.registerIcon(getIconString() + "_" + GOTItemBow.BowState.PULL_2.iconName);
 	}
 
-	public void setLoaded(ItemStack itemstack, ItemStack ammo) {
+	public static void setLoaded(ItemStack itemstack, ItemStack ammo) {
 		if (itemstack != null && itemstack.getItem() instanceof GOTItemCrossbow) {
 			NBTTagCompound nbt = itemstack.getTagCompound();
 			if (nbt == null) {

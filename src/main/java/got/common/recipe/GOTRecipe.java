@@ -231,7 +231,6 @@ public class GOTRecipe {
 		dorne.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dorneLeggings), "XXX", "X X", "X X", Character.valueOf('X'), "ingotIron"));
 		dorne.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dorneBoots), "X X", "X X", Character.valueOf('X'), "ingotIron"));
 		dorne.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.banner, 1, GOTItemBanner.BannerType.MARTELL.bannerID), "X", "Y", "Z", Character.valueOf('X'), Blocks.wool, Character.valueOf('Y'), "stickWood", Character.valueOf('Z'), "plankWood"));
-		dorne.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dorneBow), " XY", "XZY", " XY", Character.valueOf('X'), "stickWood", Character.valueOf('Y'), Items.string, Character.valueOf('Z'), Items.gold_nugget));
 		dorne.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dornePolearm), "  X", "ZYX", "YZ ", Character.valueOf('X'), "ingotIron", Character.valueOf('Y'), "stickWood", Character.valueOf('Z'), Items.gold_nugget));
 		dorne.addAll(commonWesteros);
 		dorne.addAll(tinyBasalt);
@@ -259,6 +258,7 @@ public class GOTRecipe {
 		dragonstone.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.banner, 1, GOTItemBanner.BannerType.STANNIS.bannerID), "X", "Y", "Z", Character.valueOf('X'), Blocks.wool, Character.valueOf('Y'), "stickWood", Character.valueOf('Z'), "plankWood"));
 		dragonstone.addAll(commonWesteros);
 		dragonstone.addAll(tinyBasalt);
+		dragonstone.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dorneBow), " XY", "XZY", " XY", Character.valueOf('X'), "stickWood", Character.valueOf('Y'), Items.string, Character.valueOf('Z'), Items.gold_nugget));
 		dragonstone.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dragonGlassPike), "  X", " YX", "Y  ", Character.valueOf('X'), GOTRegistry.dragonGlassShard, Character.valueOf('Y'), "stickWood"));
 		dragonstone.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dragonGlassSpear), "  X", " Y ", "Y  ", Character.valueOf('X'), GOTRegistry.dragonGlassShard, Character.valueOf('Y'), "stickWood"));
 		dragonstone.add(new ShapedOreRecipe(new ItemStack(GOTRegistry.dragonGlassSword), "X", "X", "Y", Character.valueOf('X'), GOTRegistry.dragonGlassShard, Character.valueOf('Y'), "stickWood"));

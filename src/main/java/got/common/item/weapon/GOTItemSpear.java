@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class GOTItemSpear extends GOTItemSword {
 	public GOTItemSpear(Item.ToolMaterial material) {
 		super(material);
-		gotWeaponDamage -= 1.0f;
+		gotWeaponDamage -= 0.5f;
 		BlockDispenser.dispenseBehaviorRegistry.putObject(this, new GOTDispenseSpear());
 	}
 

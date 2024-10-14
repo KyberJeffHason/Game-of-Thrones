@@ -354,9 +354,6 @@ public class GOTEntity {
 
 		GOTEntityRegistry.register(GOTEntityUlthosSpider.class, id++, GOTFaction.HIGH_POWER);
 		GOTEntityRegistry.register(GOTEntityBlizzard.class, id++, GOTFaction.WHITE_WALKER);
-
-		GOTEntityRegistry.registerLegendaryNPC(GOTEntityJaqenHghar.class, id++, GOTFaction.HIGH_POWER);
-
 		GOTEntityRegistry.registerHidden(GOTEntityPortal.class, id++, 80, 3, true);
 		GOTEntityRegistry.registerHidden(GOTEntitySmokeRing.class, id++, 64, 10, true);
 		GOTEntityRegistry.registerHidden(GOTEntityBomb.class, id++, 160, 10, true);

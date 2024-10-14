@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3050393f-8e5a-4469-b08a-51b2f06f1627" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemBattleaxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemBattleaxe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemHammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemHammer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPolearm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPolearm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPolearmLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemPolearmLong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Game of Thrones Build-1.0.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

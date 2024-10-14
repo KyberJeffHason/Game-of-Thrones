@@ -116,13 +116,6 @@ public class GOTGuiMenu extends GOTGuiScreenBase {
 	}
 
 	public static GuiScreen openMenu(EntityPlayer entityplayer) {
-		boolean[] map_factions = GOTMiniQuestWelcome.forceMenuMapFactions(entityplayer);
-		if (map_factions[0]) {
-			return new GOTGuiMap();
-		}
-		if (map_factions[1]) {
-			return new GOTGuiFactions();
-		}
 		if (lastMenuScreen != null) {
 			try {
 				return lastMenuScreen.newInstance();

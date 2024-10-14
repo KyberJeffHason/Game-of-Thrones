@@ -2,6 +2,7 @@ package got.common.quest;
 
 import java.util.*;
 
+import net.minecraft.command.ICommandSender;
 import org.apache.commons.lang3.StringUtils;
 
 import got.common.*;
@@ -213,7 +214,7 @@ public class GOTMiniQuestBounty extends GOTMiniQuest {
 			}
 			ChatComponentTranslation announceMsg = new ChatComponentTranslation("got.chat.bountyKill", entityplayer.getCommandSenderName(), slainPlayer.getCommandSenderName(), entityFaction.factionName());
 			announceMsg.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-			for (EntityPlayer otherPlayer : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
+			for (ICommandSender otherPlayer : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
 				if (otherPlayer == slainPlayer) {
 					continue;
 				}
@@ -254,7 +255,7 @@ public class GOTMiniQuestBounty extends GOTMiniQuest {
 			killerData.addAchievement(GOTAchievement.killHuntingPlayer);
 			ChatComponentTranslation announceMsg = new ChatComponentTranslation("got.chat.killedByBounty", entityplayer.getCommandSenderName(), killer.getCommandSenderName());
 			announceMsg.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-			for (EntityPlayer otherPlayer : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
+			for (ICommandSender otherPlayer : MinecraftServer.getServer().getConfigurationManager().playerEntityList) {
 				if (otherPlayer == entityplayer) {
 					continue;
 				}

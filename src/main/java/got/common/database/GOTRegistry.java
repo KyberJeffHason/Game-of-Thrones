@@ -358,6 +358,12 @@ public class GOTRegistry {
 	public static Block slabDoubleSand;
 	public static Block slabDoubleThatch;
 	public static Block slabDoubleV;
+	public static Block slabIceSingle;
+	public static Block slabIceDouble;
+	public static Block slabPackedIceSingle;
+	public static Block slabPackedIceDouble;
+	public static Block slabSnowSingle;
+	public static Block slabSnowDouble;
 	public static Block slabSingle10;
 	public static Block slabSingle11;
 	public static Block slabSingle12;
@@ -442,6 +448,9 @@ public class GOTRegistry {
 	public static Block stairsGreenOak;
 	public static Block stairsHolly;
 	public static Block stairsIbbinia;
+	public static Block stairsIce;
+	public static Block stairsPackedIce;
+	public static Block stairsSnow;
 	public static Block stairsKanuka;
 	public static Block stairsLarch;
 	public static Block stairsLemon;
@@ -1373,6 +1382,15 @@ public class GOTRegistry {
 	public static Item valyrianChainmailChestplate;
 	public static Item valyrianChainmailHelmet;
 	public static Item valyrianChainmailLeggings;
+	public static Item ironBornAxe;
+	public static Item arrynClaymore;
+	public static Item riverlandsTrident;
+	public static Item reachPike;
+	public static Item stormlandsHammer;
+	public static Item westerlandsCrossBow;
+	public static Item northGreatSword;
+
+
 
 	public static void assignContent() {
 		EffectRegister.registerPotions();
@@ -1661,7 +1679,6 @@ public class GOTRegistry {
 		sapling7 = new GOTBlockSapling7();
 		sapling8 = new GOTBlockSapling8();
 		sapling9 = new GOTBlockSapling9();
-
 		newAvariBlock = new LOTRBlockNewAvariBlock().setBlockName("lotr:newAvariBlock");
 		newAvariBlock2 = new LOTRBlockNewAvariBlock2().setBlockName("lotr:newAvariBlock2");
 		newAeornthrimBlock = new LOTRBlockNewAeornthrimBlock().setBlockName("lotr:newAeornthrimBlock");
@@ -1706,7 +1723,6 @@ public class GOTRegistry {
 		slabWOTRMCDouble14 = new LOTRWOTRMCSlab14(true).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone).setBlockName("lotr:slabWOTRMCDouble14");
 		slabWOTRMCSingle15 = new LOTRWOTRMCSlab15(false).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone).setBlockName("lotr:slabWOTRMCSingle15");
 		slabWOTRMCDouble15 = new LOTRWOTRMCSlab15(true).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone).setBlockName("lotr:slabWOTRMCDouble15");
-
 		sarbacaneTrap = new GOTBlockSarbacaneTrap(brick4, 0);
 		sarbacaneTrapGold = new GOTBlockSarbacaneTrap(brick4, 3);
 		sarbacaneTrapObsidian = new GOTBlockSarbacaneTrap(brick4, 4);
@@ -1743,6 +1759,9 @@ public class GOTRegistry {
 		slabDoubleSand = new GOTBlockSlabSand(true);
 		slabDoubleThatch = new GOTBlockSlabThatch(true);
 		slabDoubleV = new GOTBlockSlabV(true).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone);
+		slabIceDouble = new GOTBlockSlabIce(true);
+		slabPackedIceDouble = new GOTBlockSlabPackedIce(true);
+		slabSnowDouble = new GOTBlockSlabSnow(true);
 		slabSingle1 = new GOTBlockSlab1(false).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone);
 		slabSingle10 = new GOTBlockSlab10(false).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone);
 		slabSingle11 = new GOTBlockSlab11(false).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone);
@@ -1760,6 +1779,9 @@ public class GOTRegistry {
 		slabSingleSand = new GOTBlockSlabSand(false);
 		slabSingleThatch = new GOTBlockSlabThatch(false);
 		slabSingleV = new GOTBlockSlabV(false).setHardness(2.0f).setResistance(10.0f).setStepSound(Block.soundTypeStone);
+		slabIceSingle = new GOTBlockSlabIce(false);
+		slabPackedIceSingle = new GOTBlockSlabPackedIce(false);
+		slabSnowSingle = new GOTBlockSlabSnow(false);
 		smoothStone = new GOTBlockSmoothStone();
 		smoothStoneV = new GOTBlockSmoothStoneV();
 		sothoryosDoubleTorch = new GOTBlockDoubleTorch();
@@ -1827,6 +1849,9 @@ public class GOTRegistry {
 		stairsGreenOak = new GOTBlockStairs(planks2, 13);
 		stairsHolly = new GOTBlockStairs(planks1, 10);
 		stairsIbbinia = new GOTBlockStairs(planks1, 0);
+		stairsIce = new GOTBlockStairs(Blocks.ice, 0);
+		stairsPackedIce = new GOTBlockStairs(Blocks.packed_ice, 0);
+		stairsSnow = new GOTBlockStairs(Blocks.snow, 0);
 		stairsKanuka = new GOTBlockStairs(planks3, 5);
 		stairsLarch = new GOTBlockStairs(planks1, 13);
 		stairsLemon = new GOTBlockStairs(planks2, 5);
@@ -2647,6 +2672,7 @@ public class GOTRegistry {
 		westerlandsguardChestplate = new GOTItemArmor(GOTMaterial.WESTERLANDSGUARD, 1);
 		westerlandsguardHelmet = new GOTItemArmor(GOTMaterial.WESTERLANDSGUARD, 0);
 		westerlandsguardLeggings = new GOTItemArmor(GOTMaterial.WESTERLANDSGUARD, 2);
+		westerlandsCrossBow = new GOTItemWesterlandsCrossbow(GOTMaterial.IRON).setDrawTime(40);
 		westerosBow = new GOTItemBow(GOTMaterial.WOOD, 1.125);
 		westerosDagger = new GOTItemDagger(GOTMaterial.IRON);
 		westerosDaggerPoisoned = new GOTItemDagger(GOTMaterial.IRON, GOTItemSword.HitEffect.POISON);
@@ -2687,7 +2713,7 @@ public class GOTRegistry {
 
 		wineGlass = new GOTItemVessel();
 		woodPlate = new GOTItemPlate(woodPlateBlock);
-		dorneBow = new GOTItemBow(GOTMaterial.DORNE_BOW).setDrawTime(16);
+		dorneBow = new GOTItemDragonStoneBow(GOTMaterial.WOOD, 1.05).setDrawTime(17);
 		yam = new ItemSeedFood(1, 0.4f, yamCrop, Blocks.farmland).setPotionEffect(Potion.hunger.id, 15, 0, 0.4f);
 		yamRoast = new GOTItemFood(6, 0.6f, false);
 		yitiBattleaxe = new GOTItemBattleaxe(GOTMaterial.IRON);
@@ -2715,7 +2741,14 @@ public class GOTRegistry {
 		yitiSword = new GOTItemSword(GOTMaterial.IRON);
 		zebraCooked = new GOTItemFood(6, 0.6f, true);
 		zebraRaw = new GOTItemFood(2, 0.1f, true);
-		dornePolearm = new GOTItemDornePolearm(GOTMaterial.DORNE_TOOL).addWeaponDamage(-0.75f);
+		dornePolearm = new GOTItemDornePolearm(GOTMaterial.DORNE_TOOL).addWeaponDamage(-0.5f);
+		ironBornAxe = new GOTItemIronBornAxe(GOTMaterial.IRON).addWeaponDamage(0.25f);
+		arrynClaymore = new GOTItemArrynClaymore(GOTMaterial.IRON).addWeaponDamage(-2.5f);;
+		riverlandsTrident = new GOTItemRiverlandsTrident(GOTMaterial.IRON);
+		reachPike = new GOTItemReachPike(GOTMaterial.IRON).addWeaponDamage(1.0f);
+		stormlandsHammer = new GOTItemStormlandsHammer(GOTMaterial.IRON).addWeaponDamage(-0.5f);
+		northGreatSword = new GOTItemNorthGreatSword(GOTMaterial.IRON).addWeaponDamage(-2.0f);
+
 	}
 
 	public static void assignMetadata() {
@@ -2747,6 +2780,9 @@ public class GOTRegistry {
 		GOTBlockSlabBase.registerSlabs(slabSingleSand, slabDoubleSand);
 		GOTBlockSlabBase.registerSlabs(slabSingleGravel, slabDoubleGravel);
 		GOTBlockSlabBase.registerSlabs(slabBoneSingle, slabBoneDouble);
+		GOTBlockSlabBase.registerSlabs(slabIceSingle, slabIceDouble);
+		GOTBlockSlabBase.registerSlabs(slabPackedIceSingle, slabPackedIceDouble);
+		GOTBlockSlabBase.registerSlabs(slabSnowSingle, slabSnowDouble);
 		GOTBlockFallenLeaves.assignLeaves(fallenLeaves1, Blocks.leaves, Blocks.leaves2);
 		GOTBlockFallenLeaves.assignLeaves(fallenLeaves2, leaves1, fruitLeaves, leaves2, leaves3);
 		GOTBlockFallenLeaves.assignLeaves(fallenLeaves3, leaves4, leaves5, leaves6, leaves7);
@@ -2925,6 +2961,12 @@ public class GOTRegistry {
 		registerBlock(buttonDiorite, "buttonDiorite");
 		registerBlock(slabSingle3, "slabSingle3", GOTBlockSlabBase.SlabItems.Slab3Single.class);
 		registerBlock(slabDouble3, "slabDouble3", GOTBlockSlabBase.SlabItems.Slab3Double.class);
+		registerBlock(slabIceSingle, "slabIceSingle", GOTBlockSlabBase.SlabItems.iceSlabSingle.class);
+		registerBlock(slabIceDouble, "slabIceDouble", GOTBlockSlabBase.SlabItems.iceSlabDouble.class);
+		registerBlock(slabPackedIceSingle, "slabPackedIceSingle", GOTBlockSlabBase.SlabItems.icePackedSlabSingle.class);
+		registerBlock(slabPackedIceDouble, "slabPackedIceDouble", GOTBlockSlabBase.SlabItems.icePackedSlabDouble.class);
+		registerBlock(slabSnowSingle, "slabSnowSingle", GOTBlockSlabBase.SlabItems.snowSlabSingle.class);
+		registerBlock(slabSnowDouble, "slabSnowDouble", GOTBlockSlabBase.SlabItems.snowSlabDouble.class);
 		registerBlock(stairsDioriteBrick, "stairsDioriteBrick");
 		registerBlock(fence, "fence", GOTItemBlockMetadata.class);
 		registerBlock(doubleFlower, "doubleFlower", GOTItemDoubleFlower.class);
@@ -3215,6 +3257,9 @@ public class GOTRegistry {
 		registerBlock(stairsYiTiBrickMossy, "stairsYiTiBrickMossy");
 		registerBlock(stairsYiTiBrickCracked, "stairsYiTiBrickCracked");
 		registerBlock(stairsYiTiBrickFlowers, "stairsYiTiBrickFlowers");
+		registerBlock(stairsIce, "stairsIce");
+		registerBlock(stairsPackedIce, "stairsPackedIce");
+		registerBlock(stairsSnow, "stairsSnow");
 		registerBlock(brick6, "brick6", GOTItemBlockMetadata.class);
 		registerBlock(tableYiTi, "tableYiTi");
 		registerBlock(stairsYiTiBrickRed, "stairsYiTiBrickRed");
@@ -3976,6 +4021,8 @@ public class GOTRegistry {
 		registerItem(westerlandsguardChestplate, "westerlandsguardChestplate");
 		registerItem(westerlandsguardLeggings, "westerlandsguardLeggings");
 		registerItem(westerlandsguardBoots, "westerlandsguardBoots");
+		registerItem(westerlandsCrossBow, "westerlandsCrossBow");
+		registerItem(northGreatSword, "northGreatSword");
 		registerItem(riverlandsHelmet, "riverlandsHelmet");
 		registerItem(riverlandsChestplate, "riverlandsChestplate");
 		registerItem(riverlandsLeggings, "riverlandsLeggings");
@@ -4144,5 +4191,10 @@ public class GOTRegistry {
 		registerItem(valyrianChainmailBoots, "valyrianChainmailBoots");
 		registerItem(copperRing, "copperRing");
 		registerItem(bronzeRing, "bronzeRing");
+		registerItem(ironBornAxe, "ironIslandsAxe");
+		registerItem(arrynClaymore, "arrynClaymore");
+		registerItem(riverlandsTrident, "riverlandsTrident");
+		registerItem(reachPike, "reachPike");
+		registerItem(stormlandsHammer, "stormlandsHammer");
 	}
 }
