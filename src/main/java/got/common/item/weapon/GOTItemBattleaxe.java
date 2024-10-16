@@ -26,11 +26,6 @@ public class GOTItemBattleaxe extends GOTItemSword {
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack itemstack) {
-		return EnumAction.none;
-	}
-
-	@Override
 	public boolean onBlockDestroyed(ItemStack itemstack, World world, Block block, int i, int j, int k, EntityLivingBase entity) {
 		if (block.getBlockHardness(world, i, j, k) != 0.0) {
 			itemstack.damageItem(1, entity);
