@@ -6,6 +6,7 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.relauncher.Side;
 import got.common.network.clientToServer.PacketSendAttackCooldown;
+import got.common.network.serverToClient.PacketSendStamina;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 
@@ -18,6 +19,7 @@ public class PacketDispatcher {
     public static final void registerPackets() {
 
         registerMessage(PacketSendAttackCooldown.class);
+        registerMessage(PacketSendStamina.class);
     }
 
     private static final <T extends AbstractPacket<T> & IMessageHandler<T, IMessage>> void registerMessage(Class<T> clazz) {

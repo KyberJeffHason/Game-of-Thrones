@@ -17,7 +17,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 import got.common.*;
 import got.common.decorations.DecorationsRegister;
 import got.common.handlers.AttackHandler;
+import got.common.handlers.BlockServerHandler;
+import got.common.handlers.StaminaServerHandler;
 import got.common.network.base.PacketDispatcher;
+import got.common.systems.GOTCoreBlockingSystem;
 import net.minecraftforge.common.MinecraftForge;
 import got.common.block.leaves.*;
 import got.common.block.other.*;
@@ -95,6 +98,11 @@ public class GOT {
 	@Mod.EventHandler
 	public void load(FMLInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(AttackHandler.INSTANCE);
+		MinecraftForge.EVENT_BUS.register(StaminaServerHandler.INSTANCE);
+		FMLCommonHandler.instance().bus().register(StaminaServerHandler.INSTANCE);
+		MinecraftForge.EVENT_BUS.register(BlockServerHandler.INSTANCE);
+		FMLCommonHandler.instance().bus().register(BlockServerHandler.INSTANCE);
+		GOTCoreBlockingSystem.registerWeapons();
 		proxy.onLoad();
 		Set<Block> set = GOTAPI.getObjectFieldsOfType(GOTRegistry.class, Block.class);
 		for (Block block : set) {

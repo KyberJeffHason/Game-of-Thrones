@@ -3,6 +3,9 @@ package got.client;
 import java.util.*;
 import java.util.Map.Entry;
 
+import got.client.handlers.GOTBlockClientHandler;
+import got.client.handlers.GOTInterfaceHandler;
+import got.common.handlers.AttackHandler;
 import org.lwjgl.opengl.GL11;
 
 import com.mojang.authlib.GameProfile;
@@ -491,6 +494,10 @@ public class GOTClientProxy extends GOTCommonProxy {
 
 		FMLCommonHandler.instance().bus().register(new GOTEntityDragon3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTEntityMammoth3DViewer());
+		FMLCommonHandler.instance().bus().register(GOTInterfaceHandler.INSTANCE);
+		MinecraftForge.EVENT_BUS.register(GOTInterfaceHandler.INSTANCE);
+		FMLCommonHandler.instance().bus().register(GOTBlockClientHandler.INSTANCE);
+		MinecraftForge.EVENT_BUS.register(GOTBlockClientHandler.INSTANCE);
 		FMLCommonHandler.instance().bus().register(new GOTEntityElephant3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTKeyHandler(GOTPacketHandler.networkWrapper));
 	}

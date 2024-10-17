@@ -74,6 +74,8 @@ public class GOTConfig {
 	public static boolean enableFrostfangsMist;
 	public static boolean enableAmbience;
 	public static boolean enableSunFlare;
+
+	public static boolean enableBlockArc;
 	public static int cloudRange;
 	public static boolean checkUpdates;
 	public static boolean strTimelapse;
@@ -225,6 +227,7 @@ public class GOTConfig {
 		musicIntervalMenuMax = config.get(CATEGORY_MISC, "Menu Music Interval: Max.", 20, "Maximum time (seconds) between GOT menu music tracks").getInt();
 		fixRenderDistance = config.get(CATEGORY_MISC, "Fix render distance", true, "Fix a vanilla crash caused by having render distance > 16 in the options.txt. NOTE: This will not run if Optifine is installed").getBoolean();
 		preventMessageExploit = config.get(CATEGORY_MISC, "Fix /msg exploit", true, "Disable usage of @a, @r, etc. in the /msg command, to prevent exploiting it as a player locator").getBoolean();
+		enableBlockArc = config.get(CATEGORY_MISC, "Block Arc", true, "Enable the block arc overlay when blocking with a weapon").getBoolean();
 		cwpLog = config.get(CATEGORY_MISC, "Custom Waypoint logging", false).getBoolean();
 
 		if (GOTModChecker.isCauldronServer()) {
