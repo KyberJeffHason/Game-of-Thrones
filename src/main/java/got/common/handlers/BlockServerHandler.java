@@ -28,6 +28,8 @@ public class BlockServerHandler {
             float[] blockAngles = GOTCoreBlockingSystem.getBlockAngles(player.getHeldItem().getItem().getClass());
             if (isDamageBlocked(player, event.source, blockAngles)) {
                 event.setCanceled(true);
+            } else {
+                event.ammount += (float) (event.ammount * 0.3); // 30% more damage to make the 20% total reduction of damage(50% vanilla reduction + 30% more damage)
             }
         }
     }
