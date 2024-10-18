@@ -5,20 +5,28 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import got.common.network.base.PacketDispatcher;
 import got.common.network.serverToClient.PacketSendStamina;
 import got.rome.ExtendedPlayer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.MovementInput;
 
 public class StaminaServerHandler {
 
     public static final StaminaServerHandler INSTANCE = new StaminaServerHandler();
 
     public static final int MAX_STAMINA = 300;
-    private static final int DRAIN_RATE_RUNNING = 1; // Stamina drain rate while running
-    private static final int DRAIN_RATE_JUMPING = 2; // Stamina drain rate per jump
-    private static final int REGAIN_RATE = 10; // Stamina regain rate while standing still
-    private static final int STANDING_STILL_COOLDOWN = 100; // Ticks to wait before starting to regain stamina when standing still
+    private static final int DRAIN_RATE_RUNNING = 1;
+
+    private static final int BOUNCE_RANGE = 5; // New field for bounce range
+    private static final int DRAIN_RATE_JUMPING = 2;
+    private static final int REGAIN_RATE = 10;
+    private static final int STANDING_STILL_COOLDOWN = 100;
+    private static final int DOUBLE_TAP_INTERVAL = 10; // Ticks interval for double-tap detection
+
+    private int lastTapTick = 0;
+    private String lastTapDirection = "";
 
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -45,12 +53,12 @@ public class StaminaServerHandler {
 
         if (isRunning) {
             drainStamina(DRAIN_RATE_RUNNING, player);
-            extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN); // Reset the cooldown to regain stamina when running
+            extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN);
         }
 
         if (isJumping) {
             drainStamina(DRAIN_RATE_JUMPING, player);
-            extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN); // Reset the cooldown to regain stamina when jumping
+            extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN);
         }
 
         if (extendedPlayer.getStandingStillCooldown() > 0 && !isMoving && !isJumping) {
@@ -61,7 +69,6 @@ public class StaminaServerHandler {
             regainStamina(REGAIN_RATE, player);
         }
 
-        // Apply moveSlowdown effect if stamina is 0
         if (extendedPlayer.getStamina() == 0) {
             player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 20, 0, true));
         } else {
@@ -70,6 +77,66 @@ public class StaminaServerHandler {
 
         extendedPlayer.setPreviousPosX(currentPosX);
         extendedPlayer.setPreviousPosZ(currentPosZ);
+
+        handleBounce(player, extendedPlayer);
+    }
+
+    private void handleBounce(EntityPlayer player, ExtendedPlayer extendedPlayer) {
+        if (extendedPlayer.getBounceCooldown() > 0) {
+            extendedPlayer.setBounceCooldown(extendedPlayer.getBounceCooldown() - 1);
+            return;
+        }
+
+        String currentDirection = getMovementDirection(player);
+        int currentTick = player.ticksExisted;
+
+        if (!currentDirection.isEmpty() && currentDirection.equals(lastTapDirection) && (currentTick - lastTapTick) <= DOUBLE_TAP_INTERVAL) {
+            executeBounce(player, currentDirection);
+            extendedPlayer.setBounceCooldown(10); // Set cooldown for bounce
+        }
+
+        if (!currentDirection.isEmpty() && !currentDirection.equals(lastTapDirection)) {
+            lastTapDirection = currentDirection;
+            lastTapTick = currentTick;
+        }
+    }
+
+    private String getMovementDirection(EntityPlayer player) {
+        MovementInput input = Minecraft.getMinecraft().thePlayer.movementInput;
+        if (input.moveForward > 0) return "forward";
+        if (input.moveForward < 0) return "backward";
+        if (input.moveStrafe > 0) return "right";
+        if (input.moveStrafe < 0) return "left";
+        return "";
+    }
+
+    private void executeBounce(EntityPlayer player, String direction) {
+        double bounceRange = BOUNCE_RANGE;
+        double motionX = 0;
+        double motionZ = 0;
+
+        switch (direction) {
+            case "forward":
+                motionX = -Math.sin(Math.toRadians(player.rotationYaw)) * bounceRange;
+                motionZ = Math.cos(Math.toRadians(player.rotationYaw)) * bounceRange;
+                break;
+            case "backward":
+                motionX = Math.sin(Math.toRadians(player.rotationYaw)) * bounceRange;
+                motionZ = -Math.cos(Math.toRadians(player.rotationYaw)) * bounceRange;
+                break;
+            case "right":
+                motionX = Math.cos(Math.toRadians(player.rotationYaw)) * bounceRange;
+                motionZ = Math.sin(Math.toRadians(player.rotationYaw)) * bounceRange;
+                break;
+            case "left":
+                motionX = -Math.cos(Math.toRadians(player.rotationYaw)) * bounceRange;
+                motionZ = -Math.sin(Math.toRadians(player.rotationYaw)) * bounceRange;
+                break;
+        }
+
+        player.motionX += motionX;
+        player.motionZ += motionZ;
+        player.velocityChanged = true; // Ensure the server updates the player's velocity
     }
 
     private void drainStamina(int amount, EntityPlayer player) {

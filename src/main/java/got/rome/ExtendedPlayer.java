@@ -17,6 +17,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
     private int standingStillCooldown; // New field for standing still cooldown
     private double previousPosX; // New field for previous X position
     private double previousPosZ; // New field for previous Z position
+    private int bounceCooldown; // New field for bounce cooldown
 
     public ExtendedPlayer(EntityPlayer player) {
         this.player = player;
@@ -25,6 +26,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
         this.standingStillCooldown = 0; // Initialize the new field
         this.previousPosX = player.posX; // Initialize the previous X position
         this.previousPosZ = player.posZ; // Initialize the previous Z position
+        this.bounceCooldown = 0; // Initialize bounce cooldown
     }
 
     public static void register(EntityPlayer player) {
@@ -43,6 +45,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
         properties.setInteger("standingStillCooldown", this.standingStillCooldown); // Save the new field
         properties.setDouble("previousPosX", this.previousPosX); // Save the previous X position
         properties.setDouble("previousPosZ", this.previousPosZ); // Save the previous Z position
+        properties.setInteger("bounceCooldown", this.bounceCooldown); // Save bounce cooldown
         compound.setTag(EXT_PROP_NAME, properties);
     }
 
@@ -54,6 +57,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
         this.standingStillCooldown = properties.getInteger("standingStillCooldown"); // Load the new field
         this.previousPosX = properties.getDouble("previousPosX"); // Load the previous X position
         this.previousPosZ = properties.getDouble("previousPosZ"); // Load the previous Z position
+        this.bounceCooldown = properties.getInteger("bounceCooldown"); // Load bounce cooldown
     }
 
     @Override
@@ -99,5 +103,13 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 
     public void setPreviousPosZ(double previousPosZ) {
         this.previousPosZ = previousPosZ;
+    }
+
+    public int getBounceCooldown() {
+        return bounceCooldown;
+    }
+
+    public void setBounceCooldown(int bounceCooldown) {
+        this.bounceCooldown = bounceCooldown;
     }
 }
