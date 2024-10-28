@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import got.client.handlers.GOTBlockClientHandler;
+import got.client.handlers.GOTClientStaminaHandler;
 import got.client.handlers.GOTInterfaceHandler;
 import got.common.handlers.AttackHandler;
 import org.lwjgl.opengl.GL11;
@@ -498,6 +499,8 @@ public class GOTClientProxy extends GOTCommonProxy {
 		MinecraftForge.EVENT_BUS.register(GOTInterfaceHandler.INSTANCE);
 		FMLCommonHandler.instance().bus().register(GOTBlockClientHandler.INSTANCE);
 		MinecraftForge.EVENT_BUS.register(GOTBlockClientHandler.INSTANCE);
+		FMLCommonHandler.instance().bus().register(GOTClientStaminaHandler.INSTANCE);
+		MinecraftForge.EVENT_BUS.register(GOTClientStaminaHandler.INSTANCE);
 		FMLCommonHandler.instance().bus().register(new GOTEntityElephant3DViewer());
 		FMLCommonHandler.instance().bus().register(new GOTKeyHandler(GOTPacketHandler.networkWrapper));
 	}

@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 public class CustomPotion extends Potion {
     private ResourceLocation texture;
 
-    protected CustomPotion(int id, boolean isBad, int fluidColor, ResourceLocation tex, String namePot) {
+    public CustomPotion(int id, boolean isBad, int fluidColor, ResourceLocation tex, String namePot) {
         super(id, isBad, fluidColor);
         this.setPotionName(namePot);
         texture = tex;

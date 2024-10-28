@@ -7,6 +7,7 @@ import got.common.GOTEventHandler;
 import got.common.database.*;
 import got.common.enchant.*;
 import got.common.entity.other.GOTEntityCrossbowBolt;
+import got.common.handlers.StaminaServerHandler;
 import got.common.recipe.GOTRecipe;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.*;
@@ -151,6 +152,7 @@ public class GOTItemCrossbow extends ItemBow {
 				}
 				if (!world.isRemote) {
 					world.spawnEntityInWorld(bolt);
+					StaminaServerHandler.drainStaminaByPercent(8.0, entityplayer);
 				}
 				world.playSoundAtEntity(entityplayer, "got:item.crossbow", 1.0f, 1.0f / (itemRand.nextFloat() * 0.4f + 1.2f) + charge * 0.5f);
 				itemstack.damageItem(1, entityplayer);

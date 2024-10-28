@@ -1,5 +1,6 @@
 package got.client;
 
+import got.common.registers.EffectRegister;
 import org.lwjgl.opengl.GL11;
 
 import got.common.item.GOTWeaponStats;
@@ -46,7 +47,11 @@ public class GOTAttackTiming {
 					}
 				} else {
 					ItemStack itemstack = GOTAttackTiming.mc.thePlayer.getHeldItem();
-					attackTime = fullAttackTime = GOTWeaponStats.getAttackTimePlayer(itemstack);
+					if (mc.thePlayer.isPotionActive(EffectRegister.exhaustion)) {
+						attackTime = fullAttackTime = (int) (GOTWeaponStats.getAttackTimePlayer(itemstack) + (GOTWeaponStats.getAttackTimePlayer(itemstack) * 1.3));
+					} else {
+						attackTime = fullAttackTime = GOTWeaponStats.getAttackTimePlayer(itemstack);
+					} // Implementation is vulnerable to client cheats, fixing is possible, but not necessary in this case.
 					attackItem = itemstack;
 				}
 				lastCheckTick = currentTick;
@@ -56,7 +61,7 @@ public class GOTAttackTiming {
 
 	public static void renderAttackMeter(ScaledResolution resolution, float partialTicks) {
 		if (fullAttackTime > 0) {
-			float attackTimeF = prevAttackTime + (attackTime - prevAttackTime) * partialTicks;
+			float attackTimeF = prevAttackTime + ((attackTime) - prevAttackTime) * partialTicks;
 			attackTimeF /= fullAttackTime;
 			float meterAmount = 1.0f - attackTimeF;
 			int minX = resolution.getScaledWidth() / 2 + 120;

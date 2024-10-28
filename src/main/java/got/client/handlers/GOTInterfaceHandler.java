@@ -16,6 +16,7 @@ public class GOTInterfaceHandler {
 
     public static final GOTInterfaceHandler INSTANCE = new GOTInterfaceHandler();
     private float interpolatedStamina = 0;
+    private float interpolatedBounce = 0;
 
     @SubscribeEvent
     public void onOverlayPostMy(RenderGameOverlayEvent.Post e) {
@@ -32,9 +33,9 @@ public class GOTInterfaceHandler {
 
         GL11.glPushMatrix();
 
-        float disposX = 150;
-        float disposY = 15;
-        float scaleFactor = 1.7f;
+        float disposX = -135;
+        float disposY = 40;
+        float scaleFactor = 2f;
 
         float newPosX = aX - 33 + disposX;
         float newPosY = aY - 100 + disposY;
@@ -44,22 +45,41 @@ public class GOTInterfaceHandler {
         GL11.glScalef(scaleFactor, scaleFactor, 1.0f);
 
         mc.getTextureManager().bindTexture(new ResourceLocation("got:textures/hud/stamina_bar.png"));
-        drawTextureCustomSize(newPosX, newPosY, 2, 10, 67, 13, 70, 30);
+        drawTextureCustomSize(newPosX, newPosY, 0, 0, 42, 7, 42, 7);
+
+        GL11.glPopMatrix();
+
+        GL11.glPushMatrix();
+        GL11.glScalef(scaleFactor, scaleFactor, 1.0f);
+
+        float newbounceX = aX - 0 + disposX;
+        float newbounceY = aY - 130 + disposY;
+        newbounceX /= scaleFactor;
+        newbounceY /= scaleFactor;
+
+        mc.getTextureManager().bindTexture(new ResourceLocation("got:textures/hud/bounce.png"));
+        drawTextureCustomSize(newbounceX, newbounceY, 0, 0, 14, 12, 14, 12);
+
+        float currentBounce = ExtendedPlayer.get(player).getBounceCooldown();
+        float maxBounceCooldown = 20 * 3; // Maximum cooldown value
+        interpolatedBounce += (currentBounce - interpolatedBounce) * 0.1f; // Adjust the 0.1f value for smoother or faster interpolation
+        mc.getTextureManager().bindTexture(new ResourceLocation("got:textures/hud/bounce_bar.png"));
+        drawTextureCustomSize(newbounceX, newbounceY, 0, 0, 14, ((interpolatedBounce  * 12) / maxBounceCooldown), 14, 12);
 
         GL11.glPopMatrix();
 
         GL11.glPushMatrix();
         GL11.glScalef(scaleFactor, scaleFactor, 1.0f);
         mc.getTextureManager().bindTexture(new ResourceLocation("got:textures/hud/stamina.png"));
-        float staminaPosX = (aX - 23 + disposX) / scaleFactor;
-        float staminaPosY = (aY - 91 + disposY) / scaleFactor;
+        float staminaPosX = (aX - 27 + disposX) / scaleFactor;
+        float staminaPosY = (aY - 96.2F + disposY) / scaleFactor;
         int fix = 0;
         float currentStamina = ExtendedPlayer.get(player).getStamina();
         if (currentStamina == StaminaServerHandler.MAX_STAMINA) {
             fix = 0;
         }
         interpolatedStamina += (currentStamina - interpolatedStamina) * 0.1f; // Adjust the 0.1f value for smoother or faster interpolation
-        drawTextureCustomSize(staminaPosX, staminaPosY, 0, 0, (double) ((interpolatedStamina + fix) * 55) / StaminaServerHandler.MAX_STAMINA, 3, 55, 3);
+        drawTextureCustomSize(staminaPosX, staminaPosY, 0, 0, (double) ((interpolatedStamina + fix) * 37) / StaminaServerHandler.MAX_STAMINA, 3, 37, 3);
 
         String resource = (int) 50 + "/" + (int) 100;
         mc.fontRenderer.drawString(resource, (int) (aX + 83 + disposX), (int) (aY - 83 + disposY), new Color(255, 255, 255).getRGB(), false);

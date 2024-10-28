@@ -30,7 +30,7 @@ public class GOTBlockClientHandler {
         EntityPlayer player = mc.thePlayer;
 
         if (BlockServerHandler.INSTANCE.isBlocking(player)) {
-            float[] blockAngles = GOTCoreBlockingSystem.getBlockAngles(player.getHeldItem().getItem().getClass());
+            float[] blockAngles = {GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getLeftBlockAngle(), GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getRightBlockAngle()};
             if(GOTConfig.enableBlockArc) {
                 renderBlockAngleOverlay(blockAngles);
             }

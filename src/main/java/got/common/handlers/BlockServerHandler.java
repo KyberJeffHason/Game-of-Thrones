@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import org.w3c.dom.Entity;
 
 public class BlockServerHandler {
 
@@ -25,10 +26,23 @@ public class BlockServerHandler {
 
         EntityPlayer player = (EntityPlayer) event.entity;
         if (isBlocking(player)) {
-            float[] blockAngles = GOTCoreBlockingSystem.getBlockAngles(player.getHeldItem().getItem().getClass());
+            float[] blockAngles = {
+                    GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getLeftBlockAngle(),
+                    GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getRightBlockAngle()
+            };
             if (isDamageBlocked(player, event.source, blockAngles)) {
+                if(event.source.getEntity() instanceof EntityPlayer) {
+                    StaminaServerHandler.drainStaminaByPercent(5, player);
+                    EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
+                    StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaMissPercent(), attacker);
+                }
                 event.setCanceled(true);
             } else {
+                if(event.source.getEntity() instanceof EntityPlayer) {
+                    StaminaServerHandler.drainStaminaByPercent(6, player);
+                    EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
+                    StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaHitPercent(), attacker);
+                }
                 event.ammount += (float) (event.ammount * 0.3); // 30% more damage to make the 20% total reduction of damage(50% vanilla reduction + 30% more damage)
             }
         }
