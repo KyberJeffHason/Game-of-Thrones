@@ -85,9 +85,6 @@ public class GOTInterfaceHandler {
         interpolatedStamina += (currentStamina - interpolatedStamina) * 0.1f; // Adjust the 0.1f value for smoother or faster interpolation
         drawTextureCustomSize(staminaPosX, staminaPosY, 0, 0, (double) ((currentStamina + fix) * 37) / StaminaServerHandler.MAX_STAMINA, 3, 37, 3); // put interpolatedStamina instead of currentStamina to return lerp(smooth transition animation)
 
-        String resource = (int) 50 + "/" + (int) 100;
-        mc.fontRenderer.drawString(resource, (int) (aX + 83 + disposX), (int) (aY - 83 + disposY), new Color(255, 255, 255).getRGB(), false);
-
         GL11.glPopMatrix();
     }
 
