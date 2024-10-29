@@ -28,6 +28,14 @@ public class DecorationsRegister {
                 "textures/blocks/textures/decorations/dungeon_cage.png"),
                 new WOWBaseDecModel(new ResourceLocation("got", "geo/hanging_cage.geo.json"))));
 
+        decorations.add(new Decoration(GOTItems.BarrelDecor, new ResourceLocation("got",
+                "textures/blocks/textures/decorations/barrel.png"),
+                new WOWBaseDecModel(new ResourceLocation("got", "geo/barrel.geo.json"))));
+
+        decorations.add(new Decoration(GOTItems.leatherStand, new ResourceLocation("got",
+                "textures/blocks/textures/decorations/leather_stand.png"),
+                new WOWBaseDecModel(new ResourceLocation("got", "geo/leather_stand.geo.json"))));
+
         decorations.add(new Decoration(GOTItems.WOWBigCactus, new ResourceLocation("got",
                 "textures/blocks/textures/decorations/plants_big_cactus.png"),
                 new WOWBaseDecModel(new ResourceLocation("got", "geo/plants_big_cactus.geo.json"))));

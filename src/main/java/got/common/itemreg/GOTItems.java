@@ -21,6 +21,8 @@ public class GOTItems {
     public static Block WOWDungeonPillory = new BaseDecorBlock(0.3F, 1F, 0.3F).setBlockName("got:WOWDungeonPillory").setCreativeTab(GOTCreativeTabs.tabUtil);
     public static Block WOWGoblintekcoil = new BaseDecorBlock(0.5F, 2F, 0.5F).setBlockName("got:WOWGoblinTekCoil").setCreativeTab(GOTCreativeTabs.tabUtil);
     public static Block WOWSkibidiToilet = new BaseDecorBlock(1F, 1F, 1F).setBlockName("got:WOWSkibidiToilet").setCreativeTab(GOTCreativeTabs.tabUtil);
+    public static Block BarrelDecor = new BaseDecorBlock(1F, 1F, 1F).setBlockName("got:BarrelDecor").setCreativeTab(GOTCreativeTabs.tabUtil);
+    public static Block leatherStand = new BaseDecorBlock(1F, 1F, 1F).setBlockName("got:leatherStand").setCreativeTab(GOTCreativeTabs.tabUtil);
 
 
     public static void registerItem(Item item) {

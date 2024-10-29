@@ -1,18 +1,11 @@
 package got.common.handlers;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import got.common.network.base.PacketDispatcher;
-import got.common.network.serverToClient.PacketSendStamina;
 import got.common.systems.GOTCoreBlockingSystem;
-import got.rome.ExtendedPlayer;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import org.w3c.dom.Entity;
 
 public class BlockServerHandler {
 
@@ -36,6 +29,7 @@ public class BlockServerHandler {
                     EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
                     StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaMissPercent(), attacker);
                 }
+                player.worldObj.playSoundAtEntity(player, "got:combat_block", 1, 1);
                 event.setCanceled(true);
             } else {
                 if(event.source.getEntity() instanceof EntityPlayer) {

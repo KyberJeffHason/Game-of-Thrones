@@ -44,6 +44,10 @@ public class GOTInterfaceHandler {
 
         GL11.glScalef(scaleFactor, scaleFactor, 1.0f);
 
+        // Credits for the art goes to the original author (bdragon1727)
+        // https://bdragon1727.itch.io/basic-pixel-health-bar-and-scroll-bar
+        // IF is being used in commercial matters, should be replaced with a custom art or any payment(even 1$) should be made to the original author
+
         mc.getTextureManager().bindTexture(new ResourceLocation("got:textures/hud/stamina_bar.png"));
         drawTextureCustomSize(newPosX, newPosY, 0, 0, 42, 7, 42, 7);
 
@@ -79,7 +83,7 @@ public class GOTInterfaceHandler {
             fix = 0;
         }
         interpolatedStamina += (currentStamina - interpolatedStamina) * 0.1f; // Adjust the 0.1f value for smoother or faster interpolation
-        drawTextureCustomSize(staminaPosX, staminaPosY, 0, 0, (double) ((interpolatedStamina + fix) * 37) / StaminaServerHandler.MAX_STAMINA, 3, 37, 3);
+        drawTextureCustomSize(staminaPosX, staminaPosY, 0, 0, (double) ((currentStamina + fix) * 37) / StaminaServerHandler.MAX_STAMINA, 3, 37, 3); // put interpolatedStamina instead of currentStamina to return lerp(smooth transition animation)
 
         String resource = (int) 50 + "/" + (int) 100;
         mc.fontRenderer.drawString(resource, (int) (aX + 83 + disposX), (int) (aY - 83 + disposY), new Color(255, 255, 255).getRGB(), false);
@@ -97,29 +101,5 @@ public class GOTInterfaceHandler {
         tessellator.addVertexWithUV(posX + pieceSizeX, posY, 0.0D, (startPixX + pieceSizeX) * f4, startPixY * f5);
         tessellator.addVertexWithUV(posX, posY, 0.0D, startPixX * f4, startPixY * f5);
         tessellator.draw();
-    }
-
-    public static void drawColoredSquare(double posX, double posY, double size, int color) {
-        // Decode the color components from the integer color
-        float alpha = (color >> 24 & 255) / 255.0F;
-        float red = (color >> 16 & 255) / 255.0F;
-        float green = (color >> 8 & 255) / 255.0F;
-        float blue = (color & 255) / 255.0F;
-
-        Tessellator tessellator = Tessellator.instance;
-        GL11.glEnable(GL11.GL_BLEND);
-        GL11.glDisable(GL11.GL_TEXTURE_2D);
-        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-        GL11.glColor4f(red, green, blue, alpha); // Set the color for the square
-
-        tessellator.startDrawingQuads();
-        tessellator.addVertex(posX, posY + size, 0.0D); // Bottom left
-        tessellator.addVertex(posX + size, posY + size, 0.0D); // Bottom right
-        tessellator.addVertex(posX + size, posY, 0.0D); // Top right
-        tessellator.addVertex(posX, posY, 0.0D); // Top left
-        tessellator.draw();
-
-        GL11.glEnable(GL11.GL_TEXTURE_2D);
-        GL11.glDisable(GL11.GL_BLEND);
     }
 }

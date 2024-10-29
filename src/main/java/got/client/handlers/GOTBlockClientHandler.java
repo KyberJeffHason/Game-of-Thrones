@@ -29,7 +29,7 @@ public class GOTBlockClientHandler {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayer player = mc.thePlayer;
 
-        if (BlockServerHandler.INSTANCE.isBlocking(player)) {
+        if (BlockServerHandler.INSTANCE.isBlocking(player) && false) { // Put true instead of false to enable the block angle overlay debug feature
             float[] blockAngles = {GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getLeftBlockAngle(), GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getRightBlockAngle()};
             if(GOTConfig.enableBlockArc) {
                 renderBlockAngleOverlay(blockAngles);

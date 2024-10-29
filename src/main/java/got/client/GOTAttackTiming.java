@@ -1,6 +1,7 @@
 package got.client;
 
 import got.common.registers.EffectRegister;
+import net.minecraft.potion.Potion;
 import org.lwjgl.opengl.GL11;
 
 import got.common.item.GOTWeaponStats;
@@ -47,7 +48,7 @@ public class GOTAttackTiming {
 					}
 				} else {
 					ItemStack itemstack = GOTAttackTiming.mc.thePlayer.getHeldItem();
-					if (mc.thePlayer.isPotionActive(EffectRegister.exhaustion)) {
+					if (mc.thePlayer.isPotionActive(EffectRegister.exhaustion) || mc.thePlayer.isPotionActive(Potion.digSlowdown)) {
 						attackTime = fullAttackTime = (int) (GOTWeaponStats.getAttackTimePlayer(itemstack) + (GOTWeaponStats.getAttackTimePlayer(itemstack) * 1.3));
 					} else {
 						attackTime = fullAttackTime = GOTWeaponStats.getAttackTimePlayer(itemstack);

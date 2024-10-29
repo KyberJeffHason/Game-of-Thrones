@@ -2,35 +2,28 @@ package got.common.handlers;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import got.common.item.weapon.GOTItemCrossbow;
 import got.common.network.base.PacketDispatcher;
 import got.common.network.serverToClient.PacketSendBounceCooldown;
 import got.common.network.serverToClient.PacketSendStamina;
 import got.common.registers.EffectRegister;
 import got.rome.ExtendedPlayer;
-import javafx.scene.effect.Effect;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MovementInput;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
-import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 public class StaminaServerHandler {
 
     public static final StaminaServerHandler INSTANCE = new StaminaServerHandler();
 
-    public static final int MAX_STAMINA = 300;
-    private static final int DRAIN_RATE_RUNNING = 1;
+    public static final int MAX_STAMINA = 300; // Maximum stamina, increase if needed
 
-    private static final int BOUNCE_RANGE = 1; // New field for bounce range
-    private static final int DRAIN_RATE_JUMPING = 2;
-    private static final int REGAIN_RATE = 10;
-    private static final int STANDING_STILL_COOLDOWN = 30;
+    private static final int BOUNCE_RANGE = 1; // The range for the bounce, change to your liking
+    private static final int REGAIN_RATE = 10; // The rate at which stamina is regained, change to your liking
+    private static final int STANDING_STILL_COOLDOWN = 30; // The cooldown before stamina regen, when standing in-place, change to your liking
 
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -75,7 +68,7 @@ public class StaminaServerHandler {
         }
 
         if (player.isPotionActive(EffectRegister.rest)) { // Resting potion effect stamina regen, stacks with normal regen
-            regainStamina(REGAIN_RATE * 2, player);
+            regainStamina(REGAIN_RATE * 2, player); // May be too OP, adjust to your liking
         }
 
         if (!isMoving && player.onGround && !player.isSprinting() && extendedPlayer.getStandingStillCooldown() == 0) {
@@ -94,6 +87,10 @@ public class StaminaServerHandler {
                 player.removePotionEffect(EffectRegister.secondBreath.id);
             } else {
                 player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 20, 0, true));
+                // Oops, I added my own effect accidentally, but you can use whatever suits your needs, mine does not effect the dig speed, only attack speed and block degrees
+                // But I've added requested functionality anyway to the vanilla potion effect
+                //.addPotionEffect(new PotionEffect(EffectRegister.exhaustion.id, 20, 0, true));
+                player.addPotionEffect(new PotionEffect(Potion.digSlowdown.id, 20, 0, true));
             }
         } else {
             player.removePotionEffect(Potion.moveSlowdown.id);
@@ -143,6 +140,8 @@ public class StaminaServerHandler {
         drainStaminaByPercent(15, player);
         extendedPlayer.setBounceCooldown(20*3); // Set cooldown for bounce
         PacketDispatcher.sendTo(new PacketSendBounceCooldown(extendedPlayer.getBounceCooldown()), (EntityPlayerMP) player);
+
+        player.worldObj.playSoundAtEntity(player, "got:combat_bounce", 1, 1);
     }
 
     public static void drainStamina(int amount, EntityPlayer player) {

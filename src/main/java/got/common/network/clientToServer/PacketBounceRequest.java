@@ -31,7 +31,7 @@ public class PacketBounceRequest extends AbstractPacket.AbstractServerMessage<Pa
     @Override
     public void process(EntityPlayer player, Side side) {
         if (player != null) {
-            System.out.println("Bouncing in packet " + direction);
+            //System.out.println("Bouncing in packet " + direction);
             StaminaServerHandler.INSTANCE.handleBounceRequest(player, direction);
         }
     }

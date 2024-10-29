@@ -31,12 +31,12 @@ public class GOTClientStaminaHandler {
             boolean leftKey = isKeyDownSafe(mc.gameSettings.keyBindLeft.getKeyCode());
             boolean rightKey = isKeyDownSafe(mc.gameSettings.keyBindRight.getKeyCode());
             boolean backKey = isKeyDownSafe(mc.gameSettings.keyBindBack.getKeyCode());
-            System.out.println(jumpKey + " " + rightMouseButton + " " + sneakKey + " " + leftKey + " " + rightKey + " " + backKey);
+            //System.out.println(jumpKey + " " + rightMouseButton + " " + sneakKey + " " + leftKey + " " + rightKey + " " + backKey);
 
             if (jumpKey && rightMouseButton) {
                 String direction = getMovementDirection(leftKey, rightKey, backKey);
                 if (!direction.isEmpty()) {
-                    System.out.println("Bouncing in " + direction);
+                    //System.out.println("Bouncing in " + direction);
                     PacketBounceRequest packet = new PacketBounceRequest(direction);
                     PacketDispatcher.sendToServer(packet);
                 }

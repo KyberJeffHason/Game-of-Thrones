@@ -964,6 +964,21 @@
             }
         ]
     },
+    "combat_block": {
+        "category": "neutral",
+        "sounds":
+        [
+            "combat/sword-sound-effect-2-234986",
+            "combat/sword-sound-effect-1-234987"
+        ]
+    },
+    "combat_bounce": {
+        "category": "neutral",
+        "sounds":
+        [
+            "combat/swing-whoosh-110410"
+        ]
+    },
     "calm_tavern_music": {
         "category": "music",
         "sounds": [

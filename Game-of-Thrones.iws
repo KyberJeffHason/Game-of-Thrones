@@ -5,22 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3050393f-8e5a-4469-b08a-51b2f06f1627" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Game-of-Thrones.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game-of-Thrones.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Game-of-Thrones.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game-of-Thrones/assets/got/sounds.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/client/GOTAttackTiming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/GOTAttackTiming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/client/GOTClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/GOTClientProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTBlockClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTBlockClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTClientStaminaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTClientStaminaHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTInterfaceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/client/handlers/GOTInterfaceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/decorations/DecorationsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/decorations/DecorationsRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/common/handlers/BlockServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/handlers/BlockServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/common/handlers/StaminaServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/handlers/StaminaServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemCrossbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/item/weapon/GOTItemCrossbow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/network/base/PacketDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/network/base/PacketDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/potions/CustomPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/potions/CustomPotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/registers/EffectRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/registers/EffectRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/itemreg/GOTItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/itemreg/GOTItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/got/common/network/clientToServer/PacketBounceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/network/clientToServer/PacketBounceRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/got/common/systems/GOTCoreBlockingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/got/common/systems/GOTCoreBlockingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/textures/hud/stamina.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/textures/hud/stamina.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/textures/hud/stamina_bar.pdn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/textures/hud/stamina_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/textures/hud/stamina_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_barricade.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_barricade.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_pillory.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_pillory.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_shackles.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/dungeon_shackles.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/goblintek_coil.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/goblintek_coil.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/hanging_cage.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/hanging_cage.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_big_cactus.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_big_cactus.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_hanging_pothos.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_hanging_pothos.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_small_fir.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_small_fir.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_vines_flowering.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/plants_vines_flowering.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/geo/skibiditoilet.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/geo/skibiditoilet.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/got/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/got/sounds.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +130,9 @@
       <recent name="C:\Users\User\Documents\GitHub\Game-of-Thrones\src\main\java\got\common" />
       <recent name="C:\Users\User\Documents\GitHub\Game-of-Thrones\src\main\java\got\common\network" />
       <recent name="C:\Users\User\Documents\GitHub\Game-of-Thrones\src\main\java\got" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="got.common.network.serverToClient" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="got.common.network.serverToClient" />

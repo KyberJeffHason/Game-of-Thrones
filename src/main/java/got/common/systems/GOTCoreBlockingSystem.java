@@ -5,6 +5,7 @@ import got.common.item.weapon.*;
 import got.common.registers.EffectRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +29,7 @@ public class GOTCoreBlockingSystem {
 
     public static WeaponBlockData getBlockData(Class<?> weaponClass, EntityPlayer player) {
         WeaponBlockData data = weaponBlockDataMap.getOrDefault(weaponClass, new WeaponBlockData(35.0f, 35.0f, 10.0, 5.0));
-        if (player.isPotionActive(EffectRegister.exhaustion)) {
+        if (player.isPotionActive(EffectRegister.exhaustion) || player.isPotionActive(Potion.digSlowdown)) {
             return new WeaponBlockData(data.getLeftBlockAngle() - 5.0f, data.getRightBlockAngle() - 5.0f, data.getStaminaHitPercent(), data.getStaminaMissPercent());
         }
         return data;
