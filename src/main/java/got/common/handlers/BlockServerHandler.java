@@ -18,7 +18,9 @@ public class BlockServerHandler {
         if (!(event.entity instanceof EntityPlayer)) {
             if(event.source.getEntity() instanceof EntityPlayer) {
                 EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
-                StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), attacker).getStaminaMissPercent(), attacker);
+                if (attacker.getHeldItem() != null && attacker.getHeldItem().getItem() instanceof ItemSword) {
+                    StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), attacker).getStaminaMissPercent(), attacker);
+                }
             }
         }
 
