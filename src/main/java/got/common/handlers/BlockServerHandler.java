@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import org.lwjgl.Sys;
 
 public class BlockServerHandler {
 
@@ -13,6 +14,14 @@ public class BlockServerHandler {
 
     @SubscribeEvent
     public void onLivingHurt(LivingHurtEvent event) {
+
+        if (!(event.entity instanceof EntityPlayer)) {
+            if(event.source.getEntity() instanceof EntityPlayer) {
+                EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
+                StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), attacker).getStaminaMissPercent(), attacker);
+            }
+        }
+
         if (!(event.entity instanceof EntityPlayer)) {
             return;
         }
@@ -23,21 +32,22 @@ public class BlockServerHandler {
                     GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getLeftBlockAngle(),
                     GOTCoreBlockingSystem.getBlockData(player.getHeldItem().getItem().getClass(), player).getRightBlockAngle()
             };
+            if(event.source.getEntity() instanceof EntityPlayer) {
+                EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
+                StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaMissPercent(), attacker);
+            }
             if (isDamageBlocked(player, event.source, blockAngles)) {
-                if(event.source.getEntity() instanceof EntityPlayer) {
-                    StaminaServerHandler.drainStaminaByPercent(5, player);
-                    EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
-                    StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaMissPercent(), attacker);
-                }
+                StaminaServerHandler.drainStaminaByPercent(5, player);
                 player.worldObj.playSoundAtEntity(player, "got:combat_block", 1, 1);
                 event.setCanceled(true);
             } else {
-                if(event.source.getEntity() instanceof EntityPlayer) {
-                    StaminaServerHandler.drainStaminaByPercent(6, player);
-                    EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
-                    StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaHitPercent(), attacker);
-                }
-                event.ammount += (float) (event.ammount * 0.3); // 30% more damage to make the 20% total reduction of damage(50% vanilla reduction + 30% more damage)
+                StaminaServerHandler.drainStaminaByPercent(6, player);
+                event.ammount += (float) (event.ammount * 0.15); // 15% more damage to make the 20% total reduction of damage(50% vanilla reduction + 30% more damage)
+            }
+        } else {
+            if(event.source.getEntity() instanceof EntityPlayer) {
+                EntityPlayer attacker = (EntityPlayer) event.source.getEntity();
+                StaminaServerHandler.drainStaminaByPercent(GOTCoreBlockingSystem.getBlockData(attacker.getHeldItem().getItem().getClass(), player).getStaminaHitPercent(), attacker);
             }
         }
     }

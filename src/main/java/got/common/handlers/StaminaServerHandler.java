@@ -19,11 +19,12 @@ public class StaminaServerHandler {
 
     public static final StaminaServerHandler INSTANCE = new StaminaServerHandler();
 
-    public static final int MAX_STAMINA = 300; // Maximum stamina, increase if needed
+    public static final int MAX_STAMINA = 10000; // Maximum stamina, increase if needed
 
     private static final int BOUNCE_RANGE = 1; // The range for the bounce, change to your liking
-    private static final int REGAIN_RATE = 10; // The rate at which stamina is regained, change to your liking
-    private static final int STANDING_STILL_COOLDOWN = 30; // The cooldown before stamina regen, when standing in-place, change to your liking
+    private static final int BOUNCE_PERCENT = 15; // The percentage of stamina to drain when bouncing, change to your liking
+    private static final int REGAIN_RATE = 100; // The rate at which stamina is regained, change to your liking
+    private static final int STANDING_STILL_COOLDOWN = 25; // The cooldown before stamina regen, when standing in-place, change to your liking
 
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -49,17 +50,17 @@ public class StaminaServerHandler {
         boolean isMoving = currentPosX != previousPosX || currentPosZ != previousPosZ;
 
         if (isMoving && !isRunning) {
-            drainStaminaByPercent(0.35, player);
+            drainStaminaByPercent(0.05, player);
             extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN);
         }
 
         if (isRunning) {
-            drainStaminaByPercent(0.5, player);
+            drainStaminaByPercent(0.1, player);
             extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN);
         }
 
         if (isJumping) {
-            drainStaminaByPercent(0.7, player);
+            drainStaminaByPercent(0.5, player);
             extendedPlayer.setStandingStillCooldown(STANDING_STILL_COOLDOWN);
         }
 
@@ -109,7 +110,9 @@ public class StaminaServerHandler {
         }
 
         if (direction.equals("left") || direction.equals("right") || direction.equals("backward")) {
-            executeBounce(player, direction);
+            if (extendedPlayer.getStamina() - (extendedPlayer.getStamina() * BOUNCE_PERCENT/100) >= 0) {
+                executeBounce(player, direction);
+            }
         }
     }
 
@@ -137,7 +140,7 @@ public class StaminaServerHandler {
         player.motionZ += motionZ;
         player.velocityChanged = true; // Ensure the server updates the player's velocity
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
-        drainStaminaByPercent(15, player);
+        drainStaminaByPercent(BOUNCE_PERCENT, player);
         extendedPlayer.setBounceCooldown(20*3); // Set cooldown for bounce
         PacketDispatcher.sendTo(new PacketSendBounceCooldown(extendedPlayer.getBounceCooldown()), (EntityPlayerMP) player);
 
@@ -145,6 +148,10 @@ public class StaminaServerHandler {
     }
 
     public static void drainStamina(int amount, EntityPlayer player) {
+        if(player.capabilities.isCreativeMode) {
+            return;
+        }
+
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
         int dexterityLevel = player.getActivePotionEffect(EffectRegister.dexterity) != null ? player.getActivePotionEffect(EffectRegister.dexterity).getAmplifier() + 1 : 0;
         double reductionFactor = 1.0 - (0.1 * Math.min(dexterityLevel, 3));
@@ -154,10 +161,15 @@ public class StaminaServerHandler {
     }
 
     public static void drainStaminaByPercent(double percent, EntityPlayer player) {
+        if(player.capabilities.isCreativeMode) {
+            return;
+        }
+
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
         int dexterityLevel = player.getActivePotionEffect(EffectRegister.dexterity) != null ? player.getActivePotionEffect(EffectRegister.dexterity).getAmplifier() + 1 : 0;
         double reductionFactor = 1.0 - (0.1 * Math.min(dexterityLevel, 3));
-        int amountToDrain = (int) (MAX_STAMINA * (percent / 100.0) * reductionFactor);
+        int amountToDrain = (int) Math.round((MAX_STAMINA * (percent / 100.0) * reductionFactor));
+        System.out.println("Draining " + amountToDrain + " stamina " + (MAX_STAMINA * (percent / 100.0)));
         extendedPlayer.setStamina(Math.max(0, extendedPlayer.getStamina() - amountToDrain));
         PacketDispatcher.sendTo(new PacketSendStamina(extendedPlayer.getStamina()), (EntityPlayerMP) player);
     }
@@ -178,7 +190,7 @@ public class StaminaServerHandler {
             DamageSource source = event.source;
 
             if (source == DamageSource.fall) {
-                drainStaminaByPercent(1.0, player);
+                drainStaminaByPercent(1, player);
             } else if (source.isProjectile()) {
                 drainStaminaByPercent(1.33, player);
             }

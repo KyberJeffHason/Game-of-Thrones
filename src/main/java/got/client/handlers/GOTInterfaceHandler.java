@@ -33,7 +33,7 @@ public class GOTInterfaceHandler {
 
         GL11.glPushMatrix();
 
-        float disposX = -135;
+        float disposX = 140;
         float disposY = 40;
         float scaleFactor = 2f;
 

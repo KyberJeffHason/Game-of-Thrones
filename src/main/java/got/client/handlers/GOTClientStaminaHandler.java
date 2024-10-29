@@ -26,7 +26,7 @@ public class GOTClientStaminaHandler {
         EntityPlayer player = mc.thePlayer;
         if (player != null && Keyboard.isCreated() && mc.inGameHasFocus && mc.gameSettings != null) {
             boolean jumpKey = isKeyDownSafe(mc.gameSettings.keyBindJump.getKeyCode());
-            boolean rightMouseButton = Mouse.isButtonDown(1); // Check for right mouse button press
+            boolean rightMouseButton = player.isBlocking(); // Check for right mouse button press
             boolean sneakKey = isKeyDownSafe(mc.gameSettings.keyBindSneak.getKeyCode());
             boolean leftKey = isKeyDownSafe(mc.gameSettings.keyBindLeft.getKeyCode());
             boolean rightKey = isKeyDownSafe(mc.gameSettings.keyBindRight.getKeyCode());
