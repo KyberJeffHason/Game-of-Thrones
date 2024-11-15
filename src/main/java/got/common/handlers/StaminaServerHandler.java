@@ -105,14 +105,22 @@ public class StaminaServerHandler {
     public void handleBounceRequest(EntityPlayer player, String direction) {
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
 
+        int staminaAfterBounce = extendedPlayer.getStamina() - (int) (extendedPlayer.getStamina() * (BOUNCE_PERCENT / 100.0));
+
+        if (staminaAfterBounce < 0) {
+            return;
+        }
+
         if (extendedPlayer.getBounceCooldown() > 0) {
             return;
         }
 
+        if (extendedPlayer.getStamina() < (MAX_STAMINA * (BOUNCE_PERCENT / 100.0))) {
+            return; // Prevent bounce if stamina is too low
+        }
+
         if (direction.equals("left") || direction.equals("right") || direction.equals("backward")) {
-            if (extendedPlayer.getStamina() - (extendedPlayer.getStamina() * BOUNCE_PERCENT/100) >= 0) {
-                executeBounce(player, direction);
-            }
+            executeBounce(player, direction);
         }
     }
 

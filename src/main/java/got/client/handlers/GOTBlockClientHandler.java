@@ -41,13 +41,24 @@ public class GOTBlockClientHandler {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayer player = mc.thePlayer;
 
-        // Use reflection to access the private timer field
         float partialTicks = 0.0f;
         try {
-            Field timerField = Minecraft.class.getDeclaredField("timer");
+            Field timerField;
+            try {
+                timerField = Minecraft.class.getDeclaredField("timer");
+            } catch (NoSuchFieldException e) {
+                // Handle obfuscated field name
+                timerField = Minecraft.class.getDeclaredField("field_71428_T"); // Example obfuscated name
+            }
             timerField.setAccessible(true);
             Object timer = timerField.get(mc);
-            Field renderPartialTicksField = timer.getClass().getDeclaredField("renderPartialTicks");
+            Field renderPartialTicksField;
+            try {
+                renderPartialTicksField = timer.getClass().getDeclaredField("renderPartialTicks");
+            } catch (NoSuchFieldException e) {
+                // Handle obfuscated field name
+                renderPartialTicksField = timer.getClass().getDeclaredField("field_74285_i"); // Example obfuscated name
+            }
             renderPartialTicksField.setAccessible(true);
             partialTicks = renderPartialTicksField.getFloat(timer);
         } catch (Exception e) {
