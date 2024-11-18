@@ -128,6 +128,7 @@ public class StaminaServerHandler {
         double bounceRange = BOUNCE_RANGE; // Example bounce range
         double motionX = 0;
         double motionZ = 0;
+        double motionY = 0.5; // Adding a vertical component
 
         switch (direction) {
             case "backward":
@@ -144,12 +145,18 @@ public class StaminaServerHandler {
                 break;
         }
 
-        player.motionX += motionX;
-        player.motionZ += motionZ;
+        // Apply motion over a few ticks for smoothness
+        int duration = 5; // Number of ticks over which to apply the motion
+        for (int i = 0; i < duration; i++) {
+            player.motionX += motionX / duration;
+            player.motionZ += motionZ / duration;
+            player.motionY += motionY / duration;
+        }
         player.velocityChanged = true; // Ensure the server updates the player's velocity
+
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
         drainStaminaByPercent(BOUNCE_PERCENT, player);
-        extendedPlayer.setBounceCooldown(20*3); // Set cooldown for bounce
+        extendedPlayer.setBounceCooldown(20 * 3); // Set cooldown for bounce
         PacketDispatcher.sendTo(new PacketSendBounceCooldown(extendedPlayer.getBounceCooldown()), (EntityPlayerMP) player);
 
         player.worldObj.playSoundAtEntity(player, "got:combat_bounce", 1, 1);
@@ -177,7 +184,6 @@ public class StaminaServerHandler {
         int dexterityLevel = player.getActivePotionEffect(EffectRegister.dexterity) != null ? player.getActivePotionEffect(EffectRegister.dexterity).getAmplifier() + 1 : 0;
         double reductionFactor = 1.0 - (0.1 * Math.min(dexterityLevel, 3));
         int amountToDrain = (int) Math.round((MAX_STAMINA * (percent / 100.0) * reductionFactor));
-        System.out.println("Draining " + amountToDrain + " stamina " + (MAX_STAMINA * (percent / 100.0)));
         extendedPlayer.setStamina(Math.max(0, extendedPlayer.getStamina() - amountToDrain));
         PacketDispatcher.sendTo(new PacketSendStamina(extendedPlayer.getStamina()), (EntityPlayerMP) player);
     }

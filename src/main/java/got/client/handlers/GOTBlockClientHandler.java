@@ -91,7 +91,7 @@ public class GOTBlockClientHandler {
             double rotatedX = playerX + (x - playerX) * Math.cos(Math.toRadians(playerYaw)) - (z - playerZ) * Math.sin(Math.toRadians(playerYaw));
             double rotatedZ = playerZ + (x - playerX) * Math.sin(Math.toRadians(playerYaw)) + (z - playerZ) * Math.cos(Math.toRadians(playerYaw));
 
-            mc.theWorld.spawnParticle("flame", rotatedX, centerY, rotatedZ, 0.0, 0.0, 0.0); // Use "smoke" particles
+            mc.theWorld.spawnParticle("reddust", rotatedX, centerY, rotatedZ, 0.0, 0.0, 0.0); // Use "smoke" particles
         }
 
         GL11.glPopMatrix(); // Restore the previous matrix
