@@ -78,23 +78,14 @@ public class GOTBlockClientHandler {
         double endAngle   =  blockAngles[1]; // +35
         float  playerYaw  = (player.rotationYaw % 360 + 360) % 360;
 
-        // Можно дополнительно учесть, что в майне "вперёд по yaw" - это (yaw + 90),
-        // но тогда нужно и в isDamageBlocked так же делать.
-        // Главное, чтобы и там, и там один и тот же сдвиг.
-
-        // Например, если "realForward" = player.rotationYaw + 90,
-        // то пусть при отрисовке мы используем angle + realForward:
-
-        double realForward = playerYaw + 90.0; // часто в MC 0 = «восток», +90 = «юг»
+        double realForward = playerYaw + 90.0;
 
         GL11.glPushMatrix();
-    // Не обязательно делать glTranslate, потому что мы можем спавнить частицы напрямую
         for (double angle = startAngle; angle <= endAngle; angle += 5) {
             double actualAngle = realForward + angle;
             double rad = Math.toRadians(actualAngle);
             double x = player.posX + Math.cos(rad) * radius;
             double z = player.posZ + Math.sin(rad) * radius;
-            // Уровень по Y (глаза) можно брать player.posY + player.getEyeHeight()
             double y = player.posY + player.getEyeHeight();
 
             mc.theWorld.spawnParticle("reddust", x, y, z, 0.0, 0.0, 0.0);

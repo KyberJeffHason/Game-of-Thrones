@@ -58,16 +58,12 @@ public class BlockServerHandler {
         return player.isUsingItem() && player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemSword;
     }
 
-    /**
-     * Определяем, попал ли источник атаки в сектор блока
-     */
     private boolean isDamageBlocked(EntityPlayer player, DamageSource source, float[] blockAngles) {
         if (source.getEntity() == null) {
             return false;
         }
 
         float rawYaw = player.rotationYaw;
-        // "реальный" yaw с +90:
         float realYaw = (rawYaw + 90) % 360;
         if(realYaw < 0) realYaw += 360;
 
