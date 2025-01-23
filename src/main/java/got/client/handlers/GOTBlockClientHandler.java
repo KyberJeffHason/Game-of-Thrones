@@ -74,27 +74,32 @@ public class GOTBlockClientHandler {
         double centerX = playerX;
         double centerY = playerY + player.getEyeHeight();
         double centerZ = playerZ;
-        double startAngle = -blockAngles[0];
-        double endAngle = blockAngles[1];
+        double startAngle = -blockAngles[0]; // -35
+        double endAngle   =  blockAngles[1]; // +35
+        float  playerYaw  = (player.rotationYaw % 360 + 360) % 360;
 
-        float playerYaw = player.rotationYaw + 90;
+        // Можно дополнительно учесть, что в майне "вперёд по yaw" - это (yaw + 90),
+        // но тогда нужно и в isDamageBlocked так же делать.
+        // Главное, чтобы и там, и там один и тот же сдвиг.
 
-        GL11.glPushMatrix(); // Save the current matrix
-        GL11.glTranslated(-playerX, -centerY, -playerZ); // Translate to player's position
+        // Например, если "realForward" = player.rotationYaw + 90,
+        // то пусть при отрисовке мы используем angle + realForward:
 
-        for (double angle = startAngle; angle <= endAngle; angle += 10.0) { // Increase step size to reduce particles
-            double rad = Math.toRadians(angle);
-            double x = centerX + Math.cos(rad) * radius;
-            double z = centerZ + Math.sin(rad) * radius;
+        double realForward = playerYaw + 90.0; // часто в MC 0 = «восток», +90 = «юг»
 
-            // Rotate the point around the player's position
-            double rotatedX = playerX + (x - playerX) * Math.cos(Math.toRadians(playerYaw)) - (z - playerZ) * Math.sin(Math.toRadians(playerYaw));
-            double rotatedZ = playerZ + (x - playerX) * Math.sin(Math.toRadians(playerYaw)) + (z - playerZ) * Math.cos(Math.toRadians(playerYaw));
+        GL11.glPushMatrix();
+    // Не обязательно делать glTranslate, потому что мы можем спавнить частицы напрямую
+        for (double angle = startAngle; angle <= endAngle; angle += 5) {
+            double actualAngle = realForward + angle;
+            double rad = Math.toRadians(actualAngle);
+            double x = player.posX + Math.cos(rad) * radius;
+            double z = player.posZ + Math.sin(rad) * radius;
+            // Уровень по Y (глаза) можно брать player.posY + player.getEyeHeight()
+            double y = player.posY + player.getEyeHeight();
 
-            mc.theWorld.spawnParticle("reddust", rotatedX, centerY, rotatedZ, 0.0, 0.0, 0.0); // Use "smoke" particles
+            mc.theWorld.spawnParticle("reddust", x, y, z, 0.0, 0.0, 0.0);
         }
-
-        GL11.glPopMatrix(); // Restore the previous matrix
+        GL11.glPopMatrix();
     }
 
 }

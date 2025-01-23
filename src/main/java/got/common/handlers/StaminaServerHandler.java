@@ -94,7 +94,7 @@ public class StaminaServerHandler {
                 player.addPotionEffect(new PotionEffect(Potion.digSlowdown.id, 20, 0, true));
             }
         } else {
-            player.removePotionEffect(Potion.moveSlowdown.id);
+            //player.removePotionEffect(Potion.moveSlowdown.id);
         }
 
         extendedPlayer.setPreviousPosX(currentPosX);

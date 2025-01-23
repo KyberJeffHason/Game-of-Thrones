@@ -58,27 +58,28 @@ public class BlockServerHandler {
         return player.isUsingItem() && player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemSword;
     }
 
+    /**
+     * Определяем, попал ли источник атаки в сектор блока
+     */
     private boolean isDamageBlocked(EntityPlayer player, DamageSource source, float[] blockAngles) {
-        // Calculate the player's facing direction
-        float playerYaw = player.rotationYaw;
-
-        // Check if the source entity is null
         if (source.getEntity() == null) {
             return false;
         }
 
-        // Calculate the direction of the incoming attack
-        double deltaX = source.getEntity().posX - player.posX;
-        double deltaZ = source.getEntity().posZ - player.posZ;
-        float attackYaw = (float) (Math.atan2(deltaZ, deltaX) * (180 / Math.PI)) - 90;
+        float rawYaw = player.rotationYaw;
+        // "реальный" yaw с +90:
+        float realYaw = (rawYaw + 90) % 360;
+        if(realYaw < 0) realYaw += 360;
 
-        // Compute the angle between the player's facing direction and the attack direction
-        float angleDifference = Math.abs(playerYaw - attackYaw) % 360;
-        if (angleDifference > 180) {
-            angleDifference = 360 - angleDifference;
-        }
+        double dx = source.getEntity().posX - player.posX;
+        double dz = source.getEntity().posZ - player.posZ;
+        float attackYaw = (float) Math.toDegrees(Math.atan2(dz, dx)) % 360;
+        if (attackYaw < 0) attackYaw += 360;
 
-        // Check if this angle is within the block angles
-        return (angleDifference <= blockAngles[1] / 2) || (angleDifference >= 360 - blockAngles[0] / 2);
+        float diff = attackYaw - realYaw;
+        diff = (diff + 360) % 360;
+
+        return (diff <= blockAngles[1]) || (diff >= 360 - blockAngles[0]);
     }
+
 }
