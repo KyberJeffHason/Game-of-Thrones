@@ -105,6 +105,10 @@ public class StaminaServerHandler {
     public void handleBounceRequest(EntityPlayer player, String direction) {
         ExtendedPlayer extendedPlayer = ExtendedPlayer.get(player);
 
+        if (!player.onGround) {
+            return;
+        }
+
         int staminaAfterBounce = extendedPlayer.getStamina() - (int) (extendedPlayer.getStamina() * (BOUNCE_PERCENT / 100.0));
 
         if (staminaAfterBounce < 0) {
